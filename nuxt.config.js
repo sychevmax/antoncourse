@@ -14,10 +14,22 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    // 'reset-css/reset.css',
+    '~assets/styles/base.styl',
+  ],
+  styleResources: {
+    stylus: [
+      '@assets/styles/fonts.styl',
+      '@assets/styles/vars.styl',
+      '@assets/styles/base.styl',
+    ]
+  },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+    { src: '~plugins/vueSilentbox.js', mode: 'client', ssr: false }
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -29,8 +41,22 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg-sprite',
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  // build: {
+  //   postcss: {
+  //     useConfigFile: false,
+  //     plugins: [
+  //       require('autoprefixer')({
+  //         overrideBrowserslist: ['last 2 versions'],
+  //       }),
+  //       require('postcss-preset-env')(),
+  //       require('cssnano')(),
+  //     ],
+  //   }
+  // },
 }

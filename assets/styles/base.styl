@@ -1,0 +1,85 @@
+*
+  box-sizing border-box
+  margin 0
+  padding 0
+
+body
+  font-family 'ObjectSans', sans-serif
+  font-size 24px
+  font-weight 400
+  color $charkGrey
+  background $bg
+
+a
+  text-decoration none
+  color $charkGrey
+button
+  background transparent
+  outline none
+  border none
+
+p
+  font-size 24px
+  line-height 40px
+  letter-spacing 0.03em
+  @media $xs
+    font-size 16px
+    line-height 24px
+.h0
+  font-size 112px
+  line-height 134px
+  font-weight 800
+  letter-spacing 0.03em
+  color transparent
+  text-transform uppercase
+  -webkit-text-stroke-width 2px
+  -webkit-text-stroke-color $acsent
+  @media $sm_minus
+    font-size 80px
+    line-height 80px
+    letter-spacing 0.08em
+  @media $xs
+    -webkit-text-stroke-width 1px
+    font-size 40px
+    line-height 48px
+    letter-spacing 0.03em
+h1
+  font-size 80px
+  line-height 112px
+  font-weight 800
+  letter-spacing 0.05em
+  text-transform uppercase
+  @media $xs
+    font-size 40px
+    line-height 48px
+    letter-spacing 0.04em
+  &._acsent
+    color $acsent
+
+h2
+  font-size 48px
+  line-height 72px
+  letter-spacing 0.02em
+  font-weight 400
+
+h3
+  font-size 24px
+  line-height 36px
+  font-weight 800
+  letter-spacing 0.02em
+
+img
+  max-width 100%
+  max-height 100%
+
+.container
+  max-width 1440px
+  padding 0 64px
+  margin 0 auto
+  @media $md_minus
+    padding 0 44px
+  @media $sm_minus
+    padding 0 64px
+  @media $xs
+    padding 0 24px
+
