@@ -75,7 +75,7 @@ export default {
       width 404px
       height 472px
       right -10%
-      top 24px
+      top -117px
     @media $xs
       top -144px
       width 336px

@@ -1,10 +1,11 @@
 <template lang="pug">
   .about.container
+    BackToHome
     .aboutTop.gridContainer
-      .gridContainer__cell._span-5._span-md-5._span-sm-3._span-xs-3
+      .gridContainer__cell._span-4._offset-1._span-md-4._span-sm-3._span-xs-3
         .aboutTop__img
           img(src='/img/about/about_top_bg.png')
-      .gridContainer__cell._span-7._span-md-7._span-sm-3._span-xs-3
+      .gridContainer__cell._span-7._span-md-8._span-sm-3._span-xs-3
         .aboutTop__text В психологию редко приходят те, кому просто интересно. Обычно это люди с болезненным, травматичным прошлым
     .about_statham
       .aboutStatham.gridContainer
@@ -40,7 +41,43 @@
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-6._span-xs-3
           .aboutBorderText
             p После того как я на себе увидел действие метода — понял, что могу объединить свои знания и помогать людям меняться внутренне и физически.
-        .gridContainer__cell._span-7._offset-1
+        .gridContainer__cell._span-7._offset-1._span-md-8._offset-md-0._span-sm-6._order-sm-7._span-xs-3
+          .aboutContentBird__video
+            AboutVideo(
+              videoSrc='https://youtu.be/mWyak0g5LLI'
+              previewSrc='/img/about/about_video_0.jpg',
+            )
+        .gridContainer__cell._span-3._offset-9._span-md-3._offset-md-9._span-sm-3._offset-sm-2._order-sm-8._span-xs-2._offset-xs-1
+          .aboutContentBird__videoText
+            p Пример работы с&nbsp;симптомом
+        .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-1._span-sm-4._offset-sm-2._order-sm-9._span-xs-3
+          .aboutBorderText
+            p Мои ученики и клиенты знают, какой именно стресс запускает тот или иной симптом: от простуды до онкологических заболеваний.
+    .aboutVideos
+      .gridContainer
+        .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
+          AboutVideo(
+            title='мигрень'
+            videoSrc='https://youtu.be/mWyak0g5LLI'
+            previewSrc='/img/about/about_video_1.jpg',
+          )
+        .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
+          AboutVideo(
+            title='Аллергия'
+            videoSrc='https://youtu.be/mWyak0g5LLI'
+            previewSrc='/img/about/about_video_2.jpg',
+          )
+        .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
+          AboutVideo(
+            title='Простуда. ОРВИ или ОРЗ'
+            videoSrc='https://youtu.be/mWyak0g5LLI'
+            previewSrc='/img/about/about_video_3.jpg',
+          )
+    .about_youtube
+      .gridContainer
+        .gridContainer__cell._span-6._offset-3._span-md-5._offset-md-3._span-sm-4._offset-sm-1
+          p Посмотрите другие видео на&nbsp;
+            a(href='https://youtu.be/mWyak0g5LLI' target='_blank') Ютуб канале
     .about__road
       AboutRoad
     .about__mission
@@ -50,10 +87,14 @@
 <script>
 import AboutRoad from '~/components/about/AboutRoad'
 import AboutMission from '~/components/about/AboutMission'
+import AboutVideo from '~/components/about/AboutVideo'
+import BackToHome from '~/components/BackToHome'
 export default {
   components: {
     AboutMission,
     AboutRoad,
+    AboutVideo,
+    BackToHome,
   },
 }
 </script>
@@ -67,6 +108,14 @@ export default {
     padding-bottom 144px
   @media $xs
     padding-bottom 160px
+  &__mission
+    margin-top 256px
+    @media $md_minus
+      margin-top 127px
+    @media $sm_minus
+      margin-top 245px
+    @media $xs
+      margin-top 184px
 .aboutTop
   //height 700px
   //display flex
@@ -79,25 +128,18 @@ export default {
   @media $xs
     margin-bottom 0
   &__img
-    margin-top -32px
+    margin-top -40px
     @media $md_minus
-      width calc(100% + 44px)
       position relative
       margin-top 24px
     @media $sm_minus
-      width calc(100% + 64px)
       margin-top 32px
     @media $xs
-      width calc(100% - 68px + 24px)
       margin-top 16px
       left 0
       margin-left auto
     & img
       position relative
-      @media $md_minus
-        left -44px
-      @media $sm_minus
-        left -64px
       @media $xs
         left unset
         right -24px
@@ -237,7 +279,7 @@ export default {
        display block
        margin-bottom 64px
      @media $xs
-       width 80px
+       width 64px
        height 2px
        margin-bottom 40px
    & p
@@ -286,4 +328,52 @@ export default {
         margin-top 56px
       @media $xs
         margin-top 88px
+  &__video
+    margin-top 48px
+    margin-bottom 116px
+    @media $md_minus
+      margin-top 104px
+      margin-bottom 104px
+    @media $sm_minus
+      margin-top 48px
+      margin-bottom 0
+    @media $xs
+      margin-top 32px
+      width calc(100% + 24px)
+      margin-left -24px
+  &__videoText
+    margin-top 48px
+    @media $md_minus
+      margin-top 104px
+    @media $sm_minus
+      margin-top 8px
+      margin-bottom 96px
+    @media $xs
+      margin-top 0
+      margin-bottom 24px
+.aboutVideos
+  &__item
+    @media $sm_minus
+      margin-bottom 48px
+    @media $xs
+      margin-bottom 32px
+.about_youtube
+  font-size 24px
+  line-height 40px
+  margin 80px 0 128px
+  letter-spacing 0.03em
+  @media $sm_minus
+    margin 128px 0
+  @media $xs
+    margin 80px 0 83px
+    font-size 16px
+    line-height 24px
+  & a
+    font-size 24px
+    line-height 32px
+    color $acsent
+    text-transform lowercase
+    @media $xs
+      font-size 16px
+      line-height 24px
 </style>
