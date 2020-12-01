@@ -1,9 +1,9 @@
 <template lang="pug">
   .header.container
-    a.header__logo(href='#')
+    nuxt-link.header__logo(to='/')
       span Антон
       span Антонов
-    a.header__about(href='#') об авторе
+    nuxt-link.header__about(to='/about') об авторе
     .header__menu
       Burger
     .header__lang

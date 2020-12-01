@@ -1,17 +1,5 @@
 <template lang="pug">
   .index.container
-    .gridContainer
-      .gridContainer__cell._demo._span-6
-      .gridContainer__cell._demo._span-6
-    .gridContainer
-      .gridContainer__cell._demo._span-1._offset-1
-      .gridContainer__cell._demo._span-2
-      .gridContainer__cell._demo._span-1
-
-    .gridContainer
-      .gridContainer__cell._demo._span-4
-      .gridContainer__cell._demo._span-4
-      .gridContainer__cell._demo._span-4
     .indexTop
       .indexTop__inner
         .indexTop__title

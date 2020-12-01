@@ -2,10 +2,10 @@
   .about.container
     BackToHome
     .aboutTop.gridContainer
-      .gridContainer__cell._span-4._offset-1._span-md-4._span-sm-3._span-xs-3
+      .gridContainer__cell._span-4._span-md-4._span-sm-3._span-xs-3
         .aboutTop__img
           img(src='/img/about/about_top_bg.png')
-      .gridContainer__cell._span-7._span-md-8._span-sm-3._span-xs-3
+      .gridContainer__cell._span-7._offset-5._span-md-8._span-sm-3._span-xs-3
         .aboutTop__text В психологию редко приходят те, кому просто интересно. Обычно это люди с болезненным, травматичным прошлым
     .about_statham
       .aboutStatham.gridContainer
@@ -153,8 +153,6 @@ export default {
     z-index 2
     @media $md_minus
       margin-top 72px
-      width calc(100% + 70px)
-      left -70px
     @media $sm_minus
       font-size 24px
       line-height 40px
@@ -171,7 +169,7 @@ export default {
       background-size contain
       display block
       position absolute
-      right calc(100% + 26px)
+      right calc(100% + 32px)
       top 0
       @media $md_minus
         position static
