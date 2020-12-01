@@ -1,18 +1,46 @@
 <template lang="pug">
   .about.container
-    .aboutTop
-      .aboutTop__img
-        img(src='/img/about/about_top_bg.png')
-      .aboutTop__text В психологию редко приходят те, кому просто интересно. Обычно это люди с болезненным, травматичным прошлым
-    // .aboutStatham
-      .aboutStatham__text
-        p Я такой же: в детстве был неуправляемым, невротичным, склонным к различным зависимостям.
-        br
-        p Мне было все равно на то, как я живу. Я ввязывался в драки, бил чужие машины, мошенничал и обманывал. И сам не понимал, зачем это делаю. Не осознавал.
-        br
-        p У меня были самые тяжелые зависимости и болезни, с которым обычно не справляются, но я не мог увидеть себя со стороны.
+    .aboutTop.gridContainer
+      .gridContainer__cell._span-5._span-md-5._span-sm-3._span-xs-3
+        .aboutTop__img
+          img(src='/img/about/about_top_bg.png')
+      .gridContainer__cell._span-7._span-md-7._span-sm-3._span-xs-3
+        .aboutTop__text В психологию редко приходят те, кому просто интересно. Обычно это люди с болезненным, травматичным прошлым
+    .about_statham
+      .aboutStatham.gridContainer
+        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
+          .aboutBorderText
+            p Я такой же: в детстве был неуправляемым, невротичным, склонным к различным зависимостям.
+            br
+            p Мне было все равно на то, как я живу. Я ввязывался в драки, бил чужие машины, мошенничал и обманывал. И сам не понимал, зачем это делаю. Не осознавал.
+            br
+            p У меня были самые тяжелые зависимости и болезни, с которым обычно не справляются, но я не мог увидеть себя со стороны.
     .aboutEyes
-      .aboutEyes__text Вспомните себя, ведь у каждого из нас то, что нам не нравится в нас самих: поведение, эмоции, зависимости, болезни.
+      .gridContainer
+        .gridContainer__cell._span-8._offset-2._span-md-9._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
+          .aboutEyes__text Вспомните себя, ведь у каждого из нас то, что нам не нравится в&nbsp;нас самих: поведение, эмоции, зависимости, болезни.
+    .aboutContentBird
+      .gridContainer
+        .gridContainer__cell._span-5._span-md-5._span-sm-4._order-sm-2._span-xs-3
+          img.aboutContentBird__img._first(src='/img/about/about_bird.png')
+        .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
+          .aboutBorderText
+            p Я смирился с тем, что у меня не будет нормальной жизни, как у всех. Но однажды я прошел тест по проективной методике, там нужно было описать животных. Оказалось, что я описывал себя, какой я — так я смог увидеть себя со стороны.
+            br
+            p Это было как удар молнией: я начал чувствовать себя, слышать. И внутри откликалось «Антон, ты можешь больше, ты можешь иначе» — так я постепенно избавился от зависимостей и в 2008 году пришел к психологии.
+            br
+            p В 2014 стал психологом, а в 2018  — клиническим психологом. С 2016 года я помогал людям, но сам не решил главный вопрос — своего здоровья.
+        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-3._span-xs-3
+          .aboutBorderText
+            p С 6 лет я страдал заиканием и в 27 лет решил с ним разобраться: читал книги, изучал различные методики, ходил к врачам. В какой-то момент я искал психолога, который мог бы помочь с этим, а нашел не просто психолога, а специалиста по психосоматике. Догадываетесь, что случилось?
+        .gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-2._order-sm-5._span-xs-2
+          img.aboutContentBird__img._second(src='/img/about/about_bird_2.png')
+        .gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-4._offset-sm-2._order-sm-4._span-xs-2._offset-xs-1
+          img.aboutContentBird__img._third(src='/img/about/about_bird_3.png')
+        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-6._span-xs-3
+          .aboutBorderText
+            p После того как я на себе увидел действие метода — понял, что могу объединить свои знания и помогать людям меняться внутренне и физически.
+        .gridContainer__cell._span-7._offset-1
     .about__road
       AboutRoad
     .about__mission
@@ -32,7 +60,6 @@ export default {
 
 <style lang="stylus" scoped>
 .about
-  overflow hidden
   padding-bottom 510px
   @media $md_minus
     padding-bottom 214px
@@ -42,52 +69,40 @@ export default {
     padding-bottom 160px
 .aboutTop
   //height 700px
-  display flex
-  overflow hidden
+  //display flex
+  //overflow hidden
+  margin-bottom 40px
+  @media $md_minus
+    margin-bottom 128px
+  @media $sm_minus
+    margin-bottom 270px
+  @media $xs
+    margin-bottom 0
   &__img
-    width calc(100% * 5 / 12)
+    margin-top -32px
     @media $md_minus
-      width calc(100% * 4 / 12)
+      width calc(100% + 44px)
+      position relative
+      margin-top 24px
     @media $sm_minus
-      width calc(100% * 2 / 6)
+      width calc(100% + 64px)
+      margin-top 32px
+    @media $xs
+      width calc(100% - 68px + 24px)
+      margin-top 16px
+      left 0
+      margin-left auto
     & img
       position relative
-      top -98px
       @media $md_minus
-        top 0
-  //&:after
-  //  content ''
-  //  display block
-  //  position absolute
-  //  background url('/img/about/about_top_bg.png') no-repeat
-  //  background-size contain
-  //  height 807px
-  //  width 648px
-  //  left 0
-  //  top 0
-  //  @media $md_minus
-  //    left -45px
-  //    height 625px
-  //    width 593px
-  //    margin-top 72px
-  //  @media $sm_minus
-  //    left -65px
-  //    width 455px
-  //    height 520px
-  //  @media $xs
-  //    right -44px
-  //    right 0
-  //    left unset
-  //    width 100%
-  //    height 400px
-  //    margin-top 24px
-  //    //width 171px
-  //    background-position 40px 0
+        left -44px
+      @media $sm_minus
+        left -64px
+      @media $xs
+        left unset
+        right -24px
+
   &__text
-    max-width 708px
-    width calc(100% * 7 / 12)
-    flex-shrink 0
-    //margin-left 560px
     margin-top 128px
     font-size 48px
     line-height 72px
@@ -95,20 +110,17 @@ export default {
     position relative
     z-index 2
     @media $md_minus
-      width calc(100% * 8 / 12)
       margin-top 72px
+      width calc(100% + 70px)
+      left -70px
     @media $sm_minus
-      width calc(100% * 4 / 6)
-    //@media $md_minus
-    //  margin-left 324px
-    //@media $sm_minus
-    //  font-size 24px
-    //  line-height 40px
-    //  margin-left 226px
-    //  max-width 416px
-    //@media $xs
-    //  margin-left 0
-    //  margin-top 176px
+      font-size 24px
+      line-height 40px
+      width 100%
+      left 0
+    @media $xs
+      margin-left 0
+      margin-top -189px
     &:before
       content ''
       width 172px
@@ -132,81 +144,146 @@ export default {
   margin-top 40px
   position relative
   padding-bottom 128px
-  height 617px
+  //height 617px
   @media $md_minus
     height auto
   @media $sm_minus
     padding-bottom 64px
   @media $xs
-    padding-top 354px
-    margin-top -160px
-  &:after
+    margin-top 64px
+  &:before
     content ''
     background url('/img/about/about_statham.png') no-repeat
     background-size contain
     position absolute
     right 0
-    top -80px
-    width 612px
-    height 616px
+    top -20px
+    width 528px
+    height 508px
     @media $md_minus
-      width 373px
-      height 376px
-      top -60px
+      width 372px
+      height 358px
+      top 0
     @media $sm_minus
-      top -286px
-      width 456px
-      height 458px
-      right -10px
+      top -195px
+      width 416px
+      height 400px
+      right 0
     @media $xs
-      top 80px
-      width 350px
-      height 354px
-      right unset
-      left -48px
+      width 272px
+      height 261px
+      position static
+      margin 0 auto
+.aboutEyes
+  height 400px
+  position relative
+  margin-bottom 128px
+  @media $md_minus
+    margin-bottom 68px
+  @media $xs
+    margin-bottom 106px
+  &:before
+    content ''
+    background url('/img/about/about_eyes.png') no-repeat
+    background-size cover
+    background-position center
+    z-index 2
+    top 0
+    left 0
+    height 100%
+    position absolute
+    width calc(100% + 128px)
+    margin-left -64px
+    @media $md_minus
+      width calc(100% + 88px)
+      margin-left -44px
+    @media $sm_minus
+      width calc(100% + 128px)
+      margin-left -64px
+    @media $xs
+      margin-left -24px
   &__text
-    max-width 533px
-    margin-left 115px
     position relative
     z-index 3
+    font-size 24px
+    line-height 40px
+    letter-spacing 0.03em
+    color $white
+    margin-top 96px
     @media $md_minus
-      max-width 456px
-      margin-left 81px
+      margin-top 116px
     @media $sm_minus
-      max-width 416px
-      margin-left 0
-    &:before
-      content ''
-      width 80px
-      height 4px
-      background $acsent
-      position absolute
-      right calc(100% + 35px)
-      top 16px
-      @media $md_minus
-        width 56px
-        right calc(100% + 24px)
-      @media $sm_minus
-        position static
-        display block
-        margin-bottom 64px
-      @media $xs
-        width 80px
-        height 2px
-        margin-bottom 40px
-    & p
-      font-size 24px
-      line-height 36px
-      letter-spacing 0.02em
-      @media $sm_minus
-        letter-spacing 0
-        line-height 40px
-      @media $xs
-        font-size 16px
-        line-height 24px
-        letter-spacing 0.03em
-.aboutEyes
-  height 340px
+      margin-top 100px
+    @media $xs
+      margin-top 67px
+      font-size 16px
+      line-height 24px
+ .aboutBorderText
+   position relative
+   z-index 3
+   &:before
+     content ''
+     width 80px
+     height 4px
+     background $acsent
+     position absolute
+     right calc(100% + 32px)
+     top 16px
+     @media $md_minus
+       width 56px
+       right calc(100% + 24px)
+     @media $sm_minus
+       position static
+       display block
+       margin-bottom 64px
+     @media $xs
+       width 80px
+       height 2px
+       margin-bottom 40px
+   & p
+     font-size 24px
+     line-height 36px
+     letter-spacing 0.02em
+     @media $sm_minus
+       letter-spacing 0
+       line-height 40px
+     @media $xs
+       font-size 16px
+       line-height 24px
+       letter-spacing 0.03em
+.aboutContentBird
+  margin-bottom 128px
+  @media $md_minus
+    margin-bottom 80px
   @media $sm_minus
-    height 592px
+    margin-bottom 128px
+  @media $xs
+    margin-bottom 80px
+  &__img
+    &._first
+      @media $sm_minus
+        margin-top 80px
+      @media $xs
+        width calc(100% + 24px)
+        margin-left -24px
+    &._second
+      margin-top 192px
+      margin-bottom 96px
+      @media $md_minus
+        margin-top 270px
+        margin-bottom 104px
+      @media $sm_minus
+        margin-top 96px
+        margin-bottom 104px
+      @media $xs
+        margin-top 37px
+        margin-bottom 34px
+    &._third
+      margin-top 48px
+      @media $sm_minus
+        margin-top 66px
+      @media $md_minus
+        margin-top 56px
+      @media $xs
+        margin-top 88px
 </style>

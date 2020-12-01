@@ -1,5 +1,17 @@
 <template lang="pug">
   .index.container
+    .gridContainer
+      .gridContainer__cell._demo._span-6
+      .gridContainer__cell._demo._span-6
+    .gridContainer
+      .gridContainer__cell._demo._span-1._offset-1
+      .gridContainer__cell._demo._span-2
+      .gridContainer__cell._demo._span-1
+
+    .gridContainer
+      .gridContainer__cell._demo._span-4
+      .gridContainer__cell._demo._span-4
+      .gridContainer__cell._demo._span-4
     .indexTop
       .indexTop__inner
         .indexTop__title
@@ -99,6 +111,7 @@
           link='#'
           text='Каждый день я получаю новые знания о психосоматике и готов отдавать вам еще больше. Это курс, который совмещает в себе новые исследования, практические кейсы и иной подход. Скоро вы все узнаете сами.'
         )
+
 </template>
 <script>
 import Socials from '~/components/Socials'

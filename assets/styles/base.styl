@@ -1,10 +1,24 @@
+@font-face
+  font-family 'ObjectSans'
+  src url('~static/fonts/ObjectSans-Heavy.woff2') format('woff2'),
+  url('~static/fonts/ObjectSans-Heavy.woff') format('woff')
+  font-weight 800
+  font-style normal
+
+@font-face
+  font-family 'ObjectSans'
+  src url('~static/fonts/ObjectSans-Regular.woff2') format('woff2'),
+  url('~static/fonts/ObjectSans-Regular.woff') format('woff')
+  font-weight 400
+  font-style normal
+
 *
   box-sizing border-box
   margin 0
   padding 0
 
 body
-  font-family 'ObjectSans', sans-serif
+  font-family 'ObjectSans'
   font-size 24px
   font-weight 400
   color $charkGrey
@@ -72,6 +86,9 @@ img
   max-width 100%
   max-height 100%
 
+.wrapper
+  overflow hidden
+
 .container
   max-width 1440px
   padding 0 64px
@@ -83,3 +100,224 @@ img
   @media $xs
     padding 0 24px
 
+//-- grid system
+.gridContainer
+  display grid
+  gap 32px
+  grid-template-columns repeat(12,minmax(0,1fr))
+  @media $md_minus
+    gap 24px
+  @media $sm_minus
+    grid-template-columns repeat(6,minmax(0,1fr))
+    gap 32px
+  @media $xs
+    gap 40px
+    grid-template-columns repeat(3,minmax(0,1fr))
+  &__cell
+    //outline 1px solid #d4d4d4
+    &._span-1
+      grid-column-end span 1
+    &._span-2
+      grid-column-end span 2
+    &._span-3
+      grid-column-end span 3
+    &._span-4
+      grid-column-end span 4
+    &._span-5
+      grid-column-end span 5
+    &._span-6
+      grid-column-end span 6
+    &._span-7
+      grid-column-end span 7
+    &._span-8
+      grid-column-end span 8
+    &._span-9
+      grid-column-end span 9
+    &._span-10
+      grid-column-end span 10
+    &._span-11
+      grid-column-end span 11
+    &._span-12
+      grid-column-end span 12
+    &._span-md-1
+      @media $md_minus
+        grid-column-end span 1
+    &._span-md-2
+      @media $md_minus
+        grid-column-end span 2
+    &._span-md-3
+      @media $md_minus
+        grid-column-end span 3
+    &._span-md-4
+      @media $md_minus
+        grid-column-end span 4
+    &._span-md-5
+      @media $md_minus
+        grid-column-end span 5
+    &._span-md-6
+      @media $md_minus
+        grid-column-end span 6
+    &._span-md-7
+      @media $md_minus
+        grid-column-end span 7
+    &._span-md-8
+      @media $md_minus
+        grid-column-end span 8
+    &._span-md-9
+      @media $md_minus
+        grid-column-end span 9
+    &._span-md-10
+      @media $md_minus
+        grid-column-end span 10
+    &._span-md-11
+      @media $md_minus
+        grid-column-end span 11
+    &._span-md-12
+      @media $md_minus
+        grid-column-end span 12
+    &._span-sm-1
+      @media $sm_minus
+        grid-column-end span 1
+    &._span-sm-2
+      @media $sm_minus
+        grid-column-end span 2
+    &._span-sm-3
+      @media $sm_minus
+        grid-column-end span 3
+    &._span-sm-4
+      @media $sm_minus
+        grid-column-end span 4
+    &._span-sm-5
+      @media $sm_minus
+        grid-column-end span 5
+    &._span-sm-6
+      @media $sm_minus
+        grid-column-end span 6
+    &._span-xs-1
+      @media $xs
+        grid-column-end span 1
+    &._span-xs-2
+      @media $xs
+        grid-column-end span 2
+    &._span-xs-3
+      @media $xs
+        grid-column-end span 3
+    &._offset-0
+      @media $lg_plus
+        grid-column-start 1
+    &._offset-1
+      @media $lg_plus
+        grid-column-start 2
+    &._offset-2
+      @media $lg_plus
+        grid-column-start 3
+    &._offset-3
+      @media $lg_plus
+        grid-column-start 4
+    &._offset-4
+      @media $lg_plus
+        grid-column-start 5
+    &._offset-5
+      @media $lg_plus
+        grid-column-start 6
+    &._offset-6
+      @media $lg_plus
+        grid-column-start 7
+    &._offset-7
+      @media $lg_plus
+        grid-column-start 8
+    &._offset-8
+      @media $lg_plus
+        grid-column-start 9
+    &._offset-9
+      @media $lg_plus
+        grid-column-start 10
+    &._offset-10
+      @media $lg_plus
+        grid-column-start 11
+    &._offset-11
+      @media $lg_plus
+        grid-column-start 12
+    &._offset-md-0
+      @media $md
+        grid-column-start 1
+    &._offset-md-1
+      @media $md
+        grid-column-start 2
+    &._offset-md-2
+      @media $md
+        grid-column-start 3
+    &._offset-md-3
+      @media $md
+        grid-column-start 4
+    &._offset-md-4
+      @media $md
+        grid-column-start 5
+    &._offset-md-5
+      @media $md
+        grid-column-start 6
+    &._offset-md-6
+      @media $md
+        grid-column-start 7
+    &._offset-md-7
+      @media $md
+        grid-column-start 8
+    &._offset-md-8
+      @media $md
+        grid-column-start 9
+    &._offset-md-9
+      @media $md
+        grid-column-start 10
+    &._offset-md-10
+      @media $md
+        grid-column-start 11
+    &._offset-md-11
+      @media $md
+        grid-column-start 12
+    &._offset-sm-0
+      @media $sm
+        grid-column-start 1
+    &._offset-sm-1
+      @media $sm
+        grid-column-start 2
+    &._offset-sm-2
+      @media $sm
+        grid-column-start 3
+    &._offset-sm-3
+      @media $sm
+        grid-column-start 4
+    &._offset-sm-4
+      @media $sm
+        grid-column-start 5
+    &._offset-sm-5
+      @media $sm
+        grid-column-start 6
+    &._offset-xs-0
+      @media $xs
+        grid-column-start 1
+    &._offset-xs-1
+      @media $xs
+        grid-column-start 2
+    &._offset-xs-2
+      @media $sm
+        grid-column-start 3
+
+    &._order-sm-1
+      @media $sm_minus
+        order 1
+    &._order-sm-2
+      @media $sm_minus
+        order 2
+    &._order-sm-3
+      @media $sm_minus
+        order 3
+    &._order-sm-4
+      @media $sm_minus
+        order 4
+    &._order-sm-5
+      @media $sm_minus
+        order 5
+    &._order-sm-6
+      @media $sm_minus
+        order 6
+//-- grid system

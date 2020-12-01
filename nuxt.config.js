@@ -15,12 +15,11 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    // 'reset-css/reset.css',
+    'reset-css/reset.css',
     '~assets/styles/base.styl',
   ],
   styleResources: {
     stylus: [
-      '@assets/styles/fonts.styl',
       '@assets/styles/vars.styl',
       '@assets/styles/base.styl',
     ],
