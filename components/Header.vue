@@ -38,9 +38,11 @@ export default {
     line-height 24px
     font-size 24px
     position relative
+    top -12px
     @media $md_minus
       line-height 16px
       font-size 16px
+      top -8px
     & span
       display block
       &:last-child

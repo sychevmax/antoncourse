@@ -105,6 +105,7 @@ img
   display grid
   gap 32px
   grid-template-columns repeat(12,minmax(0,1fr))
+  width 100%
   @media $md_minus
     gap 24px
   @media $sm_minus
@@ -113,6 +114,9 @@ img
   @media $xs
     gap 40px
     grid-template-columns repeat(3,minmax(0,1fr))
+  &._centered
+    align-items center
+    align-self center
   &__cell
     //outline 1px solid #d4d4d4
     &._span-1
@@ -301,6 +305,22 @@ img
     &._offset-xs-2
       @media $sm
         grid-column-start 3
+
+    &._order-md-1
+      @media $md
+        order 1
+    &._order-md-2
+      @media $md
+        order 2
+    &._order-md-3
+      @media $md
+        order 3
+    &._order-md-4
+      @media $md
+        order 4
+    &._order-md-5
+      @media $md
+        order 5
 
     &._order-sm-1
       @media $sm_minus

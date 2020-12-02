@@ -1,24 +1,29 @@
 <template lang="pug">
   .index.container
     .indexTop
-      .indexTop__inner
-        .indexTop__title
-          span Готовы <br /> понять <br />
-          | себя?
+      .indexTop__inner.gridContainer
+        .gridContainer__cell._span-6._span-md-6._offset-md-1._span-sm-4
+          .indexTop__title
+            span Готовы <br /> понять <br />
+            | себя?
         .indexTop__right
           .indexTop__imgWrap
             img.indexTop__bg(src='/img/index/index_top_bg.png')
             img.indexTop__img(src='/img/index/index_top_img.png')
 
-      .indexTop__bottom
-        button.indexTop__scroll
-          svg-icon(name="arrow")
-        .indexTop__socials
-          Socials
-    .indexDescr
-      .indexDescr__text
-        p Знаете фразу «все болезни из головы»? И&nbsp;«болезни» — это не только заболевания, а проблемы, страхи, установки. Психосоматический подход помогает по-новому взглянуть на взаимосвязь психики, тела и души. Это позволяет разглядеть истинные причины своих состояний и сделать первый шаг для их изменений.
-      .indexDescr__title Психосоматика — <br /> это&nbsp;новый подход <br /> к&nbsp;осознанности
+      .indexTop__bottom.gridContainer
+        .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._span-xs-1
+          button.indexTop__scroll
+            svg-icon(name="arrow")
+        .gridContainer__cell._span-6._offset-6._span-md-6._offset-md-6._span-sm-4._span-xs-2
+          .indexTop__socials
+            Socials
+    .indexDescr.gridContainer
+      .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._order-md-2._span-sm-4._order-sm-2._span-xs-3
+        .indexDescr__text
+          p Знаете фразу «все болезни из головы»? И&nbsp;«болезни» — это не только заболевания, а проблемы, страхи, установки. Психосоматический подход помогает по-новому взглянуть на взаимосвязь психики, тела и души. Это позволяет разглядеть истинные причины своих состояний и сделать первый шаг для их изменений.
+      .gridContainer__cell._span-5._offset-7._span-md-6._offset-md-5._order-md-1._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
+        .indexDescr__title Психосоматика — <br /> это&nbsp;новый подход <br /> к&nbsp;осознанности
     .indexVideos
       .indexVideos__item
         IndexVideoBlock(
@@ -124,7 +129,12 @@ export default {
   position relative
   padding-top 24px
   &__inner
-    display flex
+    position relative
+    margin-bottom 138px
+    @media $md_minus
+      margin-bottom 176px
+    @media $sm_minus
+      margin-bottom 246px
   &__title
     font-size 112px
     text-transform uppercase
@@ -133,14 +143,10 @@ export default {
     letter-spacing 0.03em
     color $acsent
     z-index 7
-    width 50%
+    position relative
     @media $md_minus
-      margin-left 80px
-      width calc(100% / 1.5)
-    @media $sm_minus
       font-size 80px
       line-height 96px
-      margin-left 0
     @media $xs
       font-size 40px
       line-height 48px
@@ -151,29 +157,27 @@ export default {
       @media $xs
         -webkit-text-stroke-width 1px
   &__right
-    position static
-    width 50%
+    position absolute
+    right 0
+    top 0
+    width 640px
+    height  552px
     @media $md_minus
-      margin-left -16%
+      width 456px
+      height  456px
     @media $sm_minus
-      top 60px
-      right 85px
-      position relative
+      top 40px
+      width 480px
+      height  480px
+      right -60px
     @media $xs
-      right 120px
+      width 304px
+      height  304px
+      right -69px
+      top 56px
   &__imgWrap
     position relative
-    width 562px
-    height 552px
-    margin-right 44px
-    @media $md_minus
-      width 464px
-      height 456px
-      margin-right 0
-    @media $xs
-      width 321px
-      height 316px
-      right -16px
+    right 0
   &__bg
     position absolute
     top 0
@@ -193,22 +197,7 @@ export default {
   &__img
     position relative
     z-index 8
-    width 558px
-    height 552px
-    @media $md_minus
-      width 460px
-      height 456px
-    @media $sm_minus
-      width 494px
-      height 488px
-    @media $xs
-      width 321px
-      height 316px
   &__bottom
-    width 100%
-    display flex
-    align-items center
-    justify-content space-between
     @media $md_minus
       margin-top 48px
     @media $sm_minus
@@ -224,10 +213,6 @@ export default {
     align-items center
     justify-content center
     flex-shrink 0
-    @media $md_minus
-      margin-left 80px
-    @media $sm_minus
-      margin-left 0
     @media $xs
       width 64px
       height 64px
@@ -243,56 +228,47 @@ export default {
     position relative
     z-index 2
     display flex
-    width 50%
-    flex-shrink 0
+    margin-top 30px
     @media $md_minus
-      //width auto
-    @media $sm_minus
-      width calc(100% / 1.5)
-      margin-left 112px
+      margin-top auto
     @media $xs
-      margin-top 20px
-      margin-left 38px
+      margin-top 32px
 .indexDescr
-  display flex
-  margin-top 131px
+  //display flex
+  margin-top 88px
   @media $md_minus
     flex-direction column
+    margin-top 64px
+  @media $sm_minus
+    margin-top 18px
+  @media $xs
+    margin-top 64px
   &__text
-    width 50%
-    max-width 528px
-    margin-left 112px
     @media $md_minus
-      margin-left 80px
       order 2
-      max-width 452px
-    @media $sm_minus
-      margin-left 0
-      width 100%
-      max-width 452px
-    @media $xs
-      width 100%
-      max-width 100%
   &__title
-    width 50%
-    margin-left 135px
     font-weight 400
     font-size 48px
     line-height 72px
     letter-spacing 0.02em
     @media $md_minus
-      order 1
-      margin 0 59px 96px auto
+      margin-bottom 72px
     @media $sm_minus
-      margin 0 0 128px auto
       font-size 40px
       line-height 60px
-      width auto
+      margin-bottom 96px
     @media $xs
-      margin 0 0 47px 0
       font-size 24px
       line-height 40px
+      margin-bottom 7px
 .indexVideos
+  margin-top 42px
+  @media $md_minus
+    margin-top 57px
+  @media $sm_minus
+    margin-top 104px
+  @media $xs
+    margin-top 64px
   &__item
     margin-bottom 128px
     @media $xs
