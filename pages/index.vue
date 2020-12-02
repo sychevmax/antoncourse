@@ -111,12 +111,14 @@ import Socials from '~/components/Socials'
 import IndexVideoBlock from '~/components/IndexVideoBlock'
 import IndexCourse from '~/components/IndexCourse'
 import Link from '~/components/Link'
+import AboutVideo from '~/components/about/AboutVideo'
 export default {
   components: {
     Socials,
     IndexVideoBlock,
     IndexCourse,
     Link,
+    AboutVideo,
   },
 }
 </script>
@@ -261,18 +263,6 @@ export default {
       font-size 24px
       line-height 40px
       margin-bottom 7px
-.indexVideos
-  margin-top 42px
-  @media $md_minus
-    margin-top 57px
-  @media $sm_minus
-    margin-top 104px
-  @media $xs
-    margin-top 64px
-  &__item
-    margin-bottom 128px
-    @media $xs
-      margin-bottom 80px
 .indexCourses
   margin-top 128px
   &__title
@@ -289,6 +279,13 @@ export default {
     &:last-child
       margin-bottom 0
 .indexAuthor
+  margin-top 159px
+  @media $md_minus
+    margin-top 118px
+  @media $sm_minus
+    margin-bottom 128px
+  @media $xs
+    margin-bottom 103px
   &__row
     display flex
     &._bottom
@@ -392,4 +389,68 @@ export default {
     @media $xs
       width 100%
       margin-top 80px
+.indexVideos
+  margin-top 144px
+  &__item
+    position relative
+    margin-bottom 176px
+    @media $md_minus
+      margin-bottom 205px
+    @media $sm_minus
+      margin-bottom 175px
+    @media $xs
+      margin-bottom 108px
+    &:last-child
+      margin-bottom 0
+  &__video
+    &._left
+      @media $xs
+        width calc(100% + 24px)
+        margin-left -24px
+    &._right
+      @media $xs
+        width calc(100% + 24px)
+  &__title
+    position absolute
+    transform translateY(-60%)
+    z-index 3
+    top 0
+    @media $sm_minus
+      transform translateY(-70%)
+    &._first
+      left 24px
+      @media $md_minus
+        left 0
+      @media $sm_minus
+        left -60px
+      @media $xs
+        left 0
+    &._second
+      left 50%
+      transform translate(-50%, -70%)
+      @media $md_minus
+        left unset
+        right 0
+        transform translate(0, -70%)
+      @media $xs
+        right unset
+        left -16px
+    &._third
+      left 50%
+      transform translate(-50%, -70%)
+      @media $md_minus
+        left 108px
+        transform translate(0, -70%)
+      @media $sm_minus
+        left -44px
+      @media $xs
+        left unset
+        right -21px
+  &__text
+    align-self center
+    @media $sm_minus
+      margin-top 32px
+      align-self auto
+    @media $xs
+      margin-top -16px
 </style>
