@@ -25,33 +25,34 @@
       .gridContainer__cell._span-5._offset-7._span-md-6._offset-md-5._order-md-1._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
         .indexDescr__title Психосоматика — <br /> это&nbsp;новый подход <br /> к&nbsp;осознанности
     .indexVideos
-      .indexVideos__item
-        IndexVideoBlock(
-          title='отношения'
-          text='Что общего между психосоматикой и&nbsp;отношениями?'
-          videoSrc='https://youtu.be/mWyak0g5LLI'
-          previewSrc='/img/index/video_preview_1.jpg',
-          right=false
-          titleAlign='left'
-        )
-      .indexVideos__item
-        IndexVideoBlock(
-          title='Здоровье'
-          text='Как поведение и&nbsp;реакции влияют на здоровье?'
-          videoSrc='https://youtu.be/mWyak0g5LLI'
-          previewSrc='/img/index/video_preview_2.jpg',
-          right=true
-          titleAlign='center'
-        )
-      .indexVideos__item
-        IndexVideoBlock(
-          title='Деньги'
-          text='Почему внутреннее состояние сказывается на доходе?'
-          videoSrc='https://youtu.be/mWyak0g5LLI'
-          previewSrc='/img/index/video_preview_3.jpg',
-          right=false
-          titleAlign='center'
-        )
+      .indexVideos__item.gridContainer
+        .indexVideos__title.h0._first отношения
+        .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
+          AboutVideo(
+            videoSrc='https://youtu.be/mWyak0g5LLI'
+            previewSrc='/img/index/video_preview_1.jpg',
+          )
+        .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1
+          p Что общего между психосоматикой и&nbsp;отношениями?
+      .indexVideos__item.gridContainer
+        .indexVideos__title.h0._second Здоровье
+        .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2
+          p Как поведение и&nbsp;реакции влияют на здоровье?
+        .indexVideos__video.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
+          AboutVideo(
+            videoSrc='https://youtu.be/mWyak0g5LLI'
+            previewSrc='/img/index/video_preview_2.jpg',
+          )
+
+      .indexVideos__item.gridContainer
+        .indexVideos__title.h0._third Деньги
+        .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
+          AboutVideo(
+            videoSrc='https://youtu.be/mWyak0g5LLI'
+            previewSrc='/img/index/video_preview_3.jpg',
+          )
+        .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1
+          p Почему внутреннее состояние сказывается на доходе?
     .indexAuthor
       .indexAuthor__row
         .indexAuthor__col
@@ -391,6 +392,7 @@ export default {
       margin-top 80px
 .indexVideos
   margin-top 144px
+
   &__item
     position relative
     margin-bottom 176px
@@ -402,14 +404,7 @@ export default {
       margin-bottom 108px
     &:last-child
       margin-bottom 0
-  &__video
-    &._left
-      @media $xs
-        width calc(100% + 24px)
-        margin-left -24px
-    &._right
-      @media $xs
-        width calc(100% + 24px)
+
   &__title
     position absolute
     transform translateY(-60%)
