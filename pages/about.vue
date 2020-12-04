@@ -258,39 +258,6 @@ export default {
       margin-top 67px
       font-size 16px
       line-height 24px
- .aboutBorderText
-   position relative
-   z-index 3
-   &:before
-     content ''
-     width 80px
-     height 4px
-     background $acsent
-     position absolute
-     right calc(100% + 32px)
-     top 16px
-     @media $md_minus
-       width 56px
-       right calc(100% + 24px)
-     @media $sm_minus
-       position static
-       display block
-       margin-bottom 64px
-     @media $xs
-       width 64px
-       height 2px
-       margin-bottom 40px
-   & p
-     font-size 24px
-     line-height 36px
-     letter-spacing 0.02em
-     @media $sm_minus
-       letter-spacing 0
-       line-height 40px
-     @media $xs
-       font-size 16px
-       line-height 24px
-       letter-spacing 0.03em
 .aboutContentBird
   margin-bottom 128px
   @media $md_minus

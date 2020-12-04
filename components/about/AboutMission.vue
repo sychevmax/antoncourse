@@ -2,7 +2,7 @@
   .aboutMission
     .aboutMission__text Моя <span>миссия</span> — <br /> открывать <br /> людям глаза <br /> на самих себя. <br /> Вы готовы?
     .aboutMission__btn
-      Link(href='#' mod='more' outside=false) выбрать курс
+      Link(href='#' mod='_more' outside=false) выбрать курс
     .aboutMission__img
       img(src='/img/about/misson.png')
 </template>

@@ -44,4 +44,6 @@ export default {}
       top 10px
       left 0
       background $charkGrey
+    @media $xs
+      margin-left 0
 </style>

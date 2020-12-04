@@ -28,12 +28,12 @@
         .indexCourse__meta._mobile(v-else="active")
           .indexCourse__info._inactive {{date}}
         .indexCourse__more._mobile(v-if='active')
-          Link(mod="more" :href="link" outside=false) подробнее
+          Link(mod="_more" :href="link" outside=false) подробнее
         .indexCourse__text
           p(v-html='text')
       .indexCourse__col
         .indexCourse__more._desktop(v-if='active')
-          Link(mod="more" :href="link" outside=false) подробнее
+          Link(mod="_more" :href="link" outside=false) подробнее
 
 
 </template>

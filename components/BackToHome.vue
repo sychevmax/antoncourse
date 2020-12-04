@@ -14,6 +14,8 @@ export default {}
   top 168px
   left 15px
   z-index 10
+  @media $xs
+    left 6px
   &__icon
     position relative
     width 12px

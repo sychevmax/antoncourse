@@ -1,7 +1,7 @@
 <template lang="pug">
-  a.link._outside(:class='mod ? "_"+mod : "" ' :href='href' target='_blank' v-if='outside')
+  a.link._outside(:class='mod ? " "+mod : "" ' :href='href' target='_blank' v-if='outside')
     slot
-  nuxt-link.link(:class='mod ? "_"+mod : "" ' :to='href' v-else="outside")
+  nuxt-link.link(:class='mod ? " "+mod : "" ' :to='href' v-else="outside")
     slot
 </template>
 
@@ -72,4 +72,16 @@ export default {
     &:hover
       background $acsent
       color $bg
+  &._icon
+    position relative
+    display flex
+    &:after
+      content ''
+      width 14px
+      height 14px
+      background url('/img/link_icon.svg') no-repeat
+      background-size contain
+      margin-left 17px
+      display block
+      transition $transition
 </style>

@@ -1,11 +1,11 @@
 <template lang="pug">
   .socials
     .socials__item
-      Link(outside=true href='#' mod='socials') инстаграм
+      Link(outside=true href='#' mod='_socials') инстаграм
     .socials__item
-      Link(outside=true href='#' mod='socials') группа помощи
+      Link(outside=true href='#' mod='_socials') группа помощи
     .socials__item
-      Link(outside=true href='#' mod='socials') ютуб канал
+      Link(outside=true href='#' mod='_socials') ютуб канал
 </template>
 
 <script>
