@@ -1,8 +1,12 @@
 <template lang="pug">
   a.link._outside(:class='mod ? " "+mod : "" ' :href='href' target='_blank' v-if='outside')
-    slot
+    span
+      slot
+    svg-icon(name="link_icon" v-if="icon")
   nuxt-link.link(:class='mod ? " "+mod : "" ' :to='href' v-else="outside")
-    slot
+    span
+      slot
+    svg-icon(name="link_icon" v-if="icon")
 </template>
 
 <script>
@@ -19,6 +23,10 @@ export default {
     outside: {
       type: Boolean,
       required: true,
+    },
+    icon: {
+      type: Boolean,
+      required: false,
     },
   },
 }
@@ -43,7 +51,7 @@ export default {
       background-size contain
       margin-left 14px
       position absolute
-      right -14px
+      right -17px
       top 50%
       transform translateY(-50%)
       opacity 0
@@ -61,27 +69,28 @@ export default {
     justify-content center
     align-items center
     font-size 24px
-    line-height 32px
+    line-height unset
     letter-spacing 0.02em
     color $acsent
     border 2px solid $acsent
     transition $transition
     @media $md_minus
       font-size 16px
-      line-height 32px
     &:hover
       background $acsent
       color $bg
+      & svg
+        color $white
+    & span
+      line-height 40px
   &._icon
     position relative
     display flex
-    &:after
-      content ''
-      width 14px
-      height 14px
-      background url('/img/link_icon.svg') no-repeat
-      background-size contain
+    align-items center
+    & svg
+      max-width 14px
+      max-height 14px
+      color $acsent
       margin-left 17px
-      display block
       transition $transition
 </style>
