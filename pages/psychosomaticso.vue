@@ -201,12 +201,16 @@ export default {
 
 .course
   margin-top 32px
+  margin-bottom 240px
   @media $md_minus
     margin-top 48px
+    margin-bottom 155px
   @media $sm_minus
     margin-top 40px
+    margin-bottom 298px
   @media $xs
     margin-top 8px
+    margin-bottom 208px
   &__fromWhom
     margin-top 160px
     @media $sm_minus
