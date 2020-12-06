@@ -23,6 +23,7 @@
     "nuxt": "^2.14.6",
     "postcss-preset-env": "^6.7.0",
     "reset-css": "^5.0.1",
+    "vue-scrollto": "^2.20.0",
     "vue-silentbox": "^2.2.2",
     "vue-slick-carousel": "^1.0.6"
   },

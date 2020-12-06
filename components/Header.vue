@@ -1,5 +1,5 @@
 <template lang="pug">
-  .header.container
+  .header.container(ref='header')
     nuxt-link.header__logo(to='/')
       span Антон
       span Антонов

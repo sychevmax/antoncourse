@@ -48,6 +48,7 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
+    ['vue-scrollto/nuxt', { duration: 300 }],
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

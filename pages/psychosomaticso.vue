@@ -258,7 +258,7 @@ export default {
   &__faq
     margin-top 248px
     @media $sm_minus
-      margin-top 80px
+      margin-top 168px
     @media $xs
       margin-top 136px
 .courseProgram
@@ -437,25 +437,6 @@ export default {
       margin-top 48px
     @media $xs
       margin-top 0
-    &:before
-      content ''
-      width 414.41px
-      height 411.94px
-      position absolute
-      left 27%
-      top -42px
-      border-radius 50%
-      background linear-gradient(180deg, #E5EAE7 0%, rgba(229, 234, 231, 0) 100%)
-      mix-blend-mode multiply
-      opacity 0.9
-      transform rotate(120deg)
-      @media $md_minus
-        width 292.03px
-        height 290.29px
-        left 16%
-      @media $sm_minus
-        width 360.6px
-        height 358.45px
     & img
       position relative
       z-index 2
@@ -738,13 +719,18 @@ export default {
       border none
       padding 0
     &:before
-      @media $xs
+      @media $sm_minus
         content ''
         position absolute
-        left -43px
-        top 0
-        width 80px
-        height 64px
+        left -51px
+        top 41px
+        width 130px
+        height 104px
         background url('/img/about/quotes_icon.svg') no-repeat
         background-size contain
+      @media $xs
+        width 80px
+        height 64px
+        top 0
+        left -43px
 </style>

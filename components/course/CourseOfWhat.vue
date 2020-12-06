@@ -44,6 +44,10 @@ export default {
       line-height 40px
       width 100%
   &__item
+    display flex
+    flex-direction column
+    align-items baseline
+    justify-content center
     @media $md_minus
       margin-bottom 106px
     @media $sm_minus

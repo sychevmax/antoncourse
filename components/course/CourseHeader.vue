@@ -65,8 +65,13 @@ export default {}
   &__img
     margin-bottom 8px
     display flex
+    flex-direction column
+    align-items flex-start
+    max-height 448px
     @media $xs
       margin-bottom 0
+    & img
+      object-fit contain
   &__info
     display flex
     flex-direction column

@@ -13,12 +13,12 @@
 
       .indexTop__bottom.gridContainer
         .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._span-xs-1
-          button.indexTop__scroll
+          button.indexTop__scroll(@click="scrollToSecondScreen")
             svg-icon(name="arrow")
         .gridContainer__cell._span-6._offset-6._span-md-6._offset-md-6._span-sm-4._span-xs-2
           .indexTop__socials
             Socials
-    .indexDescr.gridContainer
+    .indexDescr.gridContainer(ref="secondScreen")
       .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._order-md-2._span-sm-4._order-sm-2._span-xs-3
         .indexDescr__text
           p Знаете фразу «все болезни из головы»? И&nbsp;«болезни» — это не только заболевания, а проблемы, страхи, установки. Психосоматический подход помогает по-новому взглянуть на взаимосвязь психики, тела и души. Это позволяет разглядеть истинные причины своих состояний и сделать первый шаг для их изменений.
@@ -68,7 +68,7 @@
       .indexAuthor__row._bottom
         .indexAuthor__col._bottom
           .indexAuthor__more
-            Link(href='about' mod='more' outside=false) подробнее
+            Link(href='about' mod='_more' :outside='false') подробнее
         .indexAuthor__col._bottom
           .indexAuthor__socials
             Socials
@@ -79,7 +79,7 @@
         .h0 Курсы
       .indexCourses__item
         IndexCourse(
-          active=true
+          active
           title='Открытая психосоматика'
           format='Онлайн'
           level='1 ступень'
@@ -89,7 +89,7 @@
           )
       .indexCourses__item
         IndexCourse(
-          active=false
+          :active='false'
           date='запуск в середине декабря'
           title='Практическая психосоматика'
           img='/img/index/course_2.jpg'
@@ -98,7 +98,7 @@
         )
       .indexCourses__item
         IndexCourse(
-          active=false
+          :active='false'
           date='запуск в середине декабря'
           title='Новейшая психосоматика'
           img='/img/index/course_3.jpg'
@@ -120,6 +120,11 @@ export default {
     IndexCourse,
     Link,
     AboutVideo,
+  },
+  methods: {
+    scrollToSecondScreen() {
+      this.$scrollTo(this.$refs.secondScreen, 600)
+    },
   },
 }
 </script>
@@ -224,6 +229,7 @@ export default {
     & svg
       width 28px
       height 28px
+      color $acsent
       @media $xs
         width 18px
         height 18px
