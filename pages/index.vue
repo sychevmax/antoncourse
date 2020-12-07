@@ -3,9 +3,7 @@
     .indexTop
       .indexTop__inner.gridContainer
         .gridContainer__cell._span-6._span-md-6._offset-md-1._span-sm-4
-          .indexTop__title
-            span Готовы <br /> понять <br />
-            | себя?
+          .indexTop__title(v-html="$t('pages.home.indexTopTitle')")
         .indexTop__right
           .indexTop__imgWrap
             img.indexTop__bg(src='/img/index/index_top_bg.png')
@@ -20,24 +18,21 @@
             Socials
     .indexDescr.gridContainer(ref="secondScreen")
       .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._order-md-2._span-sm-4._order-sm-2._span-xs-3
-        .indexDescr__text
-          p Знаете фразу «все болезни из головы»? И&nbsp;«болезни» — это не только заболевания, а проблемы, страхи, установки. Психосоматический подход помогает по-новому взглянуть на взаимосвязь психики, тела и души. Это позволяет разглядеть истинные причины своих состояний и сделать первый шаг для их изменений.
+        .indexDescr__text(v-html="$t('pages.home.indexDescrText')")
       .gridContainer__cell._span-5._offset-7._span-md-6._offset-md-5._order-md-1._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
-        .indexDescr__title Психосоматика — <br /> это&nbsp;новый подход <br /> к&nbsp;осознанности
+        .indexDescr__title(v-html="$t('pages.home.indexDescrTitle')")
     .indexVideos
       .indexVideos__item.gridContainer
-        .indexVideos__title.h0._first отношения
+        .indexVideos__title.h0._first {{ $t('pages.home.indexVideoTitle1') }}
         .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_1.jpg',
           )
-        .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1
-          p Что общего между психосоматикой и&nbsp;отношениями?
+        .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1(v-html="$t('pages.home.indexVideoText1')")
       .indexVideos__item.gridContainer
-        .indexVideos__title.h0._second Здоровье
-        .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2
-          p Как поведение и&nbsp;реакции влияют на здоровье?
+        .indexVideos__title.h0._second {{ $t('pages.home.indexVideoTitle2') }}
+        .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2(v-html="$t('pages.home.indexVideoText2')")
         .indexVideos__video.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
@@ -45,65 +40,61 @@
           )
 
       .indexVideos__item.gridContainer
-        .indexVideos__title.h0._third Деньги
+        .indexVideos__title.h0._third {{ $t('pages.home.indexVideoTitle3') }}
         .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_3.jpg',
           )
-        .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1
-          p Почему внутреннее состояние сказывается на доходе?
+        .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1(v-html="$t('pages.home.indexVideoText3')")
     .indexAuthor
       .indexAuthor__row
         .indexAuthor__col
           .indexAuthor__title
-            h1._acsent Антон Антонов
-          .indexAuthor__text._desktop
-            p Эксперт в области современной психосоматики. Специалист по функциональным изменениям в органах и тканях. Клинический психолог.
+            h1._acsent {{ $t('pages.home.indexAuthorTitle') }}
+          .indexAuthor__text._desktop(v-html="$t('pages.home.indexAuthorText')")
         .indexAuthor__col
           .indexAuthor__img
             img(src='/img/index/index_author.jpg')
-      .indexAuthor__text._mobile
-        p Эксперт в области современной <br /> психосоматики. Специалист по <br /> функциональным изменениям <br /> в органах и тканях. Клинический психолог.
+      .indexAuthor__text._mobile(v-html="$t('pages.home.indexAuthorText')")
       .indexAuthor__row._bottom
         .indexAuthor__col._bottom
           .indexAuthor__more
-            Link(href='about' mod='_more' :outside='false') подробнее
+            Link(href='about' mod='_more' :outside='false') {{ $t('pages.home.indexAuthorBtnText') }}
         .indexAuthor__col._bottom
           .indexAuthor__socials
             Socials
-      .indexAuthor__descr
-        p В психосоматику я пришел через свои болезни, от которых не мог избавиться долгие годы. И когда я увидел, как это работает, то понял, что должен сам передавать эти знания. Я помогаю изменить жизни тех, кто готов меняться и идти вперед.
+      .indexAuthor__descr(v-html="$t('pages.home.indexAuthorDescr')")
     .indexCourses
       .indexCourses__title
-        .h0 Курсы
+        .h0 {{ $t('pages.home.indexCoursesTitle') }}
       .indexCourses__item
         IndexCourse(
           active
-          title='Открытая психосоматика'
-          format='Онлайн'
-          level='1 ступень'
+          :title='$t("pages.courses.openPsychosomatics.title")'
+          :format='$t("pages.courses.openPsychosomatics.format")'
+          :level='$t("pages.courses.openPsychosomatics.level")'
           img='/img/index/course_1.jpg'
-          link='#'
-          text='Знакомство с психосоматикой. На&nbsp;курсе разбираем, как психосоматика влияет на все сферы жизни. Объясняем, как взаимосвязаны болезни, поведение и внутреннее состояние. Учим избавляться от симптомов и&nbsp;помогать не только себе, но и&nbsp;близким, друзьям, клиентам.'
+          link='/openPsychosomaticso'
+          :text='$t("pages.courses.openPsychosomatics.text")'
           )
       .indexCourses__item
         IndexCourse(
           :active='false'
-          date='запуск в середине декабря'
-          title='Практическая психосоматика'
+          :date='$t("pages.courses.practicalPsychosomatics.date")'
+          :title='$t("pages.courses.practicalPsychosomatics.title")'
           img='/img/index/course_2.jpg'
           link='#'
-          text='Углубленная отработка методов. На курсе фокусируемся на практике с людьми: рассказываем, какие методы и инструменты эффективны в разных ситуациях. Учимся практиковать психосоматический подход с клиентами.'
+          :text='$t("pages.courses.practicalPsychosomatics.text")'
         )
       .indexCourses__item
         IndexCourse(
           :active='false'
-          date='запуск в середине декабря'
-          title='Новейшая психосоматика'
+          :date='$t("pages.courses.neotericPsychosomatics.date")'
+          :title='$t("pages.courses.neotericPsychosomatics.title")'
           img='/img/index/course_3.jpg'
           link='#'
-          text='Каждый день я получаю новые знания о психосоматике и готов отдавать вам еще больше. Это курс, который совмещает в себе новые исследования, практические кейсы и иной подход. Скоро вы все узнаете сами.'
+          :text='$t("pages.courses.neotericPsychosomatics.text")'
         )
 
 </template>
@@ -129,10 +120,16 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .index
-  padding-bottom 148px
+  margin-bottom 240px !important
   overflow hidden
+  @media $md_minus
+    margin-bottom 200px !important
+  @media $sm_minus
+    margin-bottom 349px !important
+  @media $xs
+    margin-bottom 212px !important
 .indexTop
   position relative
   padding-top 24px

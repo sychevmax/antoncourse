@@ -49,6 +49,31 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
     ['vue-scrollto/nuxt', { duration: 300 }],
+    ['nuxt-i18n', {
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'i18n_redirected',
+        alwaysRedirect: false,
+        onlyOnRoot: true,
+      },
+      locales: [
+        {
+          name: 'Russian',
+          code: 'ru',
+          iso: 'ru-RU',
+          file: 'ru-RU.js'
+        },
+        {
+          name: 'English',
+          code: 'en',
+          iso: 'en-US',
+          file: 'en-US.js'
+        },
+      ],
+      lazy: true,
+      langDir: 'lang/',
+      defaultLocale: 'ru',
+    }]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

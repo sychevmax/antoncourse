@@ -93,14 +93,19 @@ img
 
 .container
   max-width 1440px
-  padding 0 64px
-  margin 0 auto
+  padding-left 64px
+  padding-right 64px
+  margin-right auto
+  margin-left auto
   @media $md_minus
-    padding 0 44px
+    padding-left 44px
+    padding-right 44px
   @media $sm_minus
-    padding 0 64px
+    padding-left 64px
+    padding-right 64px
   @media $xs
-    padding 0 24px
+    padding-left 24px
+    padding-right 24px
 
 //-- grid system
 .gridContainer
@@ -400,6 +405,12 @@ img
       width 64px
       height 2px
       margin-bottom 40px
+  &._about
+    margin-top 96px
+    @media $md_minus
+      margin-top 48px
+    @media $sm_minus
+      margin-top 0
   &._course
     &:before
       @media $sm_minus

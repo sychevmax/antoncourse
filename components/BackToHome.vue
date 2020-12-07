@@ -1,7 +1,7 @@
 <template lang="pug">
   nuxt-link.backToHome(to="/")
     .backToHome__icon
-    .backToHome__text На главную
+    .backToHome__text {{ $t('goToHome') }}
 </template>
 
 <script>

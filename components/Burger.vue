@@ -1,6 +1,6 @@
 <template lang="pug">
   button.burger
-    .burger__text курсы
+    .burger__text {{$t('header.courseLinkText')}}
     .burger__icon
 </template>
 

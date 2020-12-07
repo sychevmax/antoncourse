@@ -6,41 +6,29 @@
         .aboutTop__img
           img(src='/img/about/about_top_bg.png')
       .gridContainer__cell._span-7._offset-5._span-md-8._span-sm-3._span-xs-3
-        .aboutTop__text В психологию редко приходят те, кому просто интересно. Обычно это люди с болезненным, травматичным прошлым
+        .aboutTop__text {{ $t('pages.about.aboutTopText') }}
     .about_statham
       .aboutStatham.gridContainer
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
-          .aboutBorderText
-            p Я такой же: в детстве был неуправляемым, невротичным, склонным к различным зависимостям.
-            br
-            p Мне было все равно на то, как я живу. Я ввязывался в драки, бил чужие машины, мошенничал и обманывал. И сам не понимал, зачем это делаю. Не осознавал.
-            br
-            p У меня были самые тяжелые зависимости и болезни, с которым обычно не справляются, но я не мог увидеть себя со стороны.
+          .aboutBorderText(v-html="$t('pages.about.stathamText')")
     .aboutEyes
       .gridContainer
         .gridContainer__cell._span-8._offset-2._span-md-9._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
-          .aboutEyes__text Вспомните себя, ведь у каждого из нас то, что нам не нравится в&nbsp;нас самих: поведение, эмоции, зависимости, болезни.
+          .aboutEyes__text(v-html="$t('pages.about.aboutEyeText')")
     .aboutContentBird
       .gridContainer
         .gridContainer__cell._span-5._span-md-5._span-sm-4._order-sm-2._span-xs-3
           img.aboutContentBird__img._first(src='/img/about/about_bird.png')
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
-          .aboutBorderText
-            p Я смирился с тем, что у меня не будет нормальной жизни, как у всех. Но однажды я прошел тест по проективной методике, там нужно было описать животных. Оказалось, что я описывал себя, какой я — так я смог увидеть себя со стороны.
-            br
-            p Это было как удар молнией: я начал чувствовать себя, слышать. И внутри откликалось «Антон, ты можешь больше, ты можешь иначе» — так я постепенно избавился от зависимостей и в 2008 году пришел к психологии.
-            br
-            p В 2014 стал психологом, а в 2018  — клиническим психологом. С 2016 года я помогал людям, но сам не решил главный вопрос — своего здоровья.
+          .aboutBorderText(v-html="$t('pages.about.aboutBirdText1')")
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-3._span-xs-3
-          .aboutBorderText
-            p С 6 лет я страдал заиканием и в 27 лет решил с ним разобраться: читал книги, изучал различные методики, ходил к врачам. В какой-то момент я искал психолога, который мог бы помочь с этим, а нашел не просто психолога, а специалиста по психосоматике. Догадываетесь, что случилось?
+          .aboutBorderText._about(v-html="$t('pages.about.aboutBirdText2')")
         .gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-2._order-sm-5._span-xs-2
           img.aboutContentBird__img._second(src='/img/about/about_bird_2.png')
         .gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-4._offset-sm-2._order-sm-4._span-xs-2._offset-xs-1
           img.aboutContentBird__img._third(src='/img/about/about_bird_3.png')
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-6._span-xs-3
-          .aboutBorderText
-            p После того как я на себе увидел действие метода — понял, что могу объединить свои знания и помогать людям меняться внутренне и физически.
+          .aboutBorderText(v-html="$t('pages.about.aboutBirdText3')")
         .gridContainer__cell._span-7._offset-1._span-md-8._offset-md-0._span-sm-6._order-sm-7._span-xs-3
           .aboutContentBird__video
             AboutVideo(
@@ -48,58 +36,59 @@
               previewSrc='/img/about/about_video_0.jpg',
             )
         .gridContainer__cell._span-3._offset-9._span-md-3._offset-md-9._span-sm-3._offset-sm-2._order-sm-8._span-xs-2._offset-xs-1
-          .aboutContentBird__videoText
-            p Пример работы с&nbsp;симптомом
+          .aboutContentBird__videoText(v-html="$t('pages.about.aboutBirdVideoText')")
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-1._span-sm-4._offset-sm-2._order-sm-9._span-xs-3
-          .aboutBorderText
-            p Мои ученики и клиенты знают, какой именно стресс запускает тот или иной симптом: от простуды до онкологических заболеваний.
+          .aboutBorderText(v-html="$t('pages.about.aboutBirdText4')")
     .aboutVideos
       .gridContainer
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
           AboutVideo(
-            title='мигрень'
-            videoSrc='https://youtu.be/mWyak0g5LLI'
+            :title='$t("pages.about.aboutVideoText1")'
+            videoSrc='https://youtu.be/UKEpIG2vEqw'
             previewSrc='/img/about/about_video_1.jpg',
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
           AboutVideo(
-            title='Аллергия'
-            videoSrc='https://youtu.be/mWyak0g5LLI'
+            :title='$t("pages.about.aboutVideoText2")'
+            videoSrc='https://youtu.be/VUy0LsME1EI'
             previewSrc='/img/about/about_video_2.jpg',
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
           AboutVideo(
-            title='Простуда. ОРВИ или ОРЗ'
-            videoSrc='https://youtu.be/mWyak0g5LLI'
+            :title='$t("pages.about.aboutVideoText3")'
+            videoSrc='https://youtu.be/Eyy_dBJhC9U'
             previewSrc='/img/about/about_video_3.jpg',
           )
     .about_youtube
       .gridContainer
         .gridContainer__cell._span-6._offset-3._span-md-5._offset-md-3._span-sm-4._offset-sm-1
-          p Посмотрите другие видео на&nbsp;
-            a(href='https://youtu.be/mWyak0g5LLI' target='_blank') Ютуб канале
+          p(v-html='$t("pages.about.aboutYoutubeText")')
     .about__road
-      AboutRoad
+      .aboutRoad.gridContainer
+        .aboutRoad__img
+        .gridContainer__cell._span-6._offset-1._span-md-8._span-sm-5._offset-sm-0._span-xs-3
+          .aboutRoad__text(v-html='$t("pages.about.aboutRoadText")')
     .about__mission
-      AboutMission
+      .aboutMission
+        .aboutMission__text(v-html='$t("pages.about.aboutMissionText")')
+        .aboutMission__btn
+          Link(href='#' mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
+        .aboutMission__img
+          img(src='/img/about/misson.png')
 </template>
 
 <script>
-import AboutRoad from '~/components/about/AboutRoad'
-import AboutMission from '~/components/about/AboutMission'
 import AboutVideo from '~/components/about/AboutVideo'
 import BackToHome from '~/components/BackToHome'
 export default {
   components: {
-    AboutMission,
-    AboutRoad,
     AboutVideo,
     BackToHome,
   },
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .about
   padding-bottom 510px
   @media $md_minus
@@ -341,4 +330,141 @@ export default {
     @media $xs
       font-size 16px
       line-height 24px
+.aboutRoad
+  height 400px
+  padding-top 98px
+  position relative
+
+  @media $md_minus
+    padding-top 94px
+
+  @media $sm_minus
+    padding-top 64px
+
+  @media $xs
+    padding-top 50px
+
+  &:before
+    content ''
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background linear-gradient(260.88deg, #F5F7FA 5.97%, rgba(255, 255, 255, 0) 84.26%)
+    mix-blend-mode normal
+    transform matrix(-1, 0, 0, 1, 0, 0)
+    z-index 3
+    width calc(100% + 128px)
+    margin-left -64px
+    @media $md_minus
+      width calc(100% + 88px)
+      margin-left -44px
+    @media $sm_minus
+      width calc(100% + 128px)
+      margin-left -64px
+    @media $xs
+      margin-left -24px
+  &__img
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    z-index 2
+    background url('/img/about/road_bg.jpg') no-repeat
+    background-position-x center
+    background-position-y -550px
+    background-size cover
+    transform scaleX(-1)
+    width calc(100% + 128px)
+    margin-left -64px
+    @media $md_minus
+      background-position-y -420px
+      width calc(100% + 88px)
+      margin-left -44px
+    @media $sm_minus
+      background-position-y -240px
+      width calc(100% + 128px)
+      margin-left -64px
+    @media $xs
+      width calc(100% + 48px)
+      margin-left -24px
+      background-position-y 0
+      background-position-X -50px
+
+  &__text
+    font-size 24px
+    line-height 40px
+    letter-spacing 0.03em
+    position relative
+    z-index 4
+    @media $xs
+      font-size 16px
+      line-height 24px
+.aboutMission
+  position relative
+  padding-left 112px
+  @media $md_minus
+    padding-left 81px
+  @media $sm_minus
+    padding-left 0
+  &__text
+    width 100%
+    max-width 879px
+    font-size 80px
+    line-height 112px
+    font-weight 800
+    letter-spacing 0.05em
+    color transparent
+    text-transform uppercase
+    -webkit-text-stroke-width 2px
+    -webkit-text-stroke-color $acsent
+    z-index 3
+    position relative
+    @media $md_minus
+      width 100%
+    @media $sm_minus
+      font-size 48px
+      line-height 64px
+    @media $xs
+      font-size 24px
+      line-height 40px
+      letter-spacing 0.13em
+      -webkit-text-stroke-width 1px
+    & span
+      color $acsent
+  &__btn
+    width 326px
+    height 96px
+    margin-top 40px
+    position relative
+    z-index 3
+    @media $md_minus
+      width 273px
+    @media $sm_minus
+      width 249px
+    @media $xs
+      margin-top 24px
+      height 80px
+      width 207px
+  &__img
+    position absolute
+    top 41px
+    right 64px
+    width 635px
+    height 738px
+    @media $md_minus
+      right -20%
+      top 42px
+    @media $sm_minus
+      width 404px
+      height 472px
+      right -10%
+      top -117px
+    @media $xs
+      top -144px
+      width 336px
+      height 392px
+      right -30%
 </style>

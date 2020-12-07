@@ -1,9 +1,7 @@
 <template lang="pug">
   .header.container(ref='header')
-    nuxt-link.header__logo(to='/')
-      span Антон
-      span Антонов
-    nuxt-link.header__about(to='/about') об авторе
+    nuxt-link.header__logo(to='/' v-html="$t('header.logo')")
+    nuxt-link.header__about(:to="localePath('about')") {{ $t('header.aboutLinkText') }}
     .header__menu
       Burger
     .header__lang
@@ -21,11 +19,12 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .header
   display flex
   align-items center
   height 136px
+  position relative
   @media $md_minus
     height 89px
   @media $sm_minus
@@ -61,12 +60,26 @@ export default {
     @media $xs
       display none
   &__menu
-    margin-right 120px
+    margin-right 168px
     @media $md_minus
-      margin-right 125px
+      margin-right 173px
     @media $sm_minus
-      margin-right 39px
+      margin-right 87px
     @media $xs
-      margin-right 22px
+      margin-right 70px
       margin-left auto
+  &__lang
+    position absolute
+    right 64px
+    top 43px
+    z-index 10
+    @media $md_minus
+      right 44px
+      top 16px
+    @media $sm_minus
+      right 64px
+      top 19px
+    @media $xs
+      right 24px
+      top 12px
 </style>

@@ -1,11 +1,11 @@
 <template lang="pug">
   .socials
     .socials__item
-      Link(outside href='#' mod='_socials') инстаграм
+      Link(outside href='https://www.instagram.com/antonovpsy/' mod='_socials') {{ $t('socials.instagram') }}
     .socials__item
-      Link(outside href='#' mod='_socials') группа помощи
+      Link(outside href='https://www.instagram.com/antonantonovgroup/' mod='_socials') {{ $t('socials.support') }}
     .socials__item
-      Link(outside href='#' mod='_socials') ютуб канал
+      Link(outside href='https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA' mod='_socials') {{ $t('socials.youtube') }}
 </template>
 
 <script>
@@ -20,8 +20,8 @@ export default {
 <style lang="stylus" scoped>
 .socials
   display flex
-  //justify-content center
-  width auto
+  justify-content space-between
+  width 100%
   @media $xs
     flex-direction column
   &__item

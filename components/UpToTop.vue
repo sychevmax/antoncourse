@@ -2,7 +2,7 @@
   button.upToTop(@click="scrollToTop" :class="show ? '_show' : ''")
     .upToTop__icon
       svg-icon(name='arrow')
-    .upToTop__text наверх
+    .upToTop__text {{ $t('scrollToTop') }}
 </template>
 
 <script>
@@ -14,15 +14,13 @@ export default {
   },
   methods: {
     scrollToTop() {
-      this.$root.$emit('scrollToTop', 'da')
+      this.$root.$emit('scrollToTop')
     },
   },
   mounted() {
     const windowHeight = window.innerHeight
-    console.log('windowHeight', windowHeight)
     window.onscroll = (e) => {
       scrollY > windowHeight ? (this.show = true) : (this.show = false)
-      console.log(e.currentTarget.scrollY)
     }
   },
 }

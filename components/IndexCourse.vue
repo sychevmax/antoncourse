@@ -2,13 +2,13 @@
   .indexCourse
     .indexCourse__header
       .indexCourse__title
-        h1._acsent {{title}}
+        h1._acsent(v-html='title')
       .indexCourse__meta._desktop(v-if="active")
         .indexCourse__info
-          span Формат
+          span {{ $t('courseFormatLabel') }}
           samp {{format}}
         .indexCourse__info
-          span Уровень
+          span {{ $t('courseLevelLabel') }}
           samp {{level}}
       .indexCourse__meta._desktop(v-else="active")
         .indexCourse__info._inactive {{date}}
@@ -20,20 +20,20 @@
       .indexCourse__col
         .indexCourse__meta._mobile(v-if="active")
           .indexCourse__info
-            span Формат
+            span {{ $t('courseFormatLabel') }}
             samp {{format}}
           .indexCourse__info
-            span Уровень
+            span {{ $t('courseLevelLabel') }}
             samp {{level}}
         .indexCourse__meta._mobile(v-else="active")
           .indexCourse__info._inactive {{date}}
         .indexCourse__more._mobile(v-if='active')
-          Link(mod="_more" :href="link" :outside="false") подробнее
+          Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
         .indexCourse__text
           p(v-html='text')
       .indexCourse__col
         .indexCourse__more._desktop(v-if='active')
-          Link(mod="_more" :href="link" :outside="false") подробнее
+          Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
 
 
 </template>
