@@ -1,5 +1,5 @@
 <template lang="pug">
-  nuxt-link.backToHome(:to="localePath('/'")
+  nuxt-link.backToHome(:to="localePath('/')")
     .backToHome__icon
     .backToHome__text {{ $t('goToHome') }}
 </template>
