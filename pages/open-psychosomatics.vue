@@ -28,190 +28,159 @@
             span {{ $t('coursePriceLabel') }}
             samp {{ $t("pages.courses.openPsychosomatics.price") }}
   .course__fromWhom
-    CourseFromWhom
+    .courseFromWhom
+      .courseFromWhom__list.gridContainer
+        .courseFromWhom__title.gridContainer__cell._span-6._offset-1._span-md-9._offset-md-1._span-sm-6._offset-sm-0._span-xs-3 {{ $t('pages.courses.openPsychosomatics.fromWhom.title') }}
+        .courseFromWhom__col.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-1._span-sm-5._offset-sm-1._span-xs-2._offset-xs-1
+          .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.openPsychosomatics.fromWhom.contentCol1")' :key="item.id" v-html="item.body")
+        .courseFromWhom__col._second.gridContainer__cell._span-4._offset-7._span-md-5._offset-md-7._span-sm-5._offset-sm-1._span-xs-2._offset-xs-1
+          .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.openPsychosomatics.fromWhom.contentCol2")' :key="item.id" v-html="item.body")
   .course__fromWhomImage
-    CourseFromWhomImage
+    .courseFromWhomImage
+      .gridContainer
+        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4
+          .courseFromWhomImage__text(v-html='$t("pages.courses.openPsychosomatics.fromWhomImage")')
   .course__ofWhat
-    CourseOfWhat
+    .courseOfWhat
+      .courseOfWhat__inner.gridContainer._courseOfWhat
+        .courseOfWhat__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6._span-xs-3 Из чего состоит курс
+        .courseOfWhat__item.gridContainer__cell._span-2._offset-1._span-md-2._offset-md-2._span-sm-2._offset-sm-0._span-xs-1._first
+          img(src='/img/course_psy/of_what_1.svg')
+          .courseOfWhat__text(v-html='$t("pages.courses.openPsychosomatics.ofWhat[0]")')
+        .courseOfWhat__item._second.gridContainer__cell._span-3._offset-3._span-md-2._offset-md-7._span-sm-2._offset-sm-3._span-xs-1._offset-xs-1._second
+          img(src='/img/course_psy/of_what_2.svg')
+          .courseOfWhat__text(v-html='$t("pages.courses.openPsychosomatics.ofWhat[1]")')
+        .courseOfWhat__item.gridContainer__cell._span-3._offset-6._span-md-3._offset-md-2._span-sm-3._offset-md-0._span-xs-1._offset-xs-0._third
+          img(src='/img/course_psy/of_what_3.svg')
+          .courseOfWhat__text(v-html='$t("pages.courses.openPsychosomatics.ofWhat[2]")')
+        .courseOfWhat__item.gridContainer__cell._span-2._offset-9._span-md-3._offset-md-7._span-sm-3._offset-sm-3._span-xs-1._offset-xs-1._fourth
+          img(src='/img/course_psy/of_what_4.svg')
+          .courseOfWhat__text(v-html='$t("pages.courses.openPsychosomatics.ofWhat[3]")')
   .course__program
     .courseProgram.gridContainer
-      .courseProgram__title.gridContainer__cell._span-12._span-md-8._offset-md-1._span-sm-3 Программа курса
+      .courseProgram__title.gridContainer__cell._span-12._span-md-8._offset-md-1._span-sm-3 {{ $t("pages.courses.openPsychosomatics.program.title") }}
       .courseProgram__inner.gridContainer__cell.gridContainer._rows._span-10._offset-1._span-md-12._span-sm-6
-        .courseProgram__item
-          .courseProgram__num 1
-          .courseProgram__text
-            p Основы психосоматики. <br /> Как устроен организм с&nbsp;позиции эмбриологи, этологии и биологии
-        .courseProgram__item
-          .courseProgram__num 2
-          .courseProgram__text
-            p Этапы всех симптомов и&nbsp;болезней
-        .courseProgram__item
-          .courseProgram__num 3
-          .courseProgram__text
-            p Биологическая латеральность. <br /> ВАКОГ — каналы восприятия
-        .courseProgram__item
-          .courseProgram__num 4
-          .courseProgram__text
-            p Психика. <br /> Сферы реализации. <br /> Структура содержания речи
-        .courseProgram__item
-          .courseProgram__num 5
-          .courseProgram__text
-            p Невербальная коммуникация. О&nbsp;чем говорят позы и жесты
-        .courseProgram__item
-          .courseProgram__num 6
-          .courseProgram__text
-            p Глаза как система доступа
-        .courseProgram__item
-          .courseProgram__num 7
-          .courseProgram__text
-            p Психокинезиология. Реакции тела. Руки
-        .courseProgram__item
-          .courseProgram__num 8
-          .courseProgram__text
-            p Симптом. Запуск. Избавление
-        .courseProgram__item
-          .courseProgram__num 9
-          .courseProgram__text
-            p Запуск рукой, болезнь. Инструмент регрессия и прогрессия
-        .courseProgram__item
-          .courseProgram__num 10
-          .courseProgram__text
-            p Пояснения к инструментам: состояния, вторичная выгода, пять парадоксов мозга
-        .courseProgram__item
-          .courseProgram__num 11
-          .courseProgram__text
-            p Запись <br /> консультации
-        .courseProgram__item
-          .courseProgram__num 12
-          .courseProgram__text
-            p Пояснение <br /> к консультации
+        .courseProgram__item(v-for='item in $t("pages.courses.openPsychosomatics.program.list")' :key='item.num')
+          .courseProgram__num {{ item.num }}
+          .courseProgram__text(v-html='item.body')
   .course__practice
     .coursePractice
       .gridContainer
         .gridContainer__cell._span-4._offset-1._span-md-5._offset-md-1._span-sm-3._span-xs-3
-          .coursePractice__title Как практиковать
+          .coursePractice__title {{ $t("pages.courses.openPsychosomatics.practice.title") }}
         .gridContainer__cell._span-5._offset-6._span-md-5._offset-md-6._span-sm-3._offset-sm-3._span-xs-3
-          .coursePractice__text
-            p На курсе мы разберем практические методы и инструменты. После завершения курса вы сможете отрабатывать их самостоятельно на близких, друзьях. Или вместе с другими участниками в нашем чате в Telegram.
+          .coursePractice__text(v-html='$t("pages.courses.openPsychosomatics.practice.text")')
   .course__lessons
     .courseLessons
       .courseLessons__inner.gridContainer
-        .courseLessons__title Как проходят занятия
-        .courseLessons__text
-          p Рекомендую изучать все уроки последовательно — каждый следующий урок основан на информации предыдущего.
+        .courseLessons__title {{ $t("pages.courses.openPsychosomatics.lessons.title") }}
+        .courseLessons__text(v-html='$t("pages.courses.openPsychosomatics.lessons.text")')
         .courseLessons__img
           img(src='/img/course_psy/lessons_bg.png')
-        .courseLessons__info._first
-          span 15 - 40
-            small мин
-          samp длительность урока
-        .courseLessons__info._second
-          span 1
-            small._year год
-          samp доступа к платформе
-        .courseLessons__info._third
-          samp Уроки размещены на онлайн-платформе Чтобы пройти курс вам нужен интернет, смартфон или ноутбук.
+        .courseLessons__info._first(v-html='$t("pages.courses.openPsychosomatics.lessons.info[0].value")')
+        .courseLessons__info._second(v-html='$t("pages.courses.openPsychosomatics.lessons.info[1].value")')
+        .courseLessons__info._third(v-html='$t("pages.courses.openPsychosomatics.lessons.info[2].value")')
   .course__booking
-    .courseBooking.gridContainer
-      .courseBooking__left.gridContainer__cell._span-5._span-md-12._span-sm-6._span-xs-3
-        .courseBooking__title Запись и&nbsp;оплата
-        .courseBooking__text
-          p Записаться и оплатить курс можно через онлайн-платформу. После оплаты на указанную почту придет логин, пароль и ссылка для входа.
-      .courseBooking__right.gridContainer__cell._span-7._span-md-12._span-sm-6._span-xs-3
-        .courseBooking__name Открытая Психосоматика
-        .courseBooking__type Онлайн-курс
-        .courseBooking__btn
-          Link(mod="_more _icon" href="#" outside icon) записаться
-        .courseBooking__price
-          span Цена
-          samp 30 000 ₽
+    .courseBooking
+      .gridContainer
+        .courseBooking__left.gridContainer__cell._span-5._span-md-12._span-sm-6._span-xs-3
+          .courseBooking__title(v-html='$t("pages.courses.openPsychosomatics.booking.title")')
+          .courseBooking__text(v-html='$t("pages.courses.openPsychosomatics.booking.text")')
+        .courseBooking__right.gridContainer__cell._span-7._span-md-12._span-sm-6._span-xs-3
+          .courseBooking__name(v-html='$t("pages.courses.openPsychosomatics.title")')
+          .courseBooking__type {{ $t("pages.courses.openPsychosomatics.format") }}-{{ $t("courseWord") }}
+          .courseBooking__btn
+            Link(mod="_more _icon" href="#" outside icon) {{ $t('courseBtnBookingText') }}
+          .courseBooking__price
+            span {{ $t("coursePriceLabel") }}
+            samp {{ $t("pages.courses.openPsychosomatics.price") }}
   .course__reviews
     .courseReviews.gridContainer
-      .courseReviews__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6 Отзывы выпускников
+      .courseReviews__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6 {{ $t("pages.courses.openPsychosomatics.reviews.title") }}
       .courseReviews__slider.gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-6
-        Reviews
+        Reviews(
+          :data="reviews",
+          :texts='$t("pages.courses.openPsychosomatics.reviews.items")'
+        )
   .course__faq
     .courseFaq.gridContainer
       .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 Вопрос-ответ
       .courseFaq__list.gridContainer__cell._span-7._offset-4._span-md-10._offset-md-1._span-sm-6._span-xs-3
-        accordion(id="accordion-example-2" :content="faq" multiple)
+        accordion(id="accordion-example-2" :content="faq" :data='$t("pages.courses.openPsychosomatics.faq.data")' multiple)
 </template>
 
 <script>
 import Link from '@/components/Link'
 import BackToHome from '@/components/BackToHome'
-import CourseFromWhom from '@/components/course/CourseFromWhom'
-import CourseFromWhomImage from '@/components/course/CourseFromWhomImage'
-import CourseOfWhat from '@/components/course/CourseOfWhat'
 import Accordion from '@/components/Accordion'
 import Reviews from '@/components/Reviews'
 export default {
   components: {
     Link,
     BackToHome,
-    CourseFromWhom,
-    CourseFromWhomImage,
-    CourseOfWhat,
     Accordion,
     Reviews,
   },
   data() {
     return {
+      reviews: [
+        {
+          id: 1,
+          img: '/img/course_psy/review_1.png',
+          instagramLink: 'https://www.instagram.com/elmielmiee/',
+          instagramName: '@elmielmiee',
+        },
+        {
+          id: 2,
+          img: '/img/course_psy/review_2.png',
+          instagramLink: 'https://www.instagram.com/svetlana__rani/',
+          instagramName: '@svetlana__rani',
+        },
+        {
+          id: 3,
+          img: '/img/course_psy/review_3.png',
+          instagramLink: 'https://www.instagram.com/stacy__moonlightt/',
+          instagramName: '@stacy__moonlightt',
+        },
+        {
+          id: 4,
+          img: '/img/course_psy/review_4.png',
+          instagramLink: 'https://www.instagram.com/anast_asiya1210/',
+          instagramName: '@anast_asiya1210',
+        },
+        {
+          id: 5,
+          img: '/img/course_psy/review_5.png',
+          instagramLink: 'https://www.instagram.com/ylia_ttt/',
+          instagramName: '@ylia_ttt',
+        },
+        {
+          id: 6,
+          img: '/img/course_psy/review_6.png',
+          instagramLink: 'https://www.instagram.com/juliezagoret/',
+          instagramName: '@juliezagoret',
+        },
+      ],
       faq: [
         {
           id: 1,
           active: false,
-          title: 'А что, если курс мне не поможет?',
-          details: `
-            <p>Результаты курса полностью зависят от вас. Если вы готовы
-            принять эту информацию, посмотреть на себя с другой стороны,
-            то все получится. </p>
-          `,
         },
         {
           id: 2,
           active: false,
-          title: `Можно ли после курса практиковать этот метод с клиентами?`,
-          details: `
-            <p>На курсе вы получите начальные знания и инструменты,
-             чтобы помогать не только себе, но и другим людям.
-             Рекомендуем начать постепенно: не спешите использовать все
-             инструменты и знания сразу. И не забывайте, что вы работаете
-             с человеком: окружайте заботой и пониманием.</p>
-          `,
         },
         {
           id: 3,
           active: false,
-          title: `Как начать практиковать психосоматический
-          подход, если еще нет клиентов?`,
-          details: `
-            <p>После курса я создаю группу тех, кто готов работать
-            с моими клиентами. Первый месяц вы будете практиковаться
-             на безвозмездной основе, после ваша работа будет оплачиваться.</p>
-          `,
         },
         {
           id: 4,
           active: false,
-          title: `Расскажите, есть ли чат курса, что в нем
-          будет и как в него попасть?`,
-          details: `
-            <p>В описании к курсу вы найдете ссылку на чат в Telegram.
-            В нем выпускники и ученики курса практикуют инструменты и методы,
-             которые я даю на курсе. участники чата помогают друг другу найти
-             причины их симптомов, делятся полезной информацией. Также в чате
-             вы найдете дополнительные
-             материалы, о которых упоминаем в уроках.</p>
-          `,
         },
         {
           id: 5,
           active: false,
-          title: `Где можно продолжить обучение психосоматике?`,
-          details: `
-            <p>Если вы планируете применять этот подход на практике и хотите еще глубже погрузиться, приходите на курс  <u>«Практическая психосоматика»</u>.</p>
-          `,
         },
       ],
     }
@@ -219,7 +188,7 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus">
 
 .course
   margin-top 32px
@@ -378,6 +347,139 @@ export default {
     @media $xs
       margin-top 0
       height 80px
+.courseFromWhom
+  &__col
+    &._second
+      @media $sm_minus
+        margin-top -32px
+      @media $xs
+        margin-top -40px
+  &__title
+    margin-bottom 96px
+    font-size 48px
+    line-height 150%
+    letter-spacing 0.02em
+    color $charkGrey
+    opacity 0.8
+    @media $sm_minus
+      font-size 32px
+      line-height 48px
+      letter-spacing 0.02em
+    @media $xs
+      margin-bottom 24px
+      font-size 24px
+      line-height 40px
+  &__text
+    margin-bottom 80px
+    @media $sm_minus
+      margin-bottom 64px
+    @media $xs
+      margin-bottom 40px
+.courseFromWhomImage
+  //background url('/img/course_psy/from_whom_img.jpg') no-repeat
+  background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img.jpg') no-repeat
+  mix-blend-mode normal
+  background-position center
+  background-size cover
+  padding 86px 64px 154px
+  min-height 584px
+  width calc(100% + 128px)
+  margin-left -64px
+  @media $md_minus
+    padding 71px 44px 145px
+    width calc(100% + 88px)
+    margin-left -44px
+  @media $sm_minus
+    padding 71px 64px 104px
+    width calc(100% + 128px)
+    margin-left -64px
+    background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img_sm.jpg') no-repeat
+  @media $xs
+    width calc(100% + 48px)
+    margin-left -24px
+    padding 42px 24px 184px
+    min-height 480px
+    background-position 80% bottom
+  &__text
+    color $bg
+
+.courseOfWhat
+  &__title
+    margin-bottom 112px
+    font-size 48px
+    line-height 150%
+    letter-spacing 0.02em
+    color $charkGrey
+    opacity 0.8
+    @media $md_minus
+      margin-bottom 96px
+    @media $sm_minus
+      font-size 32px
+      line-height 48px
+      letter-spacing 0.02em
+      margin-bottom 56px
+    @media $xs
+      margin-bottom 60px
+      font-size 24px
+      line-height 40px
+      width 100%
+  &__item
+    display flex
+    flex-direction column
+    align-items baseline
+    justify-content center
+    @media $md_minus
+      margin-bottom 106px
+    @media $sm_minus
+      margin-bottom 128px
+    @media $xs
+      margin-bottom 85px
+      width 104px
+    &._first
+      @media $xs
+        width 97px
+        margin-right 73px
+      & img
+        @media $xs
+          width 70.92px
+          height 58.46px
+    &._second
+      margin-left 50px
+      @media $md_minus
+        margin-left 0
+      @media $xs
+        width 95px
+        display flex
+        flex-direction column
+        align-items center
+      & img
+        @media $xs
+          width 36.23px
+          height 58.46px
+    &._third
+      @media $xs
+        width 130px
+        margin-right 40px
+      & img
+        @media $xs
+          width 85.29px
+          height 68.55px
+    &._fourth
+      @media $xs
+        width 100px
+      & img
+        @media $xs
+          width 69.04px
+          height 60.7px
+  &__text
+    font-size 16px
+    line-height 24px
+    margin-top 36px
+    text-transform lowercase
+    @media $xs
+      font-size 12px
+      line-height 20px
+
 .courseProgram
   &__inner
     @media $xs

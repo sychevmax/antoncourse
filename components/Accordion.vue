@@ -1,7 +1,7 @@
 <template lang="pug">
   dl.accordion.box( role="presentation")
     accordion-item(
-      v-for="item in content"
+      v-for="item in prepareData"
       :multiple="multiple"
       :item="item"
       :groupId="groupId"
@@ -20,6 +20,10 @@ export default {
       type: Array,
       required: true,
     },
+    data: {
+      type: Array,
+      required: true,
+    },
     multiple: {
       type: Boolean,
       default: false,
@@ -27,8 +31,16 @@ export default {
   },
   data() {
     return {
+      prepareData: [],
       groupId: null,
     }
+  },
+  created() {
+    this.content.map((item, index) => {
+      item.title = this.data[index].title
+      item.details = this.data[index].details
+      this.prepareData.push(item)
+    })
   },
   mounted() {
     this.groupId = this.$el.id

@@ -75,7 +75,7 @@
           :format='$t("pages.courses.openPsychosomatics.format")'
           :level='$t("pages.courses.openPsychosomatics.level")'
           img='/img/index/course_1.jpg'
-          link='/openPsychosomaticso'
+          link='/open-psychosomatics'
           :text='$t("pages.courses.openPsychosomatics.text")'
           )
       .indexCourses__item
