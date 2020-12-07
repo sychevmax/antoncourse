@@ -1,6 +1,6 @@
 <template lang="pug">
   .header.container(ref='header')
-    nuxt-link.header__logo(to='/' v-html="$t('header.logo')")
+    nuxt-link.header__logo(:to="localePath('/')" v-html="$t('header.logo')")
     nuxt-link.header__about(:to="localePath('about')") {{ $t('header.aboutLinkText') }}
     .header__menu
       Burger
