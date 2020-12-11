@@ -1,22 +1,22 @@
 <template lang="pug">
-  .about.container
+  .about
     BackToHome
-    .aboutTop.gridContainer
+    .aboutTop.gridContainer.container
       .gridContainer__cell._span-4._span-md-4._span-sm-3._span-xs-3
         .aboutTop__img
           img(src='/img/about/about_top_bg.png')
       .gridContainer__cell._span-7._offset-5._span-md-8._span-sm-3._span-xs-3
         .aboutTop__text {{ $t('pages.about.aboutTopText') }}
-    .about_statham
+    .about_statham.container
       .aboutStatham.gridContainer
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.stathamText')")
     .aboutEyes
-      .gridContainer
+      .gridContainer.container
         .gridContainer__cell._span-8._offset-2._span-md-9._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
           .aboutEyes__text(v-html="$t('pages.about.aboutEyeText')")
     .aboutContentBird
-      .gridContainer
+      .gridContainer.container
         .gridContainer__cell._span-5._span-md-5._span-sm-4._order-sm-2._span-xs-3
           img.aboutContentBird__img._first(src='/img/about/about_bird.png')
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
@@ -40,7 +40,7 @@
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-1._span-sm-4._offset-sm-2._order-sm-9._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.aboutBirdText4')")
     .aboutVideos
-      .gridContainer
+      .gridContainer.container
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
           AboutVideo(
             :title='$t("pages.about.aboutVideoText1")'
@@ -60,16 +60,16 @@
             previewSrc='/img/about/about_video_3.jpg',
           )
     .about_youtube
-      .gridContainer
+      .gridContainer.container
         .gridContainer__cell._span-6._offset-3._span-md-5._offset-md-3._span-sm-4._offset-sm-1
           p(v-html='$t("pages.about.aboutYoutubeText")')
     .about__road
-      .aboutRoad.gridContainer
-        .aboutRoad__img
-        .gridContainer__cell._span-6._offset-1._span-md-8._span-sm-5._offset-sm-0._span-xs-3
-          .aboutRoad__text(v-html='$t("pages.about.aboutRoadText")')
+      .aboutRoad
+        .gridContainer.container
+          .gridContainer__cell._span-6._offset-1._span-md-8._span-sm-5._offset-sm-0._span-xs-3
+            .aboutRoad__text(v-html='$t("pages.about.aboutRoadText")')
     .about__mission
-      .aboutMission
+      .aboutMission.container
         .aboutMission__text(v-html='$t("pages.about.aboutMissionText")')
         .aboutMission__btn
           Link(href='#' mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
@@ -213,7 +213,7 @@ export default {
     margin-bottom 106px
   &:before
     content ''
-    background url('/img/about/about_eyes.png') no-repeat
+    background url('/img/about/about_eyes.jpg') no-repeat
     background-size cover
     background-position center
     z-index 2
@@ -221,16 +221,7 @@ export default {
     left 0
     height 100%
     position absolute
-    width calc(100% + 128px)
-    margin-left -64px
-    @media $md_minus
-      width calc(100% + 88px)
-      margin-left -44px
-    @media $sm_minus
-      width calc(100% + 128px)
-      margin-left -64px
-    @media $xs
-      margin-left -24px
+    width 100%
   &__text
     position relative
     z-index 3
@@ -351,47 +342,32 @@ export default {
     top 0
     width 100%
     height 100%
-    background linear-gradient(260.88deg, #F5F7FA 5.97%, rgba(255, 255, 255, 0) 84.26%)
-    mix-blend-mode normal
-    transform matrix(-1, 0, 0, 1, 0, 0)
-    z-index 3
-    width calc(100% + 128px)
-    margin-left -64px
-    @media $md_minus
-      width calc(100% + 88px)
-      margin-left -44px
-    @media $sm_minus
-      width calc(100% + 128px)
-      margin-left -64px
-    @media $xs
-      margin-left -24px
-  &__img
-    position absolute
-    left 0
-    top 0
-    width 100%
-    height 100%
     z-index 2
     background url('/img/about/road_bg.jpg') no-repeat
     background-position-x center
-    background-position-y -550px
+    background-position-y bottom
     background-size cover
-    transform scaleX(-1)
-    width calc(100% + 128px)
-    margin-left -64px
     @media $md_minus
-      background-position-y -420px
-      width calc(100% + 88px)
-      margin-left -44px
+      background-size 150%
     @media $sm_minus
-      background-position-y -240px
-      width calc(100% + 128px)
-      margin-left -64px
+      background-size 200%
     @media $xs
-      width calc(100% + 48px)
-      margin-left -24px
       background-position-y 0
-      background-position-X -50px
+      background-size cover
+      background-position-x 58%
+  &:after
+    content ''
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
+    z-index 3
+    background: linear-gradient(260.88deg, #F5F7FA 5.97%, rgba(255, 255, 255, 0) 84.26%);
+    mix-blend-mode: normal
+    transform matrix(-1, 0, 0, 1, 0, 0)
+    @media $xs
+      background linear-gradient(221.93deg, #F5F7FA 24.43%, rgba(255, 255, 255, 0) 99.35%)
 
   &__text
     font-size 24px

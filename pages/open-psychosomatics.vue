@@ -1,8 +1,8 @@
 <template lang="pug">
-.course.container
+.course
   BackToHome
   .course__header
-    .courseHeader
+    .courseHeader.container
       .courseHeader__top.gridContainer
         .courseHeader__title.gridContainer__cell._span-xs-3._order-xs-2(v-html='$t("pages.courses.openPsychosomatics.title")')
         .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._order-sm-2._span-xs-1
@@ -29,7 +29,7 @@
             samp {{ $t("pages.courses.openPsychosomatics.price") }}
   .course__fromWhom
     .courseFromWhom
-      .courseFromWhom__list.gridContainer
+      .courseFromWhom__list.gridContainer.container
         .courseFromWhom__title.gridContainer__cell._span-6._offset-1._span-md-9._offset-md-1._span-sm-6._offset-sm-0._span-xs-3 {{ $t('pages.courses.openPsychosomatics.fromWhom.title') }}
         .courseFromWhom__col.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-1._span-sm-5._offset-sm-1._span-xs-2._offset-xs-1
           .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.openPsychosomatics.fromWhom.contentCol1")' :key="item.id" v-html="item.body")
@@ -37,12 +37,12 @@
           .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.openPsychosomatics.fromWhom.contentCol2")' :key="item.id" v-html="item.body")
   .course__fromWhomImage
     .courseFromWhomImage
-      .gridContainer
+      .gridContainer.container
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4
           .courseFromWhomImage__text(v-html='$t("pages.courses.openPsychosomatics.fromWhomImage")')
   .course__ofWhat
     .courseOfWhat
-      .courseOfWhat__inner.gridContainer._courseOfWhat
+      .courseOfWhat__inner.gridContainer._courseOfWhat.container
         .courseOfWhat__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6._span-xs-3 Из чего состоит курс
         .courseOfWhat__item.gridContainer__cell._span-2._offset-1._span-md-2._offset-md-2._span-sm-2._offset-sm-0._span-xs-1._first
           img(src='/img/course_psy/of_what_1.svg')
@@ -57,22 +57,22 @@
           img(src='/img/course_psy/of_what_4.svg')
           .courseOfWhat__text(v-html='$t("pages.courses.openPsychosomatics.ofWhat[3]")')
   .course__program
-    .courseProgram.gridContainer
-      .courseProgram__title.gridContainer__cell._span-12._span-md-8._offset-md-1._span-sm-3 {{ $t("pages.courses.openPsychosomatics.program.title") }}
+    .courseProgram.gridContainer.container
+      .courseProgram__title.gridContainer__cell._span-11._offset-1._span-md-8._offset-md-1._span-sm-3 {{ $t("pages.courses.openPsychosomatics.program.title") }}
       .courseProgram__inner.gridContainer__cell.gridContainer._rows._span-10._offset-1._span-md-12._span-sm-6
         .courseProgram__item(v-for='item in $t("pages.courses.openPsychosomatics.program.list")' :key='item.num')
           .courseProgram__num {{ item.num }}
           .courseProgram__text(v-html='item.body')
   .course__practice
     .coursePractice
-      .gridContainer
+      .gridContainer.container
         .gridContainer__cell._span-4._offset-1._span-md-5._offset-md-1._span-sm-3._span-xs-3
           .coursePractice__title {{ $t("pages.courses.openPsychosomatics.practice.title") }}
         .gridContainer__cell._span-5._offset-6._span-md-5._offset-md-6._span-sm-3._offset-sm-3._span-xs-3
           .coursePractice__text(v-html='$t("pages.courses.openPsychosomatics.practice.text")')
   .course__lessons
     .courseLessons
-      .courseLessons__inner.gridContainer
+      .courseLessons__inner.gridContainer.container
         .courseLessons__title {{ $t("pages.courses.openPsychosomatics.lessons.title") }}
         .courseLessons__text(v-html='$t("pages.courses.openPsychosomatics.lessons.text")')
         .courseLessons__img
@@ -82,7 +82,7 @@
         .courseLessons__info._third(v-html='$t("pages.courses.openPsychosomatics.lessons.info[2].value")')
   .course__booking
     .courseBooking
-      .gridContainer
+      .gridContainer.container
         .courseBooking__left.gridContainer__cell._span-5._span-md-12._span-sm-6._span-xs-3
           .courseBooking__title(v-html='$t("pages.courses.openPsychosomatics.booking.title")')
           .courseBooking__text(v-html='$t("pages.courses.openPsychosomatics.booking.text")')
@@ -95,7 +95,7 @@
             span {{ $t("coursePriceLabel") }}
             samp {{ $t("pages.courses.openPsychosomatics.price") }}
   .course__reviews
-    .courseReviews.gridContainer
+    .courseReviews.gridContainer.container
       .courseReviews__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6 {{ $t("pages.courses.openPsychosomatics.reviews.title") }}
       .courseReviews__slider.gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-6
         Reviews(
@@ -103,7 +103,7 @@
           :texts='$t("pages.courses.openPsychosomatics.reviews.items")'
         )
   .course__faq
-    .courseFaq.gridContainer
+    .courseFaq.gridContainer.container
       .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 Вопрос-ответ
       .courseFaq__list.gridContainer__cell._span-7._offset-4._span-md-10._offset-md-1._span-sm-6._span-xs-3
         accordion(id="accordion-example-2" :content="faq" :data='$t("pages.courses.openPsychosomatics.faq.data")' multiple)
@@ -381,23 +381,16 @@ export default {
   mix-blend-mode normal
   background-position center
   background-size cover
-  padding 86px 64px 154px
+  padding 86px 0 154px
   min-height 584px
-  width calc(100% + 128px)
-  margin-left -64px
   @media $md_minus
-    padding 71px 44px 145px
-    width calc(100% + 88px)
-    margin-left -44px
+    padding 71px 0 145px
   @media $sm_minus
-    padding 71px 64px 104px
-    width calc(100% + 128px)
-    margin-left -64px
+    padding 71px 0 104px
     background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img_sm.jpg') no-repeat
+    background-size cover
   @media $xs
-    width calc(100% + 48px)
-    margin-left -24px
-    padding 42px 24px 184px
+    padding 42px 0 184px
     min-height 480px
     background-position 80% bottom
   &__text
@@ -483,7 +476,7 @@ export default {
 .courseProgram
   &__inner
     @media $xs
-      display block
+      display block !important
   &__title
     margin-bottom 48px
     font-size 48px
@@ -555,23 +548,15 @@ export default {
         font-size 12px
         line-height 20px
 .coursePractice
-  padding 61px 64px 63px
+  padding 61px 0 63px
   background $darkGray
   color $bg
-  width calc(100% + 128px)
-  margin-left -64px
   @media $md_minus
-    padding 64px 44px 112px
-    width calc(100% + 88px)
-    margin-left -44px
+    padding 64px 0 112px
   @media $sm_minus
-    padding 58px 64px 72px
-    width calc(100% + 128px)
-    margin-left -64px
+    padding 58px 0 72px
   @media $xs
-    padding 46px 24px 84px
-    width calc(100% + 48px)
-    margin-left -24px
+    padding 46px 0 84px
   &__title
     margin-bottom 48px
     font-size 48px
@@ -708,23 +693,40 @@ export default {
 .courseBooking
   border 1px solid $acsent
   border-right none
-  width calc(100% + 128px)
-  margin-left -64px
+  position relative
+  &:before
+    content ''
+    width 43%
+    position absolute
+    top 0
+    left 0
+    height 100%
+    background $acsent
+    @media $md_minus
+      background transparent
+  &:after
+    content ''
+    width 57%
+    position absolute
+    top 0
+    right 0
+    height 100%
+    background $bg
+    @media $md_minus
+      background transparent
+
   @media $md_minus
-    width calc(100% + 88px)
-    margin-left -44px
+    //width calc(100% + 88px)
+    //margin-left -44px
     border none
   @media $sm_minus
-    width calc(100% + 128px)
-    margin-left -64px
+    //width calc(100% + 128px)
+    //margin-left -64px
   @media $xs
-    width calc(100% + 48px)
-    margin-left -24px
-  @media $lg_plus
-    border-right 1px solid $acsent
+    //width calc(100% + 48px)
+    //margin-left -24px
   &__left
-    padding 81px 32px 165px 64px
-    width calc(100% + 32px)
+    padding 81px 0 165px 0
     color $white
     background $acsent
     display grid
@@ -734,28 +736,48 @@ export default {
     ". title title title . "\
     ". text text text text"
     grid-auto-rows max-content
+    position relative
+    z-index 3
+    &:before
+      content ''
+      width calc(100% + 32px)
+      height 100%
+      position absolute
+      top 0
+      left 0
+      background $acsent
+      z-index -1
+      @media $md_minus
+        width calc(100% + 88px)
+        left -44px
+      @media $sm_minus
+        width calc(100% + 128px)
+        left -64px
+      @media $xs
+        width calc(100% + 48px)
+        left -24px
     @media $md_minus
-      padding 65px 44px 73px 44px
+      padding 65px 0 73px 0
       width 100%
       grid-template-columns repeat(12,minmax(0,1fr))
-      gap 32px
+      gap 24px
       grid-template-areas\
       ". title title title . . text text text text text ."
     @media $sm_minus
-      padding 66px 64px 125px 64px
-      gap 24px
+      padding 66px 0 125px 0
+      gap 32px
       grid-template-columns repeat(6,minmax(0,1fr))
       grid-template-areas\
       "title title title text text text"
     @media $xs
-      padding 46px 24px 80px 24px
+      padding 46px 0 80px 0
       gap 40px
       grid-template-columns repeat(3,minmax(0,1fr))
       grid-template-areas\
       "title title title"\
       "text text text"
   &__right
-    padding 81px 64px 165px 0
+    padding 81px 0 165px 0
     display grid
     gap 32px
     grid-template-columns repeat(7,minmax(0,1fr))
@@ -765,8 +787,10 @@ export default {
     ". btn btn btn . price price"
     align-items self-start
     grid-auto-rows max-content
+    position relative
+    z-index 3
     @media $md_minus
-      padding 56px 44px 160px 44px
+      padding 56px 0 160px 0
       grid-template-columns repeat(12,minmax(0,1fr))
       gap 24px
       grid-template-areas\
@@ -774,7 +798,7 @@ export default {
       ". type type type . . . . . . . ."\
       ". btn btn btn btn . . price price . . ."
     @media $sm_minus
-      padding 48px 64px 114px 64px
+      padding 48px 0 114px 0
       grid-template-columns repeat(6,minmax(0,1fr))
       gap 32px
       grid-template-areas\
@@ -782,7 +806,7 @@ export default {
       "type type . . . . "\
       "btn btn btn . price price"
     @media $xs
-      padding 8px 24px 89px 24px
+      padding 8px 0 89px 0
       gap 40px
       grid-template-columns repeat(3,minmax(0,1fr))
       grid-template-areas\
