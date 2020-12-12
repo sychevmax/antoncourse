@@ -17,6 +17,12 @@ export default {
     LangSwitcher,
     Burger,
   },
+  props: {
+    opeMenuFromBurger: {
+      type: Boolean,
+      required: false,
+    },
+  },
 }
 </script>
 

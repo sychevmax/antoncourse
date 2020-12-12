@@ -1,11 +1,28 @@
 <template lang="pug">
-  button.burger
+  button.burger(@click="openMenuToggle")
     .burger__text {{$t('header.courseLinkText')}}
     .burger__icon
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      openMenu: false,
+    }
+  },
+  methods: {
+    openMenuToggle() {
+      this.openMenu ? (this.openMenu = false) : (this.openMenu = true)
+      this.$root.$emit('openMenu', this.openMenu)
+    },
+  },
+  mounted() {
+    this.$root.$on('openMenu', (value) => {
+      this.openMenu = value
+    })
+  },
+}
 </script>
 
 <style lang="stylus" scoped>

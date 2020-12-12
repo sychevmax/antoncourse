@@ -1,5 +1,6 @@
 <template lang="pug">
-  .wrapper(ref="wrapper" @scroll.passive='handleScroll')
+  .wrapper(ref="wrapper" @scroll.passive='handleScroll' :class="openMenu ? '_overflow' : ''")
+    MobileMenu(:open="openMenu")
     Header
     Nuxt
     UpToTop
@@ -8,10 +9,18 @@
 <script>
 import UpToTop from '@/components/UpToTop'
 import Header from '@/components/Header'
+import MobileMenu from '@/components/MobileMenu'
 export default {
   components: {
     UpToTop,
     Header,
+    MobileMenu,
+  },
+  data() {
+    return {
+      openMenu: false,
+      opeMenuFromBurger: false,
+    }
   },
   methods: {
     handleScroll(event) {
@@ -19,11 +28,24 @@ export default {
     },
   },
   mounted() {
-    this.$root.$on('scrollToTop', (da) => {
+    this.$root.$on('scrollToTop', () => {
       this.$scrollTo(this.$refs.wrapper, 600)
+    })
+    this.$root.$on('openMenu', (value) => {
+      this.openMenu = value
+      const body = document.querySelector('body')
+      if (this.openMenu) {
+        body.style.overflow = 'hidden'
+      } else {
+        body.style.overflow = 'auto'
+      }
     })
   },
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+.wrapper
+  &._overflow
+    overflow hidden
+</style>
