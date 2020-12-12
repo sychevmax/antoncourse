@@ -28,6 +28,7 @@
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_1.jpg',
+            hoverEffect
           )
         .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1(v-html="$t('pages.home.indexVideoText1')")
       .indexVideos__item.gridContainer
@@ -37,6 +38,7 @@
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_2.jpg',
+            hoverEffect
           )
 
       .indexVideos__item.gridContainer
@@ -45,6 +47,7 @@
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_3.jpg',
+            hoverEffect
           )
         .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1(v-html="$t('pages.home.indexVideoText3')")
     .indexAuthor
@@ -75,7 +78,7 @@
           :format='$t("pages.courses.openPsychosomatics.format")'
           :level='$t("pages.courses.openPsychosomatics.level")'
           img='/img/index/course_1.jpg'
-          link='/open-psychosomatics'
+          link='/courses/open-psychosomatics'
           :text='$t("pages.courses.openPsychosomatics.text")'
           )
       .indexCourses__item

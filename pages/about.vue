@@ -34,6 +34,7 @@
             AboutVideo(
               videoSrc='https://youtu.be/mWyak0g5LLI'
               previewSrc='/img/about/about_video_0.jpg',
+              :hoverEffect="false"
             )
         .gridContainer__cell._span-3._offset-9._span-md-3._offset-md-9._span-sm-3._offset-sm-2._order-sm-8._span-xs-2._offset-xs-1
           .aboutContentBird__videoText(v-html="$t('pages.about.aboutBirdVideoText')")
@@ -46,18 +47,21 @@
             :title='$t("pages.about.aboutVideoText1")'
             videoSrc='https://youtu.be/UKEpIG2vEqw'
             previewSrc='/img/about/about_video_1.jpg',
+            :hoverEffect="false"
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
           AboutVideo(
             :title='$t("pages.about.aboutVideoText2")'
             videoSrc='https://youtu.be/VUy0LsME1EI'
             previewSrc='/img/about/about_video_2.jpg',
+            :hoverEffect="false"
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
           AboutVideo(
             :title='$t("pages.about.aboutVideoText3")'
             videoSrc='https://youtu.be/Eyy_dBJhC9U'
             previewSrc='/img/about/about_video_3.jpg',
+            :hoverEffect="false"
           )
     .about_youtube
       .gridContainer.container

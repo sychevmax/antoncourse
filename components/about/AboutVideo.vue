@@ -1,6 +1,6 @@
 <template lang="pug">
   .aboutVideo
-    .aboutVideo__video
+    .aboutVideo__video(@mousemove="itemMove" @mouseleave="itemLeave" ref="img" :class="hoverEffect ? '_effect' : ''")
       .aboutVideo__play
         svg-icon(name="video_play")
       silent-box(:image='video')
@@ -26,6 +26,10 @@ export default {
       type: String,
       required: true,
     },
+    hoverEffect: {
+      type: Boolean,
+      required: false,
+    },
   },
   data() {
     return {
@@ -34,6 +38,20 @@ export default {
         thumbnail: this.previewSrc,
       },
     }
+  },
+  methods: {
+    itemMove(e) {
+      console.log('move')
+      const img = this.$refs.img
+      const r = img.getBoundingClientRect()
+      img.style.setProperty('--x', e.clientX - (r.left + Math.floor(r.width / 2)))
+      img.style.setProperty('--y', e.clientY - (r.top + Math.floor(r.height / 2)))
+    },
+    itemLeave(e) {
+      const img = this.$refs.img
+      img.style.setProperty('--x', 0)
+      img.style.setProperty('--y', 0)
+    },
   },
 }
 </script>
@@ -47,6 +65,13 @@ export default {
       color $acsent
   &__video
     position relative
+    display flex
+    will-change transform
+    &._effect
+      & .silentbox-item
+        transition transform calc(var(--base-duration) / 4) var(--base-ease)
+        &:hover
+          transform scale(1.025) translate(calc(var(--x) / var(--d) * 1px), calc(var(--y) / var(--d) * 1px))
   &__title
     font-size 24px
     line-height 36px

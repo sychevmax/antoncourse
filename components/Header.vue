@@ -2,7 +2,8 @@
   .header.container(ref='header')
     nuxt-link.header__logo(:to="localePath('/')" v-html="$t('header.logo')")
     nuxt-link.header__about(:to="localePath('about')") {{ $t('header.aboutLinkText') }}
-    .header__menu
+    nuxt-link.header__courses(:to="localePath('courses')") {{ $t('header.courseLinkText') }}
+    .header__burger
       Burger
     .header__lang
       LangSwitcher
@@ -31,6 +32,7 @@ export default {
     height 80px
   @media $xs
     height 72px
+    justify-content space-between
   &__logo
     color $charkGrey
     letter-spacing 0.02em
@@ -59,15 +61,24 @@ export default {
       margin-right 140px
     @media $xs
       display none
-  &__menu
-    margin-right 168px
+  &__courses
+    margin-right 229px
+    font-size 24px
+    line-height 32px
+    letter-spacing 0.02em
     @media $md_minus
-      margin-right 173px
+      font-size 16px
+      line-height 24px
+      margin-right 245px
     @media $sm_minus
-      margin-right 87px
+      margin-right 142px
     @media $xs
+      display none
+  &__burger
+    display none
+    @media $xs
+      display block
       margin-right 70px
-      margin-left auto
   &__lang
     position absolute
     right 64px

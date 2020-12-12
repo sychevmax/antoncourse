@@ -377,7 +377,7 @@ export default {
       margin-bottom 40px
 .courseFromWhomImage
   //background url('/img/course_psy/from_whom_img.jpg') no-repeat
-  background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img.jpg') no-repeat
+  background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/static/img/course_psy/from_whom_img.jpg') no-repeat
   mix-blend-mode normal
   background-position center
   background-size cover
@@ -387,7 +387,7 @@ export default {
     padding 71px 0 145px
   @media $sm_minus
     padding 71px 0 104px
-    background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img_sm.jpg') no-repeat
+    background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/static/img/course_psy/from_whom_img_sm.jpg') no-repeat
     background-size cover
   @media $xs
     padding 42px 0 184px
@@ -969,7 +969,7 @@ export default {
         top 41px
         width 130px
         height 104px
-        background url('/img/about/quotes_icon.svg') no-repeat
+        background url('/static/img/about/quotes_icon.svg') no-repeat
         background-size contain
       @media $xs
         width 80px
