@@ -416,6 +416,7 @@ export default {
     transform translateY(-60%)
     z-index 3
     top 0
+    pointer-events none
     @media $sm_minus
       transform translateY(-70%)
     &._first
