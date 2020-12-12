@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     itemMove(e) {
-      console.log('move')
       const img = this.$refs.img
       const r = img.getBoundingClientRect()
       img.style.setProperty('--x', e.clientX - (r.left + Math.floor(r.width / 2)))
@@ -66,7 +65,7 @@ export default {
   &__video
     position relative
     display flex
-    will-change transform
+    //will-change transform
     &._effect
       & .silentbox-item
         transition transform calc(var(--base-duration) / 4) var(--base-ease)
