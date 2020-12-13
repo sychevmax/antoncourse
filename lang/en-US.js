@@ -20,19 +20,19 @@ export default {
   courseWord: 'course',
   pages: {
     home: {
-      indexTopTitle: '<span>let’s to<br> explore <br></span>yourself?',
+      indexTopTitle: '<span>Are you <br> ready to explore</span> yourself?',
       indexDescrTitle: 'Psychosomatics <br> is a new approach <br> to mindfulness',
-      indexDescrText: '<p>You are probably familiar with the saying “all illnesses come from your imagination”? And illnesses are not just diseases, but also problems, fears, attitudes. The psychosomatic approach helps take a fresh look at how psyche, body, and soul are interconnected. It allows you to identify actual reasons for your conditions and take the first step towards changing them.</p>',
+      indexDescrText: '<p>Are you familiar with the expression “all diseases are created by the mind”? And “diseases” are not just illnesses, but also problems, fears and attitudes. The psychosomatic approach helps take a fresh look at how psyche, body, and soul are interconnected. It allows you to identify the actual causes of your conditions and take the first step towards changing them.</p>',
       indexVideoTitle1: 'relationships',
       indexVideoText1: '<p>What do psychosomatics and&nbsp;relationships have in common? </p>',
       indexVideoTitle2: 'health',
-      indexVideoText2: '<p>What effect do behavior and&nbsp;reactions have on&nbsp;your health?</p>',
+      indexVideoText2: '<p>What are the effects of behavior and reactions on your health?</p>',
       indexVideoTitle3: 'money',
-      indexVideoText3: '<p>Why does the inner state impact your&nbsp;income?</p>',
+      indexVideoText3: '<p>Why does the inner emotional state impact your income?</p>',
       indexAuthorTitle: 'Anton Antonov',
       indexAuthorText: '<p>Expert in the field of modern psychosomatics. Specialist in functional changes in body organs and tissues. Clinical psychologist.</p>',
       indexAuthorBtnText: 'more',
-      indexAuthorDescr: '<p>I became engaged in psychosomatics through my own illnesses that I had not been able to get free of for many years.  When I saw how it actually works, I realized that I have to pass on this knowledge. I help change the lives of those of you who are ready to change and move forward.</p>',
+      indexAuthorDescr: '<p>I became engaged in psychosomatics through my own illnesses that I could not get rid of for many years. And when I witnessed how it worked, I realized I had to pass on this knowledge. I help change the lives of those who are ready to change and move forward.</p>',
       indexCoursesTitle: 'Courses',
     },
     about: {
@@ -111,11 +111,11 @@ export default {
         format: 'Online',
         level: 'Elementary',
         text: `
-          Introduction to psychosomatics. <br> In this course, we break
-          down how psychosomatics affects all aspects of our lives.
-          We explain in what way illnesses, behavior, and inner states
-          are connected. We teach you to get free of the symptoms and help
-          not only yourself but also your close ones, friends, and colleagues.
+          Introduction to psychosomatics. <br>In this course, we break down
+          how psychosomatics affects all aspects of our lives. We explain
+          in what way illnesses, behavior, and inner emotional states are
+          interrelated. We teach you to get rid of symptoms and help not
+          only yourself but also your close ones, friends, and clients.
         `,
         price: '30,000 rubles',
         fromWhom: {
@@ -158,6 +158,7 @@ export default {
           negative behaviors, and emotions.
           </p>
         `,
+        ofWhatTitle: 'This course comprises',
         ofWhat: [`lessons`, `hours of <br> practical training`, `Chat for exercising instruments <br> and communication`, `Certificate of completion`],
         program: {
           title: 'Course program',
@@ -425,12 +426,18 @@ export default {
       practicalPsychosomatics: {
         title: 'Practical <br> psychosomatics',
         date: 'starts in mid-December ',
-        text: 'In-depth training of our methods. In the course we focus on practicing with people: we explain which methods and instruments are the most efficient in various situations. We learn to practice the psychosomatic approach with clients.',
+        text: `In-depth training of our methods. In the course we focus on
+        practicing with people: we explain which methods and instruments
+        are the most efficient in different situations. We learn to
+        practice the psychosomatic approach with clients.`,
       },
       neotericPsychosomatics: {
         title: 'neoteric <br> psychosomatics ',
         date: 'starts in mid-December ',
-        text: 'I acquire new knowledge about psychosomatics on a daily basis and I am ready to share with you even more. This course combines the latest research, practical cases, and a new approach. You will learn everything for yourself soon enough.',
+        text: `I acquire new knowledge about psychosomatics on a daily basis
+        and I am ready to share with you even more. This course combines
+        the latest research, practical cases, and a new approach.
+        You’ll soon find out for yourself.`,
       },
     },
   },

@@ -43,7 +43,7 @@
   .course__ofWhat
     .courseOfWhat
       .courseOfWhat__inner.gridContainer._courseOfWhat.container
-        .courseOfWhat__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6._span-xs-3 Из чего состоит курс
+        .courseOfWhat__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6._span-xs-3 {{ $t("pages.courses.openPsychosomatics.ofWhatTitle") }}
         .courseOfWhat__item.gridContainer__cell._span-2._offset-1._span-md-2._offset-md-2._span-sm-2._offset-sm-0._span-xs-1._first
           img(src='/img/course_psy/of_what_1.svg')
           .courseOfWhat__text(v-html='$t("pages.courses.openPsychosomatics.ofWhat[0]")')

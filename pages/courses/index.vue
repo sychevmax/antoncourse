@@ -7,7 +7,7 @@
           CourseItem(
             imgSrc="/img/courses/1.jpg"
             :title="$t('pages.courses.openPsychosomatics.title')"
-            link="/courses/open-psychosomatics"
+            :link="localePath('/courses/open-psychosomatics')"
             active
           )
       .gridContainer__cell._span-4._span-md-4._span-sm-6._span-xs-3

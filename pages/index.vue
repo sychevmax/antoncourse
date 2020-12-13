@@ -78,7 +78,7 @@
           :format='$t("pages.courses.openPsychosomatics.format")'
           :level='$t("pages.courses.openPsychosomatics.level")'
           img='/img/index/course_1.jpg'
-          link='/courses/open-psychosomatics'
+          :link="localePath('/courses/open-psychosomatics')"
           :text='$t("pages.courses.openPsychosomatics.text")'
           )
       .indexCourses__item
@@ -150,7 +150,7 @@ export default {
     font-weight 800
     letter-spacing 0.03em
     color $acsent
-    z-index 7
+    z-index 9
     position relative
     @media $md_minus
       font-size 80px
