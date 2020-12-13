@@ -28,14 +28,18 @@ export default {
   methods: {
     itemMove(e) {
       const img = this.$refs.img
-      const r = img.getBoundingClientRect()
-      img.style.setProperty('--x', e.clientX - (r.left + Math.floor(r.width / 2)))
-      img.style.setProperty('--y', e.clientY - (r.top + Math.floor(r.height / 2)))
+      if (img) {
+        const r = img.getBoundingClientRect()
+        img.style.setProperty('--x', e.clientX - (r.left + Math.floor(r.width / 2)))
+        img.style.setProperty('--y', e.clientY - (r.top + Math.floor(r.height / 2)))
+      }
     },
     itemLeave(e) {
       const img = this.$refs.img
-      img.style.setProperty('--x', 0)
-      img.style.setProperty('--y', 0)
+      if (img) {
+        img.style.setProperty('--x', 0)
+        img.style.setProperty('--y', 0)
+      }
     },
   },
 }

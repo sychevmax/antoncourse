@@ -19,7 +19,10 @@ export default {
     ],
 
   },
-
+  pageTransition: {
+    name: 'overlay-right-full',
+    mode: 'out-in',
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'reset-css/reset.css',

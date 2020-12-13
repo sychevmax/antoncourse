@@ -3,6 +3,8 @@
     MobileMenu(:open="openMenu")
     Header
     Nuxt
+    .overlay-right
+    .overlay-left
     UpToTop
 </template>
 
@@ -22,11 +24,6 @@ export default {
       opeMenuFromBurger: false,
     }
   },
-  methods: {
-    handleScroll(event) {
-      console.log(event.target.scrollTop)
-    },
-  },
   mounted() {
     this.$root.$on('scrollToTop', () => {
       this.$scrollTo(this.$refs.wrapper, 600)
@@ -40,6 +37,11 @@ export default {
         body.style.overflow = 'auto'
       }
     })
+  },
+  methods: {
+    handleScroll(event) {
+      console.log(event.target.scrollTop)
+    },
   },
 }
 </script>

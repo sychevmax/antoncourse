@@ -429,3 +429,119 @@ img
       font-size 16px
       line-height 24px
       letter-spacing 0.03em
+
+:root
+  --overlay-bg $acsent
+  --transition-duration .35s
+
+
+.overlay-right
+  position fixed
+  top 0
+  left 0
+  height 100vh
+  width 0
+  background var(--overlay-bg)
+  transition-duration var(--transition-duration)
+  z-index 500
+
+.overlay-right-enter ~ .overlay-right,
+.overlay-right-leave-to ~ .overlay-right
+  width 0
+
+.overlay-right-enter-active ~ .overlay-right,
+.overlay-right-leave-active ~ .overlay-right
+  width 100vw
+
+.overlay-right-enter-active ~ .overlay-right
+  transition-timing-function ease-in
+
+.overlay-right-leave-active ~ .overlay-right
+  transition-timing-function ease-out
+
+.overlay-right-enter-active,
+.overlay-right-leave-active
+  transition-duration var(--transition-duration)
+
+.overlay-left
+  position fixed
+  top 0
+  right 0
+  height 100vh
+  width 0
+  background var(--overlay-bg)
+  transition-duration .35s
+  z-index 500
+
+
+.overlay-left-enter ~ .overlay-left,
+.overlay-left-leave-to ~ .overlay-left
+  width 0
+
+.overlay-left-enter-active ~ .overlay-left,
+.overlay-left-leave-active ~ .overlay-left
+  width 100vw
+
+.overlay-left-enter-active ~ .overlay-left
+  transition-timing-function ease-in
+
+.overlay-left-leave-active ~ .overlay-left
+  transition-timing-function ease-out
+
+.overlay-left-enter-active,
+.overlay-left-leave-active
+  transition-duration 1s
+
+.overlay-right-full-enter ~ .overlay-left
+  width 100vw
+
+.overlay-right-full-enter-active ~ .overlay-left,
+.overlay-right-full-leave-active ~ .overlay-left
+  width 100vw
+
+.overlay-right-full-enter-active ~ .overlay-left
+  transition-timing-function ease-in
+
+
+.overlay-right-full-enter-active ~ .overlay-left,
+.overlay-right-full-enter-to ~ .overlay-left
+  display none
+
+.overlay-right-full-enter-to ~ .overlay-right
+  width 0
+
+.overlay-right-full-leave-active ~ .overlay-right
+  transition-timing-function ease
+
+.overlay-right-full-enter ~ .overlay-right,
+.overlay-right-full-enter-active ~ .overlay-right,
+.overlay-right-full-enter-to ~ .overlay-right
+  transition-duration unset !important
+  width 100vw
+
+.overlay-right-full-enter-active
+  // animation translate-in 0.8s
+  transition-duration var(--transition-duration)
+
+.overlay-right-full-leave-active
+  transition-duration var(--transition-duration)
+  animation translate-out 0.8s
+
+
+@keyframes overlay-in
+  0%
+    transform translateX(100%)
+  100%
+    transform translateX(-100%)
+
+@keyframes translate-in
+  0%
+    transform translateX(200px)
+  100%
+    transform translateX(0px)
+
+@keyframes translate-out
+  0%
+    transform translateX(0px)
+  100%
+    transform translateX(-200px)
