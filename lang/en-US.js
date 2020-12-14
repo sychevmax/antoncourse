@@ -10,6 +10,12 @@ export default {
     support: 'support',
     youtube: 'youtube',
   },
+  preloaderText: `
+    <div class="preloader__text _en _first">Are you</div>
+    <div class="preloader__text _en _second">Ready to</div>
+    <div class="preloader__text _en _third">Explore</div>
+    <div class="preloader__text _en _fourth">Yourself?</div>
+  `,
   courseFormatLabel: 'form',
   courseLevelLabel: 'level',
   coursePriceLabel: 'price',

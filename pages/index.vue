@@ -1,9 +1,9 @@
 <template lang="pug">
   .index.container
     .indexTop
-      .indexTop__inner.gridContainer
+      .indexTop__inner.gridContainer(ref="indexTitleParent")
         .gridContainer__cell._span-6._span-md-6._offset-md-1._span-sm-4
-          .indexTop__title(v-html="$t('pages.home.indexTopTitle')")
+          .indexTop__title(v-html="$t('pages.home.indexTopTitle')" ref="indexTitle")
         .indexTop__right
           .indexTop__imgWrap
             img.indexTop__bg(src='/img/index/index_top_bg.png')
@@ -119,6 +119,14 @@ export default {
     scrollToSecondScreen() {
       this.$scrollTo(this.$refs.secondScreen, 600)
     },
+  },
+  mounted() {
+    const title = this.$refs.indexTitle
+    const titleParent = this.$refs.indexTitleParent
+    const titleBox = title.getBoundingClientRect()
+    const titleParentBox = titleParent.getBoundingClientRect()
+    const leftPosTitle = titleBox.left - titleParentBox.left
+    this.$root.$emit('titleReady', leftPosTitle)
   },
 }
 </script>

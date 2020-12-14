@@ -10,6 +10,11 @@ export default {
     support: 'группа помощи',
     youtube: 'ютуб канал',
   },
+  preloaderText: `
+    <div class="preloader__text _ru _first">Готовы</div>
+    <div class="preloader__text _ru _second">Понять</div>
+    <div class="preloader__text _ru _third">Себя?</div>
+  `,
   courseFormatLabel: 'формат',
   courseLevelLabel: 'уровень',
   coursePriceLabel: 'цена',

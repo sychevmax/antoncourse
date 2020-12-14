@@ -1,5 +1,6 @@
 <template lang="pug">
   .wrapper(ref="wrapper" @scroll.passive='handleScroll' :class="openMenu ? '_overflow' : ''")
+    Preloader
     MobileMenu(:open="openMenu")
     Header
     Nuxt
@@ -12,11 +13,13 @@
 import UpToTop from '@/components/UpToTop'
 import Header from '@/components/Header'
 import MobileMenu from '@/components/MobileMenu'
+import Preloader from '@/components/Preloader'
 export default {
   components: {
     UpToTop,
     Header,
     MobileMenu,
+    Preloader,
   },
   data() {
     return {
