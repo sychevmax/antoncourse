@@ -109,13 +109,13 @@ export default {
     left 50%
     transform translateX(-50%)
     &._index
-      animation wordsAnimation1440 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
+      animation wordsAnimation1440 1.5s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
       @media $md_minus
-        animation wordsAnimation1024 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
+        animation wordsAnimation1024 1.5s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
       @media $sm_minus
-        animation wordsAnimation768 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
+        animation wordsAnimation768 1.5s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
       @media $xs
-        animation wordsAnimation320 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
+        animation wordsAnimation320 1.5s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
   &__text
     font-size 112px
     text-transform uppercase
