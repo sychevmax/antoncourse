@@ -11,10 +11,9 @@ export default {
     youtube: 'youtube',
   },
   preloaderText: `
-    <div class="preloader__text _en _first">Are you</div>
-    <div class="preloader__text _en _second">Ready to</div>
-    <div class="preloader__text _en _third">Explore</div>
-    <div class="preloader__text _en _fourth">Yourself?</div>
+    <div class="preloader__text _en _first">Ready to</div>
+    <div class="preloader__text _en _second">explore</div>
+    <div class="preloader__text _en _third">yourself?</div>
   `,
   courseFormatLabel: 'form',
   courseLevelLabel: 'level',
@@ -26,7 +25,7 @@ export default {
   courseWord: 'course',
   pages: {
     home: {
-      indexTopTitle: '<span>Are you <br> ready to explore</span> yourself?',
+      indexTopTitle: '<span>Ready to<br>explore</span> yourself?',
       indexDescrTitle: 'Psychosomatics <br> is a new approach <br> to mindfulness',
       indexDescrText: '<p>Are you familiar with the expression “all diseases are created by the mind”? And “diseases” are not just illnesses, but also problems, fears and attitudes. The psychosomatic approach helps take a fresh look at how psyche, body, and soul are interconnected. It allows you to identify the actual causes of your conditions and take the first step towards changing them.</p>',
       indexVideoTitle1: 'relationships',

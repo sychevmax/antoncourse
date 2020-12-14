@@ -89,7 +89,7 @@ export default {
   background rgba(255,255,255,1)
   z-index 600
   display flex
-  animation preloaderAnimation 1s ease-out 4s 1 normal forwards
+  animation preloaderAnimation 1s ease-out 3s 1 normal forwards
   &._index
     animation preloaderAnimation 1s ease-out 4s 1 normal forwards
   &__inner
@@ -109,13 +109,13 @@ export default {
     left 50%
     transform translateX(-50%)
     &._index
-      animation wordsAnimation1440 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
+      animation wordsAnimation1440 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
       @media $md_minus
-        animation wordsAnimation1024 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
+        animation wordsAnimation1024 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
       @media $sm_minus
-        animation wordsAnimation768 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
+        animation wordsAnimation768 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
       @media $xs
-        animation wordsAnimation320 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
+        animation wordsAnimation320 1s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
   &__text
     font-size 112px
     text-transform uppercase
@@ -140,21 +140,11 @@ export default {
     @media $xs
       font-size 40px
       line-height 48px
-    &._ru
-      &._first,
-      &._second
-        color transparent
-        -webkit-text-stroke-width 2px
-        -webkit-text-stroke-color $acsent
-        @media $xs
-          -webkit-text-stroke-width 1px
-    &._en
-      &._first,
-      &._second,
-      &._third
-        color transparent
-        -webkit-text-stroke-width 2px
-        -webkit-text-stroke-color $acsent
-        @media $xs
-          -webkit-text-stroke-width 1px
+    &._first,
+    &._second
+      color transparent
+      -webkit-text-stroke-width 2px
+      -webkit-text-stroke-color $acsent
+      @media $xs
+        -webkit-text-stroke-width 1px
 </style>
