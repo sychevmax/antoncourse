@@ -23,7 +23,15 @@
         .indexDescr__title(v-html="$t('pages.home.indexDescrTitle')")
     .indexVideos
       .indexVideos__item.gridContainer
-        .indexVideos__title.h0._first {{ $t('pages.home.indexVideoTitle1') }}
+        .indexVideos__title.h0._first
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-50"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              div {{ $t('pages.home.indexVideoTitle1') }}
         .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
@@ -32,7 +40,15 @@
           )
         .indexVideos__text.gridContainer__cell._span-3._offset-7._span-md-4._offset-md-8._span-sm-3._span-xs-2._offset-xs-1(v-html="$t('pages.home.indexVideoText1')")
       .indexVideos__item.gridContainer
-        .indexVideos__title.h0._second {{ $t('pages.home.indexVideoTitle2') }}
+        .indexVideos__title.h0._second
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-30"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              div {{ $t('pages.home.indexVideoTitle2') }}
         .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2(v-html="$t('pages.home.indexVideoText2')")
         .indexVideos__video.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
           AboutVideo(
@@ -42,7 +58,15 @@
           )
 
       .indexVideos__item.gridContainer
-        .indexVideos__title.h0._third {{ $t('pages.home.indexVideoTitle3') }}
+        .indexVideos__title.h0._third
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-50"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              div {{ $t('pages.home.indexVideoTitle3') }}
         .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
@@ -58,7 +82,14 @@
           .indexAuthor__text._desktop(v-html="$t('pages.home.indexAuthorText')")
         .indexAuthor__col
           .indexAuthor__img
-            img(src='/img/index/index_author.jpg')
+            KinesisContainer(event="scroll" :duration="100")
+              KinesisElement(
+                tag="img"
+                src="/img/index/index_author.jpg"
+                :strength="-100"
+                transformOrigin="50% 300%"
+                axis="y"
+                type="translate")
       .indexAuthor__text._mobile(v-html="$t('pages.home.indexAuthorText')")
       .indexAuthor__row._bottom
         .indexAuthor__col._bottom
@@ -102,6 +133,7 @@
 
 </template>
 <script>
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 import Socials from '~/components/Socials'
 import IndexVideoBlock from '~/components/IndexVideoBlock'
 import IndexCourse from '~/components/IndexCourse'
@@ -109,6 +141,8 @@ import Link from '~/components/Link'
 import AboutVideo from '~/components/about/AboutVideo'
 export default {
   components: {
+    KinesisContainer,
+    KinesisElement,
     Socials,
     IndexVideoBlock,
     IndexCourse,
@@ -132,6 +166,13 @@ export default {
 </script>
 
 <style lang="stylus">
+@keyframes jumpScroll
+  0%
+    transform translateY(0px)
+  50%
+    transform translateY(16px)
+  100%
+    transform translateY(0px)
 .index
   margin-bottom 240px !important
   overflow hidden
@@ -238,6 +279,7 @@ export default {
       width 28px
       height 28px
       color $acsent
+      animation jumpScroll 3s ease-out 6s 2
       @media $xs
         width 18px
         height 18px

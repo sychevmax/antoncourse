@@ -2,7 +2,14 @@
   .indexCourse
     .indexCourse__header
       .indexCourse__title
-        h1._acsent(v-html='title')
+        KinesisContainer(event="scroll" :duration="100")
+          KinesisElement(
+            tag="div"
+            :strength="-150"
+            transformOrigin="50% 300%"
+            axis="y"
+            type="translate")
+            h1._acsent(v-html='title')
       .indexCourse__meta._desktop(v-if="active")
         .indexCourse__info
           span {{ $t('courseFormatLabel') }}
@@ -14,7 +21,14 @@
         .indexCourse__info._inactive {{date}}
 
       .indexCourse__img
-        img(:src='img')
+        KinesisContainer(event="scroll" :duration="100")
+          KinesisElement(
+            tag="img"
+            :src="img"
+            :strength="-100"
+            transformOrigin="50% 300%"
+            axis="y"
+            type="translate")
 
     .indexCourse__row
       .indexCourse__col
@@ -39,9 +53,12 @@
 </template>
 
 <script>
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 import Link from '~/components/Link'
 export default {
   components: {
+    KinesisContainer,
+    KinesisElement,
     Link,
   },
   props: {
@@ -111,6 +128,7 @@ export default {
     top 50%
     transform translateY(-50%)
     left 0
+    z-index 3
     @media $md_minus
       top unset
       bottom 0
@@ -151,6 +169,8 @@ export default {
   &__img
     width 60%
     padding-left 32px
+    position relative
+    z-index 0
     @media $md_minus
       width 64%
     @media $sm_minus

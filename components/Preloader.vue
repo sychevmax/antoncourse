@@ -91,7 +91,7 @@ export default {
   display flex
   animation preloaderAnimation 1s ease-out 3s 1 normal forwards
   &._index
-    animation preloaderAnimation 1s ease-out 4s 1 normal forwards
+    animation preloaderAnimation 1s ease-out 4.5s 1 normal forwards
   &__inner
     margin-top calc(136px + 24px)
     width 100%
