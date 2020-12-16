@@ -11,9 +11,15 @@ export default {
     youtube: 'ютуб канал',
   },
   preloaderText: `
-    <div class="preloader__text _ru _first">Готовы</div>
-    <div class="preloader__text _ru _second">Понять</div>
-    <div class="preloader__text _ru _third">Себя?</div>
+    <div class="preloader__text _ru _first">
+      <span>Готовы</span>
+    </div>
+    <div class="preloader__text _ru _second">
+      <span>Понять</span>
+    </div>
+    <div class="preloader__text _ru _third">
+      <span>Себя?</span>
+    </div>
   `,
   courseFormatLabel: 'формат',
   courseLevelLabel: 'уровень',

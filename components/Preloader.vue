@@ -43,13 +43,13 @@ export default {
     pointer-events none
 @keyframes titleAnimation
   0%
-    transform translateY(134px)
+    transform translateY(100%)
     opacity 0
-    clip-path inset(100% 0 0 0)
+    //clip-path inset(100% 0 0 0)
   100%
     transform translateY(0)
     opacity 1
-    clip-path: inset(0 0 0 0)
+    //clip-path: inset(0 0 0 0)
 
 @keyframes wordsAnimation1440
   0%
@@ -125,15 +125,9 @@ export default {
     color $acsent
     z-index 9
     position relative
-    //background $black
-    clip-path inset(0 0 0 0)
-    transform translateY(134px)
-    opacity 0
-    animation-name: titleAnimation
-    animation-timing-function cubic-bezier(0.13, 0.57, 0.01, 0.99)
-    animation-duration 2s
-    animation-delay 1s
-    animation-fill-mode forwards
+    background $white
+    display flex
+    overflow hidden
     @media $md_minus
       font-size 80px
       line-height 96px
@@ -147,4 +141,12 @@ export default {
       -webkit-text-stroke-color $acsent
       @media $xs
         -webkit-text-stroke-width 1px
+    & span
+      display block
+      transform translateY(100%)
+      animation-name: titleAnimation
+      animation-timing-function cubic-bezier(0.13, 0.57, 0.01, 0.99)
+      animation-duration 2s
+      animation-delay 1s
+      animation-fill-mode forwards
 </style>

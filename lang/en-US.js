@@ -11,9 +11,15 @@ export default {
     youtube: 'youtube',
   },
   preloaderText: `
-    <div class="preloader__text _en _first">Ready to</div>
-    <div class="preloader__text _en _second">explore</div>
-    <div class="preloader__text _en _third">yourself?</div>
+    <div class="preloader__text _en _first">
+      <span>Ready to</span>
+    </div>
+    <div class="preloader__text _en _second">
+      <span>explore</span>
+    </div>
+    <div class="preloader__text _en _third">
+      <span>yourself?</span>
+    </div>
   `,
   courseFormatLabel: 'form',
   courseLevelLabel: 'level',

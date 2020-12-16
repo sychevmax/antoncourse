@@ -5,7 +5,7 @@
         KinesisContainer(event="scroll" :duration="100")
           KinesisElement(
             tag="div"
-            :strength="-150"
+            :strength="-50"
             transformOrigin="50% 300%"
             axis="y"
             type="translate")
@@ -25,7 +25,7 @@
           KinesisElement(
             tag="img"
             :src="img"
-            :strength="-100"
+            :strength="-32"
             transformOrigin="50% 300%"
             axis="y"
             type="translate")

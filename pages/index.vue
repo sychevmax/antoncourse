@@ -44,7 +44,7 @@
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
-              :strength="-30"
+              :strength="-50"
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
@@ -62,7 +62,7 @@
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
-              :strength="-50"
+              :strength="-52"
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
@@ -86,7 +86,7 @@
               KinesisElement(
                 tag="img"
                 src="/img/index/index_author.jpg"
-                :strength="-100"
+                :strength="-50"
                 transformOrigin="50% 300%"
                 axis="y"
                 type="translate")
@@ -279,7 +279,7 @@ export default {
       width 28px
       height 28px
       color $acsent
-      animation jumpScroll 3s ease-out 6s 2
+      animation jumpScroll 2s ease-out 6s 2
       @media $xs
         width 18px
         height 18px
@@ -479,7 +479,7 @@ export default {
         left 0
     &._second
       left 50%
-      transform translate(-50%, -70%)
+      transform translate(-50%, -60%)
       @media $md_minus
         left unset
         right 0
@@ -489,7 +489,7 @@ export default {
         left -16px
     &._third
       left 50%
-      transform translate(-50%, -70%)
+      transform translate(-50%, -60%)
       @media $md_minus
         left 108px
         transform translate(0, -70%)
