@@ -39,7 +39,15 @@
     .courseFromWhomImage
       .gridContainer.container
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4
-          .courseFromWhomImage__text(v-html='$t("pages.courses.openPsychosomatics.fromWhomImage")')
+          .courseFromWhomImage__text
+            KinesisContainer(event="scroll" :duration="100")
+              KinesisElement(
+                tag="div"
+                :strength="-128"
+                transformOrigin="50% 300%"
+                axis="y"
+                type="translate")
+                div(v-html='$t("pages.courses.openPsychosomatics.fromWhomImage")')
   .course__ofWhat
     .courseOfWhat
       .courseOfWhat__inner.gridContainer._courseOfWhat.container
@@ -110,12 +118,15 @@
 </template>
 
 <script>
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 import Link from '@/components/Link'
 import BackToHome from '@/components/BackToHome'
 import Accordion from '@/components/Accordion'
 import Reviews from '@/components/Reviews'
 export default {
   components: {
+    KinesisContainer,
+    KinesisElement,
     Link,
     BackToHome,
     Accordion,

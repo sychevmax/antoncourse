@@ -107,4 +107,10 @@ export default {
   & #silentbox-overlay__embed
     height 45vw
     max-height 80%
+  & #silentbox-gallery
+    width 100%
+  & .silentbox-item
+    width 100%
+    & img
+      width 100%
 </style>

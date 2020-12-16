@@ -9,33 +9,78 @@
         .aboutTop__text {{ $t('pages.about.aboutTopText') }}
     .about_statham.container
       .aboutStatham.gridContainer
+        .aboutStatham__img
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-128"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              img(src="/img/about/about_statham.png")
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.stathamText')")
     .aboutEyes
       .gridContainer.container
         .gridContainer__cell._span-8._offset-2._span-md-9._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
-          .aboutEyes__text(v-html="$t('pages.about.aboutEyeText')")
+          .aboutEyes__text
+            KinesisContainer(event="scroll" :duration="100")
+              KinesisElement(
+                tag="div"
+                :strength="-128"
+                transformOrigin="50% 300%"
+                axis="y"
+                type="translate")
+                div(v-html="$t('pages.about.aboutEyeText')")
     .aboutContentBird
       .gridContainer.container
         .gridContainer__cell._span-5._span-md-5._span-sm-4._order-sm-2._span-xs-3
-          img.aboutContentBird__img._first(src='/img/about/about_bird.png')
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-146"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              img.aboutContentBird__img._first(src='/img/about/about_bird.png')
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.aboutBirdText1')")
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-3._span-xs-3
           .aboutBorderText._about(v-html="$t('pages.about.aboutBirdText2')")
         .gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-2._order-sm-5._span-xs-2
-          img.aboutContentBird__img._second(src='/img/about/about_bird_2.png')
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-134"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              img.aboutContentBird__img._second(src='/img/about/about_bird_2.png')
         .gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-4._offset-sm-2._order-sm-4._span-xs-2._offset-xs-1
-          img.aboutContentBird__img._third(src='/img/about/about_bird_3.png')
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-128"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              img.aboutContentBird__img._third(src='/img/about/about_bird_3.png')
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-6._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.aboutBirdText3')")
         .gridContainer__cell._span-7._offset-1._span-md-8._offset-md-0._span-sm-6._order-sm-7._span-xs-3
           .aboutContentBird__video
-            AboutVideo(
-              videoSrc='https://youtu.be/mWyak0g5LLI'
-              previewSrc='/img/about/about_video_0.jpg',
-              :hoverEffect="false"
-            )
+            KinesisContainer(event="scroll" :duration="100")
+              KinesisElement(
+                tag="div"
+                :strength="-128"
+                transformOrigin="50% 300%"
+                axis="y"
+                type="translate")
+                  AboutVideo(
+                    videoSrc='https://youtu.be/mWyak0g5LLI'
+                    previewSrc='/img/about/about_video_0.jpg',
+                    :hoverEffect="true"
+                  )
         .gridContainer__cell._span-3._offset-9._span-md-3._offset-md-9._span-sm-3._offset-sm-2._order-sm-8._span-xs-2._offset-xs-1
           .aboutContentBird__videoText(v-html="$t('pages.about.aboutBirdVideoText')")
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-1._span-sm-4._offset-sm-2._order-sm-9._span-xs-3
@@ -47,21 +92,21 @@
             :title='$t("pages.about.aboutVideoText1")'
             videoSrc='https://youtu.be/UKEpIG2vEqw'
             previewSrc='/img/about/about_video_1.jpg',
-            :hoverEffect="false"
+            :hoverEffect="true"
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
           AboutVideo(
             :title='$t("pages.about.aboutVideoText2")'
             videoSrc='https://youtu.be/VUy0LsME1EI'
             previewSrc='/img/about/about_video_2.jpg',
-            :hoverEffect="false"
+            :hoverEffect="true"
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
           AboutVideo(
             :title='$t("pages.about.aboutVideoText3")'
             videoSrc='https://youtu.be/Eyy_dBJhC9U'
             previewSrc='/img/about/about_video_3.jpg',
-            :hoverEffect="false"
+            :hoverEffect="true"
           )
     .about_youtube
       .gridContainer.container
@@ -71,21 +116,46 @@
       .aboutRoad
         .gridContainer.container
           .gridContainer__cell._span-6._offset-1._span-md-8._span-sm-5._offset-sm-0._span-xs-3
-            .aboutRoad__text(v-html='$t("pages.about.aboutRoadText")')
+            .aboutRoad__text
+              KinesisContainer(event="scroll" :duration="100")
+                KinesisElement(
+                  tag="div"
+                  :strength="-128"
+                  transformOrigin="50% 300%"
+                  axis="y"
+                  type="translate")
+                  div(v-html='$t("pages.about.aboutRoadText")')
     .about__mission
       .aboutMission.container
-        .aboutMission__text(v-html='$t("pages.about.aboutMissionText")')
-        .aboutMission__btn
-          Link(href='#' mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
+        KinesisContainer(event="scroll" :duration="100")
+          KinesisElement(
+            tag="div"
+            :strength="-170"
+            transformOrigin="50% 300%"
+            axis="y"
+            type="translate")
+            .aboutMission__text(v-html='$t("pages.about.aboutMissionText")')
+            .aboutMission__btn
+              Link(href='#' mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
         .aboutMission__img
-          img(src='/img/about/misson.png')
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-130"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+                img(src='/img/about/misson.png')
 </template>
 
 <script>
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 import AboutVideo from '~/components/about/AboutVideo'
 import BackToHome from '~/components/BackToHome'
 export default {
   components: {
+    KinesisContainer,
+    KinesisElement,
     AboutVideo,
     BackToHome,
   },
@@ -94,13 +164,13 @@ export default {
 
 <style lang="stylus">
 .about
-  padding-bottom 510px
+  padding-bottom 960px
   @media $md_minus
-    padding-bottom 214px
+    padding-bottom 900px
   @media $sm_minus
-    padding-bottom 144px
+    padding-bottom 820px
   @media $xs
-    padding-bottom 160px
+    padding-bottom 820px
   &__mission
     margin-top 256px
     @media $md_minus
@@ -184,10 +254,7 @@ export default {
     padding-bottom 64px
   @media $xs
     margin-top 64px
-  &:before
-    content ''
-    background url('/img/about/about_statham.png') no-repeat
-    background-size contain
+  &__img
     position absolute
     right 0
     top -20px
@@ -228,7 +295,7 @@ export default {
     width 100%
   &__text
     position relative
-    z-index 3
+    z-index 5
     font-size 24px
     line-height 40px
     letter-spacing 0.03em
@@ -434,6 +501,7 @@ export default {
     right 64px
     width 635px
     height 738px
+    z-index -1
     @media $md_minus
       right -20%
       top 42px
