@@ -25,7 +25,7 @@
           KinesisElement(
             tag="img"
             :src="img"
-            :strength="-32"
+            :strength="-100"
             transformOrigin="50% 300%"
             axis="y"
             type="translate")
