@@ -13,7 +13,7 @@
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
-              :strength="-128"
+              :strength="-140"
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
@@ -21,13 +21,22 @@
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.stathamText')")
     .aboutEyes
+      .aboutEyes__bg
+        KinesisContainer(event="scroll" :duration="100")
+          KinesisElement(
+            tag="div"
+            :strength="-120"
+            transformOrigin="50% 300%"
+            axis="y"
+            type="translate")
+            img(src="/img/about/about_eyes.jpg")
       .gridContainer.container
         .gridContainer__cell._span-8._offset-2._span-md-9._offset-md-1._span-sm-4._offset-sm-0._span-xs-3
           .aboutEyes__text
             KinesisContainer(event="scroll" :duration="100")
               KinesisElement(
                 tag="div"
-                :strength="-128"
+                :strength="-50"
                 transformOrigin="50% 300%"
                 axis="y"
                 type="translate")
@@ -114,13 +123,22 @@
           p(v-html='$t("pages.about.aboutYoutubeText")')
     .about__road
       .aboutRoad
+        .aboutRoad__bg
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="-140"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              img(src="/img/about/road_bg.jpg")
         .gridContainer.container
           .gridContainer__cell._span-6._offset-1._span-md-8._span-sm-5._offset-sm-0._span-xs-3
             .aboutRoad__text
               KinesisContainer(event="scroll" :duration="100")
                 KinesisElement(
                   tag="div"
-                  :strength="-128"
+                  :strength="-50"
                   transformOrigin="50% 300%"
                   axis="y"
                   type="translate")
@@ -282,17 +300,31 @@ export default {
     margin-bottom 68px
   @media $xs
     margin-bottom 106px
-  &:before
-    content ''
-    background url('/img/about/about_eyes.jpg') no-repeat
-    background-size cover
-    background-position center
-    z-index 2
+  &__bg
+    position absolute
     top 0
     left 0
-    height 100%
-    position absolute
     width 100%
+    height 100%
+    overflow hidden
+    & *
+      width 100%
+      height 100%
+    & img
+      width 100%
+      height 100%
+      object-fit cover
+  //&:before
+  //  content ''
+  //  background url('/img/about/about_eyes.jpg') no-repeat
+  //  background-size cover
+  //  background-position center
+  //  z-index 2
+  //  top 0
+  //  left 0
+  //  height 100%
+  //  position absolute
+  //  width 100%
   &__text
     position relative
     z-index 5
@@ -405,27 +437,40 @@ export default {
 
   @media $xs
     padding-top 50px
-
-  &:before
-    content ''
+  &__bg
     position absolute
-    left 0
     top 0
+    left 0
     width 100%
     height 100%
-    z-index 2
-    background url('/img/about/road_bg.jpg') no-repeat
-    background-position-x center
-    background-position-y bottom
-    background-size cover
-    @media $md_minus
-      background-size 150%
-    @media $sm_minus
-      background-size 200%
-    @media $xs
-      background-position-y 0
-      background-size cover
-      background-position-x 58%
+    overflow hidden
+    & *
+      width 100%
+      height 100%
+    & img
+      width 100%
+      height 100%
+      object-fit cover
+  //&:before
+  //  content ''
+  //  position absolute
+  //  left 0
+  //  top 0
+  //  width 100%
+  //  height 100%
+  //  z-index 2
+  //  background url('/img/about/road_bg.jpg') no-repeat
+  //  background-position-x center
+  //  background-position-y bottom
+  //  background-size cover
+  //  @media $md_minus
+  //    background-size 150%
+  //  @media $sm_minus
+  //    background-size 200%
+  //  @media $xs
+  //    background-position-y 0
+  //    background-size cover
+  //    background-position-x 58%
   &:after
     content ''
     width 100%

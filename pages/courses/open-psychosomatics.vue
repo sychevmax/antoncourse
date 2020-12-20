@@ -37,13 +37,24 @@
           .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.openPsychosomatics.fromWhom.contentCol2")' :key="item.id" v-html="item.body")
   .course__fromWhomImage
     .courseFromWhomImage
+      .courseFromWhomImage__bg
+        KinesisContainer(event="scroll" :duration="100")
+          KinesisElement(
+            tag="div"
+            :strength="-140"
+            transformOrigin="50% 300%"
+            axis="y"
+            type="translate")
+            picture
+              source( media="(max-width: 1439px)" srcset="/img/course_psy/from_whom_img_sm.jpg")
+              img(src="/img/course_psy/from_whom_img.jpg")
       .gridContainer.container
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4
           .courseFromWhomImage__text
             KinesisContainer(event="scroll" :duration="100")
               KinesisElement(
                 tag="div"
-                :strength="-128"
+                :strength="-50"
                 transformOrigin="50% 300%"
                 axis="y"
                 type="translate")
@@ -387,23 +398,35 @@ export default {
     @media $xs
       margin-bottom 40px
 .courseFromWhomImage
-  //background url('/img/course_psy/from_whom_img.jpg') no-repeat
-  background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img.jpg') no-repeat
   mix-blend-mode normal
   background-position center
   background-size cover
   padding 86px 0 154px
   min-height 584px
+  position relative
+
   @media $md_minus
     padding 71px 0 145px
   @media $sm_minus
     padding 71px 0 104px
-    background linear-gradient(0deg, rgba(43, 43, 43, 0.1), rgba(43, 43, 43, 0.1)), url('/img/course_psy/from_whom_img_sm.jpg') no-repeat
-    background-size cover
   @media $xs
     padding 42px 0 184px
     min-height 480px
     background-position 80% bottom
+  &__bg
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    overflow hidden
+    & *
+      width 100%
+      height 100%
+    & img
+      width 100%
+      height 100%
+      object-fit cover
   &__text
     color $bg
 
