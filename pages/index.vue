@@ -7,7 +7,9 @@
         .indexTop__right
           .indexTop__imgWrap
             img.indexTop__bg(src='/img/index/index_top_bg.png')
-            img.indexTop__img(src='/img/index/index_top_img.png')
+            picture.indexTop__img
+              source( media="(max-width: 1439px)" srcset="/img/index/index_top_img_md.png")
+              img.indexTop__img(src='/img/index/index_top_img.png')
 
       .indexTop__bottom.gridContainer
         .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._span-xs-1
@@ -27,12 +29,12 @@
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
-              :strength="-160"
+              :strength="pidr"
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
               div {{ $t('pages.home.indexVideoTitle1') }}
-        .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
+        .indexVideos__video._leftMobile.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_1.jpg',
@@ -51,7 +53,7 @@
               type="translate")
               div {{ $t('pages.home.indexVideoTitle2') }}
         .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2(v-html="$t('pages.home.indexVideoText2')")
-        .indexVideos__video.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
+        .indexVideos__video._rightMobile.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_2.jpg',
@@ -68,7 +70,7 @@
               axis="y"
               type="translate")
               div {{ $t('pages.home.indexVideoTitle3') }}
-        .indexVideos__video.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
+        .indexVideos__video._leftMobile.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
             videoSrc='https://youtu.be/mWyak0g5LLI'
             previewSrc='/img/index/video_preview_3.jpg',
@@ -151,10 +153,13 @@ export default {
     Link,
     AboutVideo,
   },
-  methods: {
-    scrollToSecondScreen() {
-      this.$scrollTo(this.$refs.secondScreen, 600)
-    },
+  data() {
+    return {
+      pidr: 0,
+    }
+  },
+  beforeMount() {
+    this.myEventHandler()
   },
   mounted() {
     const title = this.$refs.indexTitle
@@ -163,6 +168,35 @@ export default {
     const titleParentBox = titleParent.getBoundingClientRect()
     const leftPosTitle = titleBox.left - titleParentBox.left
     this.$root.$emit('titleReady', leftPosTitle)
+
+    this.$nextTick(function () {
+      window.addEventListener('resize', this.myEventHandler)
+      window.addEventListener('resize', this.myEventHandler)
+
+      this.myEventHandler()
+      this.myEventHandler()
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.myEventHandler)
+    window.removeEventListener('resize', this.myEventHandler)
+  },
+  methods: {
+    scrollToSecondScreen() {
+      this.$scrollTo(this.$refs.secondScreen, 600)
+    },
+    myEventHandler() {
+      if (window.matchMedia('(max-width: 1439px)').matches) {
+        console.log('pidr')
+        this.pidr = -100
+        /* the viewport is at least 400 pixels wide */
+      } else {
+        console.log('no pidr')
+        this.pidr = -500
+        /* the viewport is less than 400 pixels wide */
+      }
+      console.log('this', this.pidr)
+    },
   },
 }
 </script>
@@ -237,25 +271,42 @@ export default {
   &__imgWrap
     position relative
     right 0
+    @media $xs
+      right -41px
   &__bg
     position absolute
-    top 0
-    left 0
+    top 20px
+    left 34px
     z-index 5
     width 486px
     height 483px
     @media $md_minus
       width 402px
       height 400px
+      top 17px
+      left -9px
     @media $sm_minus
-      width 372px
-      height 370px
+      width 404px
+      height 401px
+      top 56px
+      left 8px
     @media $xs
-      width 248px
-      height 246px
+      width 260px
+      height 259px
+      top 28px
+      left 0
   &__img
     position relative
     z-index 8
+    @media $md_minus
+      width 456px
+      height 456px
+    @media $sm_minus
+      width 480px
+      height 480px
+    @media $xs
+      width 296px
+      height 296px
   &__bottom
     @media $md_minus
       margin-top 48px
@@ -327,12 +378,22 @@ export default {
   &__title
     margin-left 112px
     margin-bottom 160px
+    @media $md_minus
+      margin-bottom 104px
     @media $sm_minus
-      margin-bottom 112px
+      margin-bottom 128px
       margin-left 0
     @media $xs
       margin-bottom 64px
       margin-left 0
+    & .h0
+      line-height 134px
+      @media $md_minus
+        line-height 146px
+      @media $sm_minus
+        line-height 96px
+      @media $xs
+        line-height 56px
   &__item
     margin-bottom 80px
     &:last-child
@@ -367,6 +428,11 @@ export default {
       @media $xs
         width 131%
     &._bottom
+      margin-top 32px
+      @media $md_minus
+        margin-top 24px
+      @media $sm_minus
+        margin-top 0
       @media $xs
         width 100%
         display flex
@@ -462,13 +528,24 @@ export default {
       margin-bottom 108px
     &:last-child
       margin-bottom 0
-
+  &__video
+    &._leftMobile
+      @media $xs
+        position relative
+        width calc(100% + 24px)
+        left -24px
+    &._rightMobile
+      @media $xs
+        position relative
+        width calc(100% + 24px)
+        right -24px
   &__title
     position absolute
     transform translateY(-60%)
     z-index 3
     top 0
     pointer-events none
+    line-height 100% !important
     @media $sm_minus
       transform translateY(-70%)
     &._first

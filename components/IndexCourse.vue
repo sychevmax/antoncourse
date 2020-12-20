@@ -1,6 +1,6 @@
 <template lang="pug">
   .indexCourse
-    .indexCourse__header
+    .indexCourse__header.gridContainer
       .indexCourse__title
         KinesisContainer(event="scroll" :duration="100")
           KinesisElement(
@@ -10,28 +10,29 @@
             axis="y"
             type="translate")
             h1._acsent(v-html='title')
-      .indexCourse__meta._desktop(v-if="active")
-        .indexCourse__info
-          span {{ $t('courseFormatLabel') }}
-          samp {{format}}
-        .indexCourse__info
-          span {{ $t('courseLevelLabel') }}
-          samp {{level}}
-      .indexCourse__meta._desktop(v-else="active")
-        .indexCourse__info._inactive {{date}}
+      .gridContainer__cell._span-4._offset-1._span-md-5._offset-md-1._none-xs
+        .indexCourse__meta._desktop(v-if="active")
+          .indexCourse__info
+            span {{ $t('courseFormatLabel') }}
+            samp {{format}}
+          .indexCourse__info
+            span {{ $t('courseLevelLabel') }}
+            samp {{level}}
+        .indexCourse__meta._desktop(v-else="active")
+          .indexCourse__info._inactive {{date}}
+      .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
+        .indexCourse__img
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="img"
+              :src="img"
+              :strength="-100"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
 
-      .indexCourse__img
-        KinesisContainer(event="scroll" :duration="100")
-          KinesisElement(
-            tag="img"
-            :src="img"
-            :strength="-100"
-            transformOrigin="50% 300%"
-            axis="y"
-            type="translate")
-
-    .indexCourse__row
-      .indexCourse__col
+    .indexCourse__bottom.gridContainer
+      .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._span-xs-3
         .indexCourse__meta._mobile(v-if="active")
           .indexCourse__info
             span {{ $t('courseFormatLabel') }}
@@ -45,7 +46,7 @@
           Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
         .indexCourse__text
           p(v-html='text')
-      .indexCourse__col
+      .gridContainer__cell._span-3._offset-6._span-md-3._offset-md-7._span-sm-2._span-xs-3
         .indexCourse__more._desktop(v-if='active')
           Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
 
@@ -118,23 +119,17 @@ export default {
       width 100%
   &__header
     position relative
-    display flex
     align-items flex-end
-    @media $xs
-      flex-direction column
-      align-items flex-start
   &__title
     position absolute
     top 50%
     transform translateY(-50%)
     left 0
     z-index 3
-    @media $md_minus
-      top unset
-      bottom 0
-      transform none
     @media $sm_minus
       bottom 40px
+      top unset
+      transform none
     @media $xs
       position static
       margin-bottom 24px
@@ -146,43 +141,39 @@ export default {
         font-size 24px
         line-height 32px
   &__meta
-    width 50%
     display flex
     flex-wrap wrap
-    margin-left 112px
+    justify-content space-between
     &._desktop
       & .indexCourse__info
-        @media $md_minus
+        @media $sm_minus
           display none
     &._mobile
       display none
-      @media $md_minus
+      @media  $sm_minus
         display flex
+        justify-content flex-start
         width 100%
-        margin-bottom 84px
-        margin-left 80px
-      @media $sm_minus
+        height 80px
+        align-items center
+        margin-bottom 64px
         margin-left 0
-        margin-bottom 68px
       @media $xs
-        margin-bottom 0
+        margin-bottom 40px
+        height auto
   &__img
-    width 60%
-    padding-left 32px
     position relative
     z-index 0
-    @media $md_minus
-      width 64%
-    @media $sm_minus
-      width 192%
     @media $xs
-      width 100%
       padding-left 0
       margin-left -24px
   &__info
     display flex
     flex-direction column
-    margin-right 104px
+    width calc(50% - 16px)
+    @media $sm_minus
+      width auto
+      margin-right calc( ((100% - (24px * 3)) / 4) + 24px + 24px )
     @media $xs
       margin-right 95px
     &:last-child
@@ -193,11 +184,22 @@ export default {
       color $acsent
       margin-bottom 8px
       text-transform uppercase
+      height 30px
+      display flex
+      flex-direction column
+      @media $md_minus
+        margin-bottom 16px
+        height auto
       @media $xs
         font-size 12px
         line-height 14px
+        margin-bottom 8px
     & samp
       font-family inherit
+      @media $md_minus
+        font-size 16px
+        line-height 24px
+        letter-spacing 0.04em
       @media $xs
         font-size 16px
         line-height 20px
@@ -209,10 +211,13 @@ export default {
         font-size 16px
         line-height 16px
         flex-direction row
+      @media $sm_minus
+        margin-top 4px
       @media $xs
         font-size 16px
         line-height 24px
         flex-direction column
+        margin-top 0
       &:before
         content ''
         width 23px
@@ -227,33 +232,16 @@ export default {
           margin-right 14px
         @media $xs
           margin-right 0
+          margin-bottom 8px
   &__text
-    margin-left 113px
-    margin-right 46px
-    @media $md_minus
-      width 85%
-      margin-left 80px
-      margin-right 0
-    @media $sm_minus
-      margin-left 0
-      width calc(400% / 3)
-    @media $xs
-      width 100%
-      margin-top 40px
+   opacity 1
   &__more
     height 96px
     width 100%
-    max-width 302px
-    @media $md_minus
-      max-width 215px
     @media $sm_minus
-      max-width 191px
-      margin-left auto
-    @media $xs
       height 80px
-      max-width 273px
+    @media $xs
       margin-bottom 24px
-      margin-left 0
       margin-top 40px
     &._desktop
       @media $xs
@@ -262,4 +250,13 @@ export default {
       display none
       @media $xs
         display block
+        margin-bottom 40px
+  &__bottom
+    margin-top 80px
+    @media $md_minus
+      margin-top 64px
+    @media $sm_minus
+      margin-top 40px
+    @media $xs
+      margin-top 64px
 </style>

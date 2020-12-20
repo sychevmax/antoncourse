@@ -46,6 +46,8 @@ export default {
     bottom 24px
   &:hover
     cursor pointer
+    & .upToTop__icon svg
+      transform translateY(-8px) rotate(180deg)
   &._show
     opacity 1
     visibility visible
@@ -66,6 +68,7 @@ export default {
     height 28px
     color $charkGrey
     transform rotate(180deg)
+    transition $transition
   &__text
     font-size 14px
     line-height 17px

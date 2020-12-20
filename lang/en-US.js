@@ -438,7 +438,7 @@ export default {
       },
       practicalPsychosomatics: {
         title: 'Practical <br> psychosomatics',
-        date: 'starts in mid-December ',
+        date: 'starts at the end of January',
         text: `In-depth training of our methods. In the course we focus on
         practicing with people: we explain which methods and instruments
         are the most efficient in different situations. We learn to
@@ -446,7 +446,7 @@ export default {
       },
       neotericPsychosomatics: {
         title: 'neoteric <br> psychosomatics ',
-        date: 'starts in mid-December ',
+        date: 'starts at the end of January',
         text: `I acquire new knowledge about psychosomatics on a daily basis
         and I am ready to share with you even more. This course combines
         the latest research, practical cases, and a new approach.

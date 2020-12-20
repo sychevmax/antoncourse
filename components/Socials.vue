@@ -31,8 +31,10 @@ export default {
     margin-right 80px
     @media $md_minus
       margin-right 72px
+      line-height 26px
     @media $sm_minus
       margin-right 48px
+      line-height 24px
     @media $xs
       margin-right 0
     &:last-child

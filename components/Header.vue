@@ -51,14 +51,27 @@ export default {
       font-size 16px
       top -8px
     & span
-      display block
+      height 31px
+      display flex
+      flex-direction column
+      justify-content flex-start
+      @media $md_minus
+        height auto
+        line-height 16px
+        margin-bottom 8px
+      @media $sm_minus
+        margin-bottom 4px
+        line-height 18px
       &:last-child
         margin-left 21px
+        @media $md_minus
+          margin-bottom 0
   &__about
     font-size 24px
     line-height 32px
     margin-left auto
     margin-right 211px
+    transition $transition
     @media $md_minus
       font-size 16px
       line-height 24px
@@ -67,11 +80,14 @@ export default {
       margin-right 140px
     @media $xs
       display none
+    &:hover
+      color $acsent
   &__courses
     margin-right 229px
     font-size 24px
     line-height 32px
     letter-spacing 0.02em
+    transition $transition
     @media $md_minus
       font-size 16px
       line-height 24px
@@ -80,6 +96,8 @@ export default {
       margin-right 142px
     @media $xs
       display none
+    &:hover
+      color $acsent
   &__burger
     display none
     @media $xs

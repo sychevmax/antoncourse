@@ -45,22 +45,25 @@ export default {
       line-height 24px
     &:after
       content ''
-      width 10px
-      height 10px
+      width 16px
+      height 16px
       background url('/img/link_icon.svg') no-repeat
       background-size contain
       margin-left 14px
       position absolute
-      right -17px
-      top 50%
+      right -28px
+      top calc(50% + 2px)
       transform translateY(-50%)
       opacity 0
       visibility hidden
       transition $transition
-    &:hover
-      &:after
-        opacity 1
-        visibility visible
+      @media $md_minus
+        top 50%
+    @media $hover
+      &:hover
+        &:after
+          opacity 1
+          visibility visible
   &._more
     border-radius 2px
     width 100%
