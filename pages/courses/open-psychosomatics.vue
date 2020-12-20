@@ -46,7 +46,7 @@
             axis="y"
             type="translate")
             picture
-              source( media="(max-width: 1439px)" srcset="/img/course_psy/from_whom_img_sm.jpg")
+              source( media="(max-width: 1023px)" srcset="/img/course_psy/from_whom_img_sm.jpg")
               img(src="/img/course_psy/from_whom_img.jpg")
       .gridContainer.container
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4

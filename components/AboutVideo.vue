@@ -1,17 +1,31 @@
 <template lang="pug">
   .aboutVideo
     .aboutVideo__video(@mousemove="itemMove" @mouseleave="itemLeave" ref="img" :class="hoverEffect ? '_effect' : ''")
-      .aboutVideo__play
+      .aboutVideo__play(:class="mod")
         svg-icon(name="video_play")
       silent-box(:image='video')
+        template(v-slot:silentbox-item="{ silentboxItem }" v-if="parallax")
+          KinesisContainer(event="scroll" :duration="100")
+            KinesisElement(
+              tag="div"
+              :strength="parallax"
+              transformOrigin="50% 300%"
+              axis="y"
+              type="translate")
+              img(:src="silentboxItem.thumbnail" :width="silentboxItem.thumbnailWidth" :height="silentboxItem.thumbnailHeight")
+        template(v-slot:silentbox-item="{ silentboxItem }" v-else)
+          img(:src="silentboxItem.thumbnail" :width="silentboxItem.thumbnailWidth" :height="silentboxItem.thumbnailHeight")
     .aboutVideo__title(v-if='title') {{title}}
 </template>
 
 <script>
 import VueSilentbox from 'vue-silentbox'
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 export default {
   components: {
     VueSilentbox,
+    KinesisContainer,
+    KinesisElement,
   },
   props: {
     title: {
@@ -28,6 +42,14 @@ export default {
     },
     hoverEffect: {
       type: Boolean,
+      required: false,
+    },
+    mod: {
+      type: String,
+      required: false,
+    },
+    parallax: {
+      type: Number,
       required: false,
     },
   },
@@ -87,6 +109,7 @@ export default {
       font-size 16px
       line-height 32px
       letter-spacing 0.04em
+      margin-top 24px
   &__play
     width 112px
     height 112px
@@ -99,6 +122,15 @@ export default {
     @media $xs
       width 64px
       height 64px
+    &._symptoms
+      width 80px
+      height 80px
+      @media $sm_minus
+        width 64px
+        height 64px
+      @media $xs
+        width 40px
+        height 40px
     & svg
       width 100%
       height 100%

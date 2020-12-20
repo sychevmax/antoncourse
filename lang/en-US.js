@@ -59,12 +59,14 @@ export default {
           to see myself from the outside.
         </p>
         <br>
+        <br>
         <p>
          It felt like a strike of lightning, I began to feel myself, hear
          myself. And the voice inside responded: “Anton, you can
          do more, you can do better”. Thus, I gradually got rid of addictions
          and in 2008 I got involved in psychology.
         </p>
+        <br>
         <br>
         <p>
           In 2014, I became a psychologist, and in 2018 a clinical

@@ -408,9 +408,15 @@ img
   &._about
     margin-top 96px
     @media $md_minus
-      margin-top 48px
+      margin-top 56px
     @media $sm_minus
-      margin-top 0
+      margin-top 96px
+    @media $xs
+      margin-top 40px
+  &._students
+    &:before
+      @media $xs
+        margin-bottom 64px
   &._course
     &:before
       @media $sm_minus

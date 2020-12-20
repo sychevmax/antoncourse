@@ -65,7 +65,7 @@
               axis="y"
               type="translate")
               img.aboutContentBird__img._second(src='/img/about/about_bird_2.png')
-        .gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-4._offset-sm-2._order-sm-4._span-xs-2._offset-xs-1
+        .gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-4._offset-sm-2._order-sm-4._span-xs-3
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
@@ -78,22 +78,16 @@
           .aboutBorderText(v-html="$t('pages.about.aboutBirdText3')")
         .gridContainer__cell._span-7._offset-1._span-md-8._offset-md-0._span-sm-6._order-sm-7._span-xs-3
           .aboutContentBird__video
-            KinesisContainer(event="scroll" :duration="100")
-              KinesisElement(
-                tag="div"
-                :strength="-128"
-                transformOrigin="50% 300%"
-                axis="y"
-                type="translate")
-                  AboutVideo(
-                    videoSrc='https://youtu.be/mWyak0g5LLI'
-                    previewSrc='/img/about/about_video_0.jpg',
-                    :hoverEffect="true"
-                  )
+            AboutVideo(
+              videoSrc='https://youtu.be/PcK8VyrcphU'
+              previewSrc='/img/about/about_video_0.jpg',
+              :parallax="-32"
+              :hoverEffect="true"
+            )
         .gridContainer__cell._span-3._offset-9._span-md-3._offset-md-9._span-sm-3._offset-sm-2._order-sm-8._span-xs-2._offset-xs-1
           .aboutContentBird__videoText(v-html="$t('pages.about.aboutBirdVideoText')")
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-1._span-sm-4._offset-sm-2._order-sm-9._span-xs-3
-          .aboutBorderText(v-html="$t('pages.about.aboutBirdText4')")
+          .aboutBorderText._students(v-html="$t('pages.about.aboutBirdText4')")
     .aboutVideos
       .gridContainer.container
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
@@ -102,6 +96,7 @@
             videoSrc='https://youtu.be/UKEpIG2vEqw'
             previewSrc='/img/about/about_video_1.jpg',
             :hoverEffect="true"
+            mod="_symptoms"
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
           AboutVideo(
@@ -109,6 +104,7 @@
             videoSrc='https://youtu.be/VUy0LsME1EI'
             previewSrc='/img/about/about_video_2.jpg',
             :hoverEffect="true"
+            mod="_symptoms"
           )
         .aboutVideos__item.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-2
           AboutVideo(
@@ -116,6 +112,7 @@
             videoSrc='https://youtu.be/Eyy_dBJhC9U'
             previewSrc='/img/about/about_video_3.jpg',
             :hoverEffect="true"
+            mod="_symptoms"
           )
     .about_youtube
       .gridContainer.container
@@ -168,7 +165,7 @@
 
 <script>
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
-import AboutVideo from '~/components/about/AboutVideo'
+import AboutVideo from '@/components/AboutVideo'
 import BackToHome from '~/components/BackToHome'
 export default {
   components: {
@@ -182,13 +179,11 @@ export default {
 
 <style lang="stylus">
 .about
-  padding-bottom 960px
-  @media $md_minus
-    padding-bottom 900px
+  padding-bottom 500px
   @media $sm_minus
-    padding-bottom 820px
+    padding-bottom 600px
   @media $xs
-    padding-bottom 820px
+    padding-bottom 200px
   &__mission
     margin-top 256px
     @media $md_minus
@@ -343,10 +338,6 @@ export default {
       line-height 24px
 .aboutContentBird
   margin-bottom 128px
-  @media $md_minus
-    margin-bottom 80px
-  @media $sm_minus
-    margin-bottom 128px
   @media $xs
     margin-bottom 80px
   &__img
@@ -368,6 +359,8 @@ export default {
       @media $xs
         margin-top 37px
         margin-bottom 34px
+        width calc(100% - 40px)
+        margin-left -24px
     &._third
       margin-top 48px
       @media $sm_minus
@@ -376,6 +369,8 @@ export default {
         margin-top 56px
       @media $xs
         margin-top 88px
+        width calc( 100% - ( (100% - 80px) / 3) )
+        margin-left calc( (100% - 80px) / 3 )
   &__video
     margin-top 48px
     margin-bottom 116px
