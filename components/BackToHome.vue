@@ -36,7 +36,7 @@ export default {
     background url('/img/back_icon.svg') no-repeat
     background-size contain
     display block
-    @media $sm_minus
+    @media $xs
       background url('/img/back_icon_xs.svg') no-repeat
       left 0
   &__text
@@ -48,7 +48,7 @@ export default {
     left -40px
     top 74px
     width 100px
-    @media $sm_minus
+    @media $xs
       font-size 12px
       top 66px
 </style>
