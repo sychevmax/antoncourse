@@ -1,6 +1,6 @@
 <template lang="pug">
 .course
-  BackToHome
+  BackToHome(page="course")
   .course__header
     .courseHeader.container
       .courseHeader__top.gridContainer
@@ -215,6 +215,7 @@ export default {
 .course
   margin-top 32px
   margin-bottom 240px
+  position relative
   @media $md_minus
     margin-top 48px
     margin-bottom 155px
@@ -231,11 +232,11 @@ export default {
   &__fromWhomImage
     margin-top 88px
     @media $md_minus
-      margin-top 194px
+      margin-top 114px
     @media $sm_minus
-      margin-top 83px
+      margin-top 19px
     @media $xs
-      margin-top 64px
+      margin-top 24px
   &__ofWhat
     margin-top 128px
     @media $xs
@@ -257,7 +258,7 @@ export default {
   &__booking
     margin-top 133px
     @media $md_minus
-      margin-top 114px
+      margin-top 157px
     @media $sm_minus
       margin-top 161px
     @media $xs
@@ -387,6 +388,7 @@ export default {
       font-size 32px
       line-height 48px
       letter-spacing 0.02em
+      margin-bottom 32px
     @media $xs
       margin-bottom 24px
       font-size 24px
@@ -534,12 +536,16 @@ export default {
     width 100%
     //border-top 1px solid $border
     border-top 1px solid $border
-    padding 32px 0 40px
+    padding 32px 0 8px
     display flex
     @media $md_minus
-      padding 24px 0 40px
+      padding 24px 0 16px
     @media $sm_minus
-      padding 16px 0 24px
+      padding 16px 0 0
+      margin-bottom -8px
+    @media $xs
+      margin-bottom 0
+      padding 16px 0
     &:nth-last-child(1),
     &:nth-child(6)
       border-bottom 1px solid $border
@@ -549,7 +555,6 @@ export default {
   &__num
     width 80px
     height 80px
-    font-family Roboto
     font-style normal
     font-weight 400
     font-size 80px
@@ -620,8 +625,8 @@ export default {
     grid-template-areas\
     ". title title title title img img img img img img img"\
     ". text text text text img img img img img img img"\
-    ". text text text text img img img img img img img"\
     ". info1 info1 . info2 info2 . info3 info3 info3 . ."
+    grid-template-rows max-content
     @media $md_minus
       grid-template-areas\
       ". title title title title title . . . . . ."\
@@ -644,9 +649,10 @@ export default {
         "info3 info3 info3"
   &__title
     grid-area title
-    margin-bottom 48px
+    //margin-bottom 48px
     font-size 48px
-    line-height 150%
+    line-height 72px
+    max-height 144px
     letter-spacing 0.02em
     @media $md_minus
       margin-bottom 16px
@@ -657,13 +663,12 @@ export default {
       margin-bottom 32px
     @media $xs
       margin-bottom 0
-      margin-top 40px
+      margin-top 0px
       font-size 24px
       line-height 40px
       width 100%
   &__text
     grid-area text
-    margin-top -40px
     @media $md_minus
       margin-top 0
     @media $xs
@@ -671,8 +676,13 @@ export default {
   &__img
     grid-area img
     position relative
+    margin-top -80px
+    @media $md_minus
+      margin-top 0
+      top -180px
     @media $sm_minus
       margin-top 48px
+      top 0
     @media $xs
       margin-top 0
     & img
@@ -681,7 +691,7 @@ export default {
   &__info
     display flex
     flex-direction column
-    margin-top 8px
+    margin-top 40px
     & span
       font-family Roboto
       font-style normal
@@ -699,6 +709,7 @@ export default {
         line-height 24px
         font-family 'ObjectSans'
         margin-left 16px
+        letter-spacing normal
         &._year
           margin-left 8px
     & samp
@@ -706,6 +717,9 @@ export default {
       line-height 24px
       @media $sm_minus
         line-height 26px
+      @media $xs
+        font-size 12px
+        line-height 20px
     &._first
       grid-area info1
       @media $sm_minus
@@ -721,13 +735,16 @@ export default {
     &._third
       grid-area info3
       @media $sm_minus
-        margin-top 48px
+        margin-top 16px
       @media $xs
         margin-top 24px
 .courseBooking
-  border 1px solid $acsent
+  border 2px solid $acsent
   border-right none
   position relative
+  @media $md_minus
+    border none
+    border-bottom 2px solid $acsent
   &:before
     content ''
     width 43%
@@ -748,19 +765,8 @@ export default {
     background $bg
     @media $md_minus
       background transparent
-
-  @media $md_minus
-    //width calc(100% + 88px)
-    //margin-left -44px
-    border none
-  @media $sm_minus
-    //width calc(100% + 128px)
-    //margin-left -64px
-  @media $xs
-    //width calc(100% + 48px)
-    //margin-left -24px
   &__left
-    padding 81px 0 165px 0
+    padding 81px 0 111px 0
     color $white
     background $acsent
     display grid
@@ -811,7 +817,7 @@ export default {
       "title title title"\
       "text text text"
   &__right
-    padding 81px 0 165px 0
+    padding 81px 0 137px 0
     display grid
     gap 32px
     grid-template-columns repeat(7,minmax(0,1fr))
@@ -849,7 +855,7 @@ export default {
       "price price ."\
       "btn btn btn"
   &__title
-    margin-bottom 64px
+    margin-bottom 32px
     font-size 48px
     line-height 150%
     letter-spacing 0.02em
@@ -861,7 +867,7 @@ export default {
       line-height 48px
       letter-spacing 0.02em
     @media $xs
-      margin-bottom 24px
+      margin-bottom -10px
       margin-top 0
       font-size 24px
       line-height 40px
@@ -882,6 +888,7 @@ export default {
     letter-spacing 0.02em
     text-transform uppercase
     color $acsent
+    height 152px
     grid-area name
     @media $xs
       font-size 24px
@@ -901,7 +908,7 @@ export default {
       margin-top 0
   &__type
     grid-area type
-    margin-top 24px
+    margin-top -16px
     @media $md_minus
       margin-top 0
     @media $sm_minus
@@ -1003,7 +1010,7 @@ export default {
         top 41px
         width 130px
         height 104px
-        background url('/static/img/about/quotes_icon.svg') no-repeat
+        background url('/img/about/quotes_icon.svg') no-repeat
         background-size contain
       @media $xs
         width 80px

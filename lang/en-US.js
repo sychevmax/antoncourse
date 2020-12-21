@@ -130,7 +130,7 @@ export default {
           interrelated. We teach you to get rid of symptoms and help not
           only yourself but also your close ones, friends, and clients.
         `,
-        price: '30,000 rubles',
+        price: '30 000 rubles',
         fromWhom: {
           title: 'This will help you if',
           contentCol1: [

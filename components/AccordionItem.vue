@@ -44,6 +44,7 @@ export default {
   &-text
     font-size 24px
     line-height 36px
+    font-family 'ObjectSans'
     max-width calc(100% - 32px - 82px)
     @media $md_minus
       max-width calc(100% - 24px - 56px)

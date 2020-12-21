@@ -91,8 +91,8 @@ export default {
     display flex
     align-items center
     & svg
-      max-width 14px
-      max-height 14px
+      max-width 16px
+      max-height 16px
       color $acsent
       margin-left 17px
       transition $transition

@@ -1,11 +1,18 @@
 <template lang="pug">
-  nuxt-link.backToHome(:to="localePath('/')")
+  nuxt-link.backToHome(:to="localePath('/')" :class="'_'+page")
     .backToHome__icon
     .backToHome__text {{ $t('goToHome') }}
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    page: {
+      type: String,
+      required: false,
+    },
+  },
+}
 </script>
 
 <style scoped lang="stylus">
@@ -16,6 +23,9 @@ export default {}
   z-index 10
   @media $xs
     left 6px
+  &._course
+    position absolute
+    top 0
   &__icon
     position relative
     width 12px
