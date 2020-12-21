@@ -29,7 +29,7 @@
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
-              :strength="pidr"
+              :strength="-160"
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
@@ -153,14 +153,6 @@ export default {
     Link,
     AboutVideo,
   },
-  data() {
-    return {
-      pidr: 0,
-    }
-  },
-  beforeMount() {
-    this.myEventHandler()
-  },
   mounted() {
     const title = this.$refs.indexTitle
     const titleParent = this.$refs.indexTitleParent
@@ -168,34 +160,10 @@ export default {
     const titleParentBox = titleParent.getBoundingClientRect()
     const leftPosTitle = titleBox.left - titleParentBox.left
     this.$root.$emit('titleReady', leftPosTitle)
-
-    this.$nextTick(function () {
-      window.addEventListener('resize', this.myEventHandler)
-      window.addEventListener('resize', this.myEventHandler)
-
-      this.myEventHandler()
-      this.myEventHandler()
-    })
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.myEventHandler)
-    window.removeEventListener('resize', this.myEventHandler)
   },
   methods: {
     scrollToSecondScreen() {
       this.$scrollTo(this.$refs.secondScreen, 600)
-    },
-    myEventHandler() {
-      if (window.matchMedia('(max-width: 1439px)').matches) {
-        console.log('pidr')
-        this.pidr = -100
-        /* the viewport is at least 400 pixels wide */
-      } else {
-        console.log('no pidr')
-        this.pidr = -500
-        /* the viewport is less than 400 pixels wide */
-      }
-      console.log('this', this.pidr)
     },
   },
 }

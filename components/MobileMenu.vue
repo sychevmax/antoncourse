@@ -35,9 +35,7 @@ export default {
   transition $transition
   display flex
   flex-direction column
-  align-items flex-end
-  padding-right 70px
-  padding-top 64px
+  padding 64px 24px 0
   @media $sm_plus
     display none !important
   &._open
@@ -45,10 +43,10 @@ export default {
     transform translateX(0)
   &__item
     font-size 16px
-    line-height 24px;
-    text-align right
+    line-height 24px
     letter-spacing 0.02em
     color $black
     text-transform lowercase
     margin-bottom 24px
+    margin-left calc(100% - 118px)
 </style>

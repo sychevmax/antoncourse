@@ -25,7 +25,7 @@
         KinesisContainer(event="scroll" :duration="100")
           KinesisElement(
             tag="div"
-            :strength="-120"
+            :strength="-240"
             transformOrigin="50% 300%"
             axis="y"
             type="translate")
@@ -124,7 +124,7 @@
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
               tag="div"
-              :strength="-140"
+              :strength="-240"
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
@@ -416,6 +416,28 @@ export default {
     line-height 32px
     color $acsent
     text-transform lowercase
+    position relative
+    &:after
+      content ''
+      width 16px
+      height 16px
+      background url('/img/link_icon.svg') no-repeat
+      background-size contain
+      margin-left 14px
+      position absolute
+      right -28px
+      top calc(50% + 2px)
+      transform translateY(-50%)
+      opacity 0
+      visibility hidden
+      transition $transition
+      @media $md_minus
+        top 50%
+    @media $hover
+      &:hover
+        &:after
+          opacity 1
+          visibility visible
     @media $xs
       font-size 16px
       line-height 24px

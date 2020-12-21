@@ -22,27 +22,23 @@ export default {
   left 15px
   z-index 10
   @media $xs
-    left 6px
+    left 2px
   &._course
     position absolute
     top 0
   &__icon
-    position relative
-    width 12px
-    height 32px
-    border-right 1px solid $charkGrey
-    border-top 1px solid $charkGrey
-    &:before
-      content ''
-      width 16px
-      height 16px
-      position absolute
-      top 0
-      left -6px
-      transform translate(0,-50%)
-      background url('/img/arrow_back.svg') no-repeat
-      background-size contain
-      display block
+    width 14px
+    height 40px
+    position absolute
+    top 0
+    left -2px
+    transform translate(0,-50%)
+    background url('/img/back_icon.svg') no-repeat
+    background-size contain
+    display block
+    @media $sm_minus
+      background url('/img/back_icon_xs.svg') no-repeat
+      left 0
   &__text
     transform rotate(90deg)
     text-transform lowercase
@@ -50,6 +46,9 @@ export default {
     letter-spacing 0.02em
     position: absolute;
     left -40px
-    top 88px
+    top 74px
     width 100px
+    @media $sm_minus
+      font-size 12px
+      top 66px
 </style>

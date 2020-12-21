@@ -248,6 +248,7 @@ export default {
         display none
     &._mobile
       display none
+      max-width 273px
       @media $xs
         display block
         margin-bottom 40px

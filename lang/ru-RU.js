@@ -100,7 +100,7 @@ export default {
       aboutVideoText3: `Простуда. ОРВИ или ОРЗ`,
       aboutYoutubeText: `
         <p>Посмотрите другие видео на
-        <a href="https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA"
+        <a class="_icon" href="https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA"
         target="_blank">ютуб канале</a></p>
       `,
       aboutRoadText: `

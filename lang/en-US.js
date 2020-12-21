@@ -104,7 +104,7 @@ export default {
       aboutVideoText3: `Common cold. VRI and ARI`,
       aboutYoutubeText: `
         <p>Watch other videos on the
-        <a href="https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA"
+        <a class="_icon" href="https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA"
         target="_blank">YouTube channel</a></p>
       `,
       aboutRoadText: `

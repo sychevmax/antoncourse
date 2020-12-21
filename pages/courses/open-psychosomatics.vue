@@ -41,7 +41,7 @@
         KinesisContainer(event="scroll" :duration="100")
           KinesisElement(
             tag="div"
-            :strength="-140"
+            :strength="-240"
             transformOrigin="50% 300%"
             axis="y"
             type="translate")
@@ -537,7 +537,7 @@ export default {
   &__item
     width 100%
     //border-top 1px solid $border
-    border-top 1px solid $border
+    border-top 2px solid $border
     padding 32px 0 8px
     display flex
     @media $md_minus
@@ -548,12 +548,11 @@ export default {
     @media $xs
       margin-bottom 0
       padding 16px 0
-    &:nth-last-child(1),
-    &:nth-child(6)
-      border-bottom 1px solid $border
-    &:nth-child(6)
-      @media $xs
-        border-bottom none
+      border-width 1px
+    &:nth-last-child(1)
+      border-bottom 2px solid $border
+    &:last-child
+      border-bottom none
   &__num
     width 80px
     height 80px
