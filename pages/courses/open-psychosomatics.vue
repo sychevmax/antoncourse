@@ -314,6 +314,8 @@ export default {
     max-height 448px
     @media $xs
       margin-bottom 0
+      width calc(100% + 24px)
+      position relative
     & img
       object-fit contain
   &__info
