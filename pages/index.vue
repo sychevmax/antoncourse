@@ -166,6 +166,17 @@ export default {
       this.$scrollTo(this.$refs.secondScreen, 600)
     },
   },
+  transition: {
+    afterEnter(el) {
+      el.classList.add('_enter')
+    },
+    beforeLeave(el) {
+      el.classList.remove('_enter')
+    },
+    leave(el) {
+      el.classList.add('_leave')
+    },
+  },
 }
 </script>
 
@@ -186,6 +197,10 @@ export default {
     margin-bottom 349px !important
   @media $xs
     margin-bottom 212px !important
+  &._leave
+    animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+  &._enter
+    animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
 .indexTop
   position relative
   padding-top 24px

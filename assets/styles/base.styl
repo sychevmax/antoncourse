@@ -447,7 +447,6 @@ img
   --overlay-bg $acsent
   --transition-duration .35s
 
-
 .overlay-right
   position fixed
   top 0
@@ -538,7 +537,7 @@ img
 
 .overlay-right-full-leave-active
   transition-duration var(--transition-duration)
-  animation translate-out 0.8s
+  // animation translate-out 0.8s
 
 
 @keyframes overlay-in
@@ -549,7 +548,7 @@ img
 
 @keyframes translate-in
   0%
-    transform translateX(200px)
+    transform translateX(100px)
   100%
     transform translateX(0px)
 
@@ -557,4 +556,4 @@ img
   0%
     transform translateX(0px)
   100%
-    transform translateX(-200px)
+    transform translateX(-100px)

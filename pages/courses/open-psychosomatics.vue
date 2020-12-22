@@ -207,6 +207,17 @@ export default {
       ],
     }
   },
+  transition: {
+    afterEnter(el) {
+      el.classList.add('_enter')
+    },
+    beforeLeave(el) {
+      el.classList.remove('_enter')
+    },
+    leave(el) {
+      el.classList.add('_leave')
+    },
+  },
 }
 </script>
 
@@ -216,6 +227,10 @@ export default {
   margin-top 32px
   margin-bottom 240px
   position relative
+  &._leave
+    animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+  &._enter
+    animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
   @media $md_minus
     margin-top 48px
     margin-bottom 155px
