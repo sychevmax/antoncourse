@@ -17,15 +17,12 @@ export default {
 
 <style scoped lang="stylus">
 .backToHome
-  position fixed
-  top 168px
+  position absolute
+  top 32px
   left 15px
   z-index 10
   @media $xs
     left 2px
-  &._course
-    position absolute
-    top 0
   &__icon
     width 14px
     height 40px

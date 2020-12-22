@@ -18,9 +18,11 @@ export default {
     },
   },
   mounted() {
-    const windowHeight = window.innerHeight
+    const body = document.querySelector('body')
+    const bodyHeight = body.getBoundingClientRect().height
+    console.log('bodyHeight', bodyHeight)
     window.onscroll = (e) => {
-      scrollY > windowHeight ? (this.show = true) : (this.show = false)
+      scrollY > bodyHeight - 100 ? (this.show = true) : (this.show = false)
     }
   },
 }
@@ -37,13 +39,13 @@ export default {
   transition $transition
   @media $md_minus
     right 44px
-    bottom 44px
+    bottom 202px
   @media $sm_minus
     right 64px
     bottom 64px
   @media $xs
     right 24px
-    bottom 24px
+    bottom 46px
   &:hover
     cursor pointer
     & .upToTop__icon svg

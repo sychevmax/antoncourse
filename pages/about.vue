@@ -180,6 +180,7 @@ export default {
 <style lang="stylus">
 .about
   padding-bottom 500px
+  position relative
   @media $sm_minus
     padding-bottom 600px
   @media $xs
