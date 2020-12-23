@@ -36,7 +36,7 @@
               div {{ $t('pages.home.indexVideoTitle1') }}
         .indexVideos__video._leftMobile.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
-            videoSrc='https://youtu.be/mWyak0g5LLI'
+            videoSrc='https://youtu.be/-XKgNFCDdBc'
             previewSrc='/img/index/video_preview_1.jpg',
             :parallax="-32"
             hoverEffect
@@ -55,7 +55,7 @@
         .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2(v-html="$t('pages.home.indexVideoText2')")
         .indexVideos__video._rightMobile.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
           AboutVideo(
-            videoSrc='https://youtu.be/mWyak0g5LLI'
+            videoSrc='https://youtu.be/mWI9CGHO-Js'
             previewSrc='/img/index/video_preview_2.jpg',
             :parallax="-32"
             hoverEffect
@@ -72,7 +72,7 @@
               div {{ $t('pages.home.indexVideoTitle3') }}
         .indexVideos__video._leftMobile.gridContainer__cell._span-6._span-md-7._span-sm-6._span-xs-3
           AboutVideo(
-            videoSrc='https://youtu.be/mWyak0g5LLI'
+            videoSrc='https://youtu.be/T0Ru8rUj2bw'
             previewSrc='/img/index/video_preview_3.jpg',
             :parallax="-32"
             hoverEffect
@@ -461,6 +461,9 @@ export default {
     display flex
     @media $sm_minus
       max-height 384px
+    @media $xs
+      & *
+        transform none !important
     & img
       object-fit cover
   &__socials
@@ -531,6 +534,9 @@ export default {
     line-height 100% !important
     @media $sm_minus
       transform translateY(-70%)
+    @media $xs
+      & div
+        transform none !important
     &._first
       left 24px
       @media $md_minus

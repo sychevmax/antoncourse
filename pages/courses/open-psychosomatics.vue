@@ -442,6 +442,9 @@ export default {
     & *
       width 100%
       height 100%
+    & div
+      @media $xs
+        transform none !important
     & img
       width 2560px
       height 1020px
@@ -456,6 +459,9 @@ export default {
         transform translate(-55%, -267px)
   &__text
     color $bg
+    & *
+      @media $xs
+        transform none !important
 
 .courseOfWhat
   &__title

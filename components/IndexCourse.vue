@@ -133,6 +133,8 @@ export default {
     @media $xs
       position static
       margin-bottom 24px
+      & *
+        transform none !important
     & h1
       @media $sm_minus
         font-size 48px
@@ -167,6 +169,8 @@ export default {
     @media $xs
       padding-left 0
       margin-left -24px
+      & *
+        transform none !important
   &__info
     display flex
     flex-direction column

@@ -151,7 +151,7 @@
             type="translate")
             .aboutMission__text(v-html='$t("pages.about.aboutMissionText")')
             .aboutMission__btn
-              Link(href='#' mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
+              Link(:href="localePath('/courses')" mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
         .aboutMission__img
           img(src='/img/about/misson.png')
 </template>
@@ -298,6 +298,9 @@ export default {
       height 261px
       position static
       margin 0 auto
+    & div
+      @media $xs
+        transform none !important
 .aboutEyes
   height 400px
   position relative
@@ -328,6 +331,9 @@ export default {
       top 0
       @media $xs
         transform translate(-45%, -267px)
+    & div
+      @media $xs
+        transform none !important
   //&:before
   //  content ''
   //  background url('/img/about/about_eyes.jpg') no-repeat
@@ -355,10 +361,16 @@ export default {
       margin-top 67px
       font-size 16px
       line-height 24px
+    & *
+      @media $xs
+        transform none !important
 .aboutContentBird
   margin-bottom 128px
   @media $xs
     margin-bottom 80px
+  & div:not(.aboutVideo__play)
+    @media $xs
+      transform none !important
   &__img
     &._first
       @media $sm_minus
@@ -495,6 +507,9 @@ export default {
       top 0
       @media $xs
         transform translate(-60%, -267px)
+    & div
+      @media $xs
+        transform none !important
   //&:before
   //  content ''
   //  position absolute
@@ -538,6 +553,9 @@ export default {
     @media $xs
       font-size 16px
       line-height 24px
+    & div
+      @media $xs
+        transform none !important
 .aboutMission
   position relative
   padding-left 112px
@@ -545,6 +563,9 @@ export default {
     padding-left 81px
   @media $sm_minus
     padding-left 0
+  & div
+    @media $xs
+      transform none !important
   &__text
     width 100%
     max-width 879px
