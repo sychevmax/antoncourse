@@ -145,7 +145,7 @@
         KinesisContainer(event="scroll" :duration="100")
           KinesisElement(
             tag="div"
-            :strength="-170"
+            :strength="-260"
             transformOrigin="50% 300%"
             axis="y"
             type="translate")
@@ -153,14 +153,7 @@
             .aboutMission__btn
               Link(href='#' mod='_more' :outside="false") {{ $t("courseSelectBtnText") }}
         .aboutMission__img
-          KinesisContainer(event="scroll" :duration="100")
-            KinesisElement(
-              tag="div"
-              :strength="-130"
-              transformOrigin="50% 300%"
-              axis="y"
-              type="translate")
-                img(src='/img/about/misson.png')
+          img(src='/img/about/misson.png')
 </template>
 
 <script>
@@ -190,16 +183,18 @@ export default {
 
 <style lang="stylus">
 .about
-  padding-bottom 500px
+  padding-bottom 270px
   position relative
   &._leave
     animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
   &._enter
     animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+  @media $md_minus
+    padding-bottom 250px
   @media $sm_minus
-    padding-bottom 600px
+    padding-bottom 160px
   @media $xs
-    padding-bottom 200px
+    padding-bottom 148px
   &__mission
     margin-top 256px
     @media $md_minus
@@ -322,9 +317,17 @@ export default {
       width 100%
       height 100%
     & img
-      width 100%
-      height 100%
-      object-fit cover
+      width 2560px
+      height 1020px
+      max-width unset
+      transform translate(-50%, -267px)
+      max-height unset
+      object-fit contain
+      position absolute
+      left 50%
+      top 0
+      @media $xs
+        transform translate(-45%, -267px)
   //&:before
   //  content ''
   //  background url('/img/about/about_eyes.jpg') no-repeat
@@ -481,9 +484,17 @@ export default {
       width 100%
       height 100%
     & img
-      width 100%
-      height 100%
-      object-fit cover
+      width 2560px
+      height 1020px
+      max-width unset
+      transform translate(-50%, -467px)
+      max-height unset
+      object-fit contain
+      position absolute
+      left 50%
+      top 0
+      @media $xs
+        transform translate(-60%, -267px)
   //&:before
   //  content ''
   //  position absolute

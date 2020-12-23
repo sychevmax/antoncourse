@@ -443,9 +443,17 @@ export default {
       width 100%
       height 100%
     & img
-      width 100%
-      height 100%
-      object-fit cover
+      width 2560px
+      height 1020px
+      max-width unset
+      transform translate(-50%, -267px)
+      max-height unset
+      object-fit contain
+      position absolute
+      left 50%
+      top 0
+      @media $xs
+        transform translate(-55%, -267px)
   &__text
     color $bg
 
