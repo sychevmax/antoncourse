@@ -4,7 +4,7 @@
   .course__header
     .courseHeader.container
       .courseHeader__top.gridContainer
-        .courseHeader__title.gridContainer__cell._span-xs-3._order-xs-2(v-html='$t("pages.courses.openPsychosomatics.title")')
+        .courseHeader__title.gridContainer__cell._span-xs-3._order-xs-2(v-html='$t("pages.courses.openPsychosomatics.titleFirstScreen")')
         .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._order-sm-2._span-xs-1
           .courseHeader__info
             span {{ $t('courseFormatLabel') }}
@@ -22,7 +22,7 @@
             p(v-html='$t("pages.courses.openPsychosomatics.text")')
         .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._span-xs-3._order-xs-3._offset-xs-0
           .courseHeader__btn
-            Link(mod='_more _icon' href="#" outside icon) {{ $t('courseBtnBookingText') }}
+            Link(mod='_more _icon' href="https://online.antonantonov.com/public/course/58085237-9e3e-4f70-9f74-536789e18399" outside icon) {{ $t('courseBtnBookingText') }}
         .gridContainer__cell._span-2._offset-5._span-md-2._offset-md-6._span-sm-2._offset-sm-4._centered._span-xs-2._order-xs-2
           .courseHeader__info._price
             span {{ $t('coursePriceLabel') }}
@@ -109,7 +109,7 @@
           .courseBooking__name(v-html='$t("pages.courses.openPsychosomatics.title")')
           .courseBooking__type {{ $t("pages.courses.openPsychosomatics.format") }}-{{ $t("courseWord") }}
           .courseBooking__btn
-            Link(mod="_more _icon" href="#" outside icon) {{ $t('courseBtnBookingText') }}
+            Link(mod="_more _icon" href="https://online.antonantonov.com/public/course/58085237-9e3e-4f70-9f74-536789e18399" outside icon) {{ $t('courseBtnBookingText') }}
           .courseBooking__price
             span {{ $t("coursePriceLabel") }}
             samp {{ $t("pages.courses.openPsychosomatics.price") }}
@@ -231,6 +231,20 @@ export default {
     animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
   &._enter
     animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+    & .courseHeader__title div span
+      animation-name translateFirstScreen
+      animation-timing-function ease
+      animation-duration 0.7s
+      animation-delay 0.2s
+      animation-fill-mode forwards
+      transform translateY(100%)
+    & .courseHeader__img
+      opacity 0
+      animation-name animPhoto
+      animation-timing-function ease
+      animation-duration 1s
+      animation-delay 0.2s
+      animation-fill-mode forwards
   @media $md_minus
     margin-top 48px
     margin-bottom 155px
@@ -321,6 +335,10 @@ export default {
       position static
       width 100%
       margin-top -16px
+    & div
+      overflow hidden
+    & span
+      display block
   &__img
     margin-bottom 8px
     display flex

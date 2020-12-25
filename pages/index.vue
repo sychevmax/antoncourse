@@ -188,6 +188,7 @@ export default {
     transform translateY(16px)
   100%
     transform translateY(0px)
+
 .index
   margin-bottom 240px !important
   overflow hidden
@@ -201,6 +202,22 @@ export default {
     animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
   &._enter
     animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+    & .indexTop__text
+      & span
+        animation-name translateFirstScreen
+        animation-timing-function ease
+        animation-duration 0.7s
+        animation-delay 0.2s
+        animation-fill-mode forwards
+        transform translateY(100%)
+    & .indexTop__imgWrap
+      opacity 0
+      animation-name animPhoto
+      animation-timing-function ease
+      animation-duration 1s
+      animation-delay 0.2s
+      animation-fill-mode forwards
+
 .indexTop
   position relative
   padding-top 24px
@@ -213,6 +230,8 @@ export default {
       margin-bottom 246px
   &__title
     font-size 112px
+  &__text
+    font-size 112px
     text-transform uppercase
     line-height 134px
     font-weight 800
@@ -220,24 +239,31 @@ export default {
     color $acsent
     z-index 9
     position relative
+    //background $bg
+    display flex
+    overflow hidden
     @media $md_minus
       font-size 80px
       line-height 96px
     @media $xs
       font-size 40px
       line-height 48px
-    & span
+    &._first,
+    &._second
       color transparent
       -webkit-text-stroke-width 2px
       -webkit-text-stroke-color $acsent
       @media $xs
         -webkit-text-stroke-width 1px
+    & span
+      display block
   &__right
     position absolute
     right 0
     top 0
     width 640px
     height  552px
+    z-index 3
     @media $md_minus
       width 456px
       height  456px

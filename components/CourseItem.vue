@@ -1,8 +1,10 @@
 <template lang="pug">
   nuxt-link.coursesItem(:to="link ? link : ''" @mousemove.native="itemMove" @mouseleave.native="itemLeave" :class="!active ? '_disabled' : ''")
-    .coursesItem__title(v-html="title")
-    .coursesItem__img(ref="img")
-      img(:src="imgSrc")
+    .coursesItem__titleWrap
+      .coursesItem__title(v-html="title")
+    .coursesItem__imgWrap
+      .coursesItem__img(ref="img")
+        img(:src="imgSrc")
 </template>
 
 <script>
@@ -54,7 +56,7 @@ export default {
   --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 </style>
 
-<style scoped lang="stylus">
+<style lang="stylus">
 .coursesItem
   position relative
   padding 58px 0 85px
@@ -71,7 +73,7 @@ export default {
   &._disabled
     opacity 0.5
     pointer-events none
-  &__title
+  &__titleWrap
     position absolute
     top 50%
     left 0
@@ -90,25 +92,34 @@ export default {
       bottom 99px
     @media $sm_minus
       position static
-      font-size: 48px;
+      font-size 48px
       line-height 64px
       letter-spacing 0.03em
     @media $xs
       font-size 24px
       line-height 32px
       letter-spacing 0.05em
-  &__img
-    pointer-events none
-    transition transform calc(var(--base-duration) / 4) var(--base-ease)
-    position relative
-    z-index 2
-    will-change transform
+  &__title
+    & div
+      display flex
+      overflow hidden
+      z-index 9
+      position relative
+    & span
+      display block
+  &__imgWrap
     width calc(100% - 80px - 32px)
     margin-left auto
+    position relative
+    z-index 2
     @media $md_minus
       width calc(100% - 56px - 24px)
     @media $sm_minus
       display none
+  &__img
+    pointer-events none
+    transition transform calc(var(--base-duration) / 4) var(--base-ease)
+    will-change transform
   &__link
     background gray
     position absolute

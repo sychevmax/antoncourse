@@ -189,6 +189,13 @@ export default {
     animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
   &._enter
     animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+    & .aboutTop__img img
+      opacity 0
+      animation-name animPhoto
+      animation-timing-function ease
+      animation-duration 1s
+      animation-delay 0.2s
+      animation-fill-mode forwards
   @media $md_minus
     padding-bottom 250px
   @media $sm_minus
@@ -216,6 +223,7 @@ export default {
     margin-bottom 0
   &__img
     margin-top -40px
+    overflow hidden
     @media $md_minus
       position relative
       margin-top 24px

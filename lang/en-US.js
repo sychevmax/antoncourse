@@ -31,7 +31,17 @@ export default {
   courseWord: 'course',
   pages: {
     home: {
-      indexTopTitle: '<span>Ready to<br>explore</span> yourself?',
+      indexTopTitle: `
+        <div class="indexTop__text _first">
+          <span>Ready to</span>
+        </div>
+        <div class="indexTop__text _second">
+          <span>explore</span>
+        </div>
+        <div class="indexTop__text  _third">
+          <span>yourself?</span>
+        </div>
+      `,
       indexDescrTitle: 'Psychosomatics <br> is a new approach <br> to mindfulness',
       indexDescrText: '<p>Are you familiar with the expression “all diseases are created by the mind”? And “diseases” are not just illnesses, but also problems, fears and attitudes. The psychosomatic approach helps take a fresh look at how psyche, body, and soul are interconnected. It allows you to identify the actual causes of your conditions and take the first step towards changing them.</p>',
       indexVideoTitle1: 'relationships',
@@ -121,6 +131,14 @@ export default {
     courses: {
       openPsychosomatics: {
         title: 'Open <br> psychosomatics',
+        titleFirstScreen: `
+          <div>
+            <span>Open</span>
+          </div>
+          <div>
+            <span>psychosomatics</span>
+          </div>
+        `,
         format: 'Online',
         level: 'Elementary',
         text: `
@@ -438,6 +456,14 @@ export default {
       },
       practicalPsychosomatics: {
         title: 'Practical <br> psychosomatics',
+        titleFirstScreen: `
+          <div>
+            <span>Practical</span>
+          </div>
+          <div>
+            <span>psychosomatics</span>
+          </div>
+        `,
         date: 'Starts at the end of January',
         text: `In-depth training of our methods. In the course we focus on
         practicing with people: we explain which methods and instruments
@@ -446,6 +472,14 @@ export default {
       },
       neotericPsychosomatics: {
         title: 'neoteric <br> psychosomatics ',
+        titleFirstScreen: `
+          <div>
+            <span>neoteric</span>
+          </div>
+          <div>
+            <span>psychosomatics</span>
+          </div>
+        `,
         date: 'Starts in mid-2021',
         text: `I acquire new knowledge about psychosomatics on a daily basis
         and I am ready to share with you even more. This course combines
