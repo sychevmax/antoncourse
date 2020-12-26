@@ -23,6 +23,10 @@ export default {
   z-index 10
   @media $xs
     left 2px
+  @media $hover
+    &:hover
+      & .backToHome__icon
+        top -8px
   &__icon
     width 14px
     height 40px
@@ -33,6 +37,7 @@ export default {
     background url('/img/back_icon.svg') no-repeat
     background-size contain
     display block
+    transition $transition
     @media $xs
       background url('/img/back_icon_xs.svg') no-repeat
       left 0
@@ -43,7 +48,7 @@ export default {
     letter-spacing 0.02em
     position: absolute;
     left -40px
-    top 74px
+    top 70px
     width 100px
     @media $xs
       font-size 12px

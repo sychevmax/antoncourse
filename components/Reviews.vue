@@ -80,6 +80,8 @@ export default {
       width 32px
       height 32px
       display block
+      position relative
+      transition $transition
       @media $sm_minus
         width 19px
         height 19px
@@ -93,12 +95,20 @@ export default {
         right 112px
       @media $xs
         display none !important
+      @media $hover
+        &:hover
+          &:before
+            transform translateX(-8px)
     &.slick-next
       right 0
       @media $xs
         right 0
       &:before
         transform rotate(180deg)
+      @media $hover
+        &:hover
+          &:before
+            transform rotate(180deg) translateX(-8px)
   &-dots
     display flex !important
     justify-content flex-start

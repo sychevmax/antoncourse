@@ -80,10 +80,12 @@ export default {
     color $charkGrey
 
 .accordion-item
-  border-top 1px solid $borderSecond
+  border-top 2px solid $borderSecond
   padding 0 0 40px 0
   &:last-child
-    border-bottom 1px solid $borderSecond
+    border-bottom 2px solid $borderSecond
+  @media $xs
+    border-width 1px
   &.is-active
     & .accordion-item-trigger-icon
       transform rotate(180deg)
