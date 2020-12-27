@@ -2,7 +2,7 @@
   .accordion-item(:id="groupId + '-' + item.id" :class="{'is-active': item.active}")
     dt.accordion-item-title
       button.accordion-item-trigger(@click='toggle')
-        .accordion-item-title-text {{item.title}}
+        .accordion-item-title-text(v-html="item.title")
         span.accordion-item-trigger-icon
           svg-icon(name="arrow_accordion")
     transition(name='accordion-item' @enter='startTransition' @after-enter='endTransition' @before-leave='startTransition' @after-leave='endTransition')

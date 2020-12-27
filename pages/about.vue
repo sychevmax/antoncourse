@@ -6,7 +6,7 @@
         .aboutTop__img
           img(src='/img/about/about_top_bg.png')
       .gridContainer__cell._span-7._offset-5._span-md-8._span-sm-3._span-xs-3
-        .aboutTop__text {{ $t('pages.about.aboutTopText') }}
+        .aboutTop__text(v-html="$t('pages.about.aboutTopText')")
     .about_statham.container
       .aboutStatham.gridContainer
         .aboutStatham__img
