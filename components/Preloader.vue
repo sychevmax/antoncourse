@@ -18,7 +18,6 @@ export default {
       if (content) {
         this.isIndexPage = true
         this.left = `--left:${left}px`
-        console.log('left', this.left)
       } else {
         this.isIndexPage = false
         this.left = `--left:0px`

@@ -17,9 +17,6 @@ export default {
     window.onscroll = (e) => {
       const bodyHeight = Math.floor(body.getBoundingClientRect().height)
       const windowHeight = window.innerHeight
-      console.log('bodyHeight', bodyHeight)
-      console.log('windowHeight', windowHeight)
-      console.log('scrollY', scrollY, bodyHeight - windowHeight)
       scrollY >= bodyHeight - windowHeight ? (this.show = true) : (this.show = false)
     }
   },
