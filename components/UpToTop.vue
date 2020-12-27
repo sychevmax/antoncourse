@@ -12,18 +12,21 @@ export default {
       show: false,
     }
   },
+  mounted() {
+    const body = document.querySelector('body')
+    window.onscroll = (e) => {
+      const bodyHeight = Math.floor(body.getBoundingClientRect().height)
+      const windowHeight = window.innerHeight
+      console.log('bodyHeight', bodyHeight)
+      console.log('windowHeight', windowHeight)
+      console.log('scrollY', scrollY, bodyHeight - windowHeight)
+      scrollY >= bodyHeight - windowHeight ? (this.show = true) : (this.show = false)
+    }
+  },
   methods: {
     scrollToTop() {
       this.$root.$emit('scrollToTop')
     },
-  },
-  mounted() {
-    const body = document.querySelector('body')
-    const bodyHeight = body.getBoundingClientRect().height
-    console.log('bodyHeight', bodyHeight)
-    window.onscroll = (e) => {
-      scrollY > bodyHeight - 100 ? (this.show = true) : (this.show = false)
-    }
   },
 }
 </script>
