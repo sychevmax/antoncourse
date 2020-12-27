@@ -25,6 +25,7 @@ export default {
     return {
       openMenu: false,
       opeMenuFromBurger: false,
+      overflowBody: true,
     }
   },
   mounted() {
@@ -40,11 +41,28 @@ export default {
         body.style.overflow = 'auto'
       }
     })
+    this.unlockBody()
   },
   methods: {
-    handleScroll(event) {
-      console.log(event.target.scrollTop)
+    unlockBody() {
+      const page = this.$route.path
+      let interval = 0
+      if (page === '/') {
+        interval = 4500
+      } else {
+        interval = 3000
+      }
+      setTimeout(() => {
+        this.overflowBody = false
+      }, interval)
     },
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.overflowBody ? '_overflow' : '',
+      },
+    }
   },
 }
 </script>
