@@ -199,7 +199,7 @@ export default {
   @media $xs
     margin-bottom 212px !important
   &._leave
-    animation translate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84)
+    animation translate-out 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
   &._enter
     animation translate-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84)
     & .indexTop__text

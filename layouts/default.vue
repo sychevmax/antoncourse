@@ -50,7 +50,7 @@ export default {
       if (page === '/') {
         interval = 4500
       } else {
-        interval = 3000
+        interval = 4500
       }
       setTimeout(() => {
         this.overflowBody = false

@@ -14,12 +14,12 @@
         .indexCourse__meta._desktop(v-if="active")
           .indexCourse__info
             span {{ $t('courseFormatLabel') }}
-            samp {{format}}
+            samp(v-html="format")
           .indexCourse__info
             span {{ $t('courseLevelLabel') }}
-            samp {{level}}
+            samp(v-html="level")
         .indexCourse__meta._desktop(v-else="active")
-          .indexCourse__info._inactive {{date}}
+          .indexCourse__info._inactive(v-html="date")
       .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._span-xs-2._offset-xs-1
         .indexCourse__img
           KinesisContainer(event="scroll" :duration="100")
@@ -36,12 +36,12 @@
         .indexCourse__meta._mobile(v-if="active")
           .indexCourse__info
             span {{ $t('courseFormatLabel') }}
-            samp {{format}}
+            samp(v-html="format")
           .indexCourse__info
             span {{ $t('courseLevelLabel') }}
-            samp {{level}}
+            samp(v-html="level")
         .indexCourse__meta._mobile(v-else="active")
-          .indexCourse__info._inactive {{date}}
+          .indexCourse__info._inactive(v-html="date")
         .indexCourse__more._mobile(v-if='active')
           Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
         .indexCourse__text

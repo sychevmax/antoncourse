@@ -448,7 +448,7 @@ export default {
               details: `
                 <p>If you intend to apply this approach in practice and want
                 to have a deeper understanding of it, join the course
-                <u>Practical Psychosomatics</u>. It starts at the end of January 2021.</p>
+                Practical Psychosomatics. It starts at the end of January 2021.</p>
               `,
             },
           ],

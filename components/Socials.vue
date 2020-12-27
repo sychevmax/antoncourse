@@ -1,7 +1,7 @@
 <template lang="pug">
   .socials
     .socials__item
-      Link(outside href='https://www.instagram.com/antonov//' mod='_socials') {{ $t('socials.instagram') }}
+      Link(outside href='https://www.instagram.com/antonov/' mod='_socials') {{ $t('socials.instagram') }}
     .socials__item
       Link(outside href='https://www.instagram.com/antonantonovgroup/' mod='_socials') {{ $t('socials.support') }}
     .socials__item

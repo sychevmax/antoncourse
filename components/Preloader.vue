@@ -44,11 +44,9 @@ export default {
   0%
     transform translateY(100%)
     opacity 0
-    //clip-path inset(100% 0 0 0)
   100%
     transform translateY(0)
     opacity 1
-    //clip-path: inset(0 0 0 0)
 
 @keyframes wordsAnimation1440
   0%
@@ -79,6 +77,12 @@ export default {
     left calc(var(--left) + 24px)
     transform translateX(0)
 
+@keyframes wordsAnimationOther
+  0%
+    opacity 1
+  100%
+    opacity 0
+
 .preloader
   position fixed
   top 0
@@ -88,7 +92,7 @@ export default {
   background rgba(255,255,255,1)
   z-index 600
   display flex
-  animation preloaderAnimation 1s ease-out 3s 1 normal forwards
+  animation preloaderAnimation 1.5s ease-out 3s 1 normal forwards
   &._index
     animation preloaderAnimation 1s ease-out 4.5s 1 normal forwards
   &__inner
@@ -107,6 +111,7 @@ export default {
     top 0
     left 50%
     transform translateX(-50%)
+    animation wordsAnimationOther 1.5s cubic-bezier(0.13, 0.57, 0.01, 0.99) 3s 1 normal forwards
     &._index
       animation wordsAnimation1440 1.5s cubic-bezier(0.13, 0.57, 0.01, 0.99) 2.5s 1 normal forwards
       @media $md_minus
