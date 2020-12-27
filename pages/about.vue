@@ -182,11 +182,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@keyframes firstDisplay
-  0%
-    opacity 0
-  100%
-    opacity 1
 .about
   padding-bottom 270px
   position relative
@@ -197,6 +192,7 @@ export default {
     opacity 1
     & .aboutTop
       opacity 1
+      animation none
     & .aboutTop__img img
       opacity 0
       animation-name animPhoto
@@ -222,7 +218,7 @@ export default {
   //height 700px
   //display flex
   //overflow hidden
-  animation firstDisplay 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
+  animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
   opacity 0
   margin-bottom 40px
   @media $md_minus
