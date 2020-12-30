@@ -31,6 +31,16 @@ export default {
   courseWord: 'course',
   pages: {
     home: {
+      seo: {
+        title: 'Anton Antonov website | Life, psychosomatics, courses',
+        description: `
+          Courses from experts in the field of modern psychosomatics.
+          We break down how psychosomatics affects all aspects of our lives.
+          We explain in what way illnesses, behavior, and inner emotional states
+          are interrelated. We teach you to get rid of symptoms and help not only
+          yourself but also your close ones, friends, and clients.
+        `,
+      },
       indexTopTitle: `
         <div class="indexTop__text _first">
           <span>Ready to</span>
@@ -57,6 +67,13 @@ export default {
       indexCoursesTitle: 'Courses',
     },
     about: {
+      seo: {
+        title: 'Anton Antonov',
+        description: `
+          Expert in the field of modern psychosomatics. Specialist in
+          functional changes in body organs and tissues. Clinical psychologist.
+        `,
+      },
       aboutTopText: 'People rarely get involved in psychology out of pure interest. In most cases, these people have a painful and traumatic background.',
       stathamText: `<p>The same goes for me: as a child, I was uncontrollable, neurotic, and prone to various addictions.</p><br><p>I didn’t care about the way I lived my life. I got into fights, damaged other people's cars, cheated and lied. I myself didn’t understand why I was doing that. I couldn’t comprehend it.</p><br><p>I had the most severe addictions and sicknesses which people usually cannot cope with. I just couldn’t look at my actions from the outside.</p>`,
       aboutEyeText: `Think of yourself, every one of us has something that he or she doesn’t like about himself/herself, i.e. behavior, emotions, addictions, illnesses. `,
@@ -129,7 +146,21 @@ export default {
       `,
     },
     courses: {
+      seo: {
+        title: '',
+        description: ``,
+      },
       openPsychosomatics: {
+        seo: {
+          title: 'Open psychosomatics. Course from Anton Antonov',
+          description: `
+            Introduction to psychosomatics. In this course, we break down
+            how psychosomatics affects all aspects of our lives. We explain
+            in what way illnesses, behavior, and inner emotional states are
+            interrelated. We teach you to get rid of symptoms and help not
+            only yourself but also your close ones, friends, and clients.
+          `,
+        },
         title: 'Open <br> psychosomatics',
         titleFirstScreen: `
           <div>

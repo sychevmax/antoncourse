@@ -35,6 +35,18 @@ export default {
     CourseItem,
     BackToHome,
   },
+  head() {
+    return {
+      title: this.$t('pages.home.seo.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('pages.home.seo.description'),
+        },
+      ],
+    }
+  },
   transition: {
     afterEnter(el) {
       el.classList.add('_enter')

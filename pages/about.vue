@@ -167,6 +167,18 @@ export default {
     AboutVideo,
     BackToHome,
   },
+  head() {
+    return {
+      title: this.$t('pages.about.seo.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('pages.about.seo.description'),
+        },
+      ],
+    }
+  },
   transition: {
     afterEnter(el) {
       el.classList.add('_enter')

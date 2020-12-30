@@ -109,7 +109,7 @@
           .courseBooking__name(v-html='$t("pages.courses.openPsychosomatics.title")')
           .courseBooking__type {{ $t("pages.courses.openPsychosomatics.format") }}-{{ $t("courseWord") }}
           .courseBooking__btn
-            Link(mod="_more _icon" href="https://online.antonantonov.com/public/course/58085237-9e3e-4f70-9f74-536789e18399" outside icon) {{ $t('courseBtnBookingText') }}
+            Link(mod="_more _icon" href="https://openpsycho.zenclass.ru/public/course/58085237-9e3e-4f70-9f74-536789e18399" outside icon) {{ $t('courseBtnBookingText') }}
           .courseBooking__price
             span {{ $t("coursePriceLabel") }}
             samp {{ $t("pages.courses.openPsychosomatics.price") }}
@@ -142,6 +142,18 @@ export default {
     BackToHome,
     Accordion,
     Reviews,
+  },
+  head() {
+    return {
+      title: this.$t('pages.courses.openPsychosomatics.seo.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('pages.courses.openPsychosomatics.seo.description'),
+        },
+      ],
+    }
   },
   data() {
     return {

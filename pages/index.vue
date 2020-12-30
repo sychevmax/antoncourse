@@ -153,6 +153,18 @@ export default {
     Link,
     AboutVideo,
   },
+  head() {
+    return {
+      title: this.$t('pages.home.seo.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('pages.home.seo.description'),
+        },
+      ],
+    }
+  },
   mounted() {
     const title = this.$refs.indexTitle
     const titleParent = this.$refs.indexTitleParent
