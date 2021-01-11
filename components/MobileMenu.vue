@@ -1,7 +1,8 @@
 <template lang="pug">
   .mobileMenu(:class="open ? '_open' : ''")
-    nuxt-link.mobileMenu__item(:to="localePath('about')" @click.native="closeMenu") Об авторе
+    nuxt-link.mobileMenu__item(:to="localePath('author')" @click.native="closeMenu") Об авторе
     nuxt-link.mobileMenu__item(:to="localePath('courses')" @click.native="closeMenu") Курсы
+    a.mobileMenu__item(href="https://antonantonov.com/") контакты
 </template>
 
 <script>

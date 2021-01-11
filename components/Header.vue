@@ -1,8 +1,9 @@
 <template lang="pug">
   .header.container(ref='header')
     nuxt-link.header__logo(:to="localePath('/')" v-html="$t('header.logo')")
-    nuxt-link.header__about(:to="localePath('about')") {{ $t('header.aboutLinkText') }}
+    nuxt-link.header__about(:to="localePath('author')") {{ $t('header.aboutLinkText') }}
     nuxt-link.header__courses(:to="localePath('courses')") {{ $t('header.courseLinkText') }}
+    a.header__contacts(href="https://antonantonov.com/") контакты
     .header__burger
       Burger
     .header__lang
@@ -70,20 +71,19 @@ export default {
     font-size 24px
     line-height 32px
     margin-left auto
-    margin-right 211px
+    margin-right 88px
     transition $transition
     @media $md_minus
       font-size 16px
       line-height 24px
-      margin-right 159px
     @media $sm_minus
-      margin-right 140px
+      margin-right 48px
     @media $xs
       display none
     &:hover
       color $acsent
   &__courses
-    margin-right 229px
+    margin-right 88px
     font-size 24px
     line-height 32px
     letter-spacing 0.02em
@@ -91,9 +91,23 @@ export default {
     @media $md_minus
       font-size 16px
       line-height 24px
-      margin-right 245px
     @media $sm_minus
-      margin-right 142px
+      margin-right 48px
+    @media $xs
+      display none
+    &:hover
+      color $acsent
+  &__contacts
+    margin-right 136px
+    font-size 24px
+    line-height 32px
+    letter-spacing 0.02em
+    transition $transition
+    @media $md_minus
+      font-size 16px
+      line-height 24px
+    @media $sm_minus
+      margin-right 96px
     @media $xs
       display none
     &:hover

@@ -4,7 +4,7 @@ export default {
     aboutLinkText: 'about the author',
     courseLinkText: 'courses',
   },
-  goToHome: 'Go to home',
+  goToHome: 'Back',
   socials: {
     instagram: 'instagram',
     support: 'support',

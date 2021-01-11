@@ -98,7 +98,7 @@
       .indexAuthor__row._bottom
         .indexAuthor__col._bottom
           .indexAuthor__more
-            Link(href='about' mod='_more' :outside='false') {{ $t('pages.home.indexAuthorBtnText') }}
+            Link(href='author' mod='_more' :outside='false') {{ $t('pages.home.indexAuthorBtnText') }}
         .indexAuthor__col._bottom
           .indexAuthor__socials
             Socials

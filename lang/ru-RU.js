@@ -4,7 +4,7 @@ export default {
     aboutLinkText: 'об авторе',
     courseLinkText: 'курсы',
   },
-  goToHome: 'На главную',
+  goToHome: 'Назад',
   socials: {
     instagram: 'инстаграм',
     support: 'группа помощи',
