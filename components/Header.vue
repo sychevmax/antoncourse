@@ -3,7 +3,7 @@
     nuxt-link.header__logo(:to="localePath('/')" v-html="$t('header.logo')")
     nuxt-link.header__about(:to="localePath('author')") {{ $t('header.aboutLinkText') }}
     nuxt-link.header__courses(:to="localePath('courses')") {{ $t('header.courseLinkText') }}
-    a.header__contacts(href="https://antonantonov.com/") контакты
+    a.header__contacts(href="https://antonantonov.com/") {{ $t('header.contactsLinkText') }}
     .header__burger
       Burger
     .header__lang

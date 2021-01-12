@@ -3,6 +3,7 @@ export default {
     logo: '<span>Антон</span><span>Антонов</span>',
     aboutLinkText: 'об авторе',
     courseLinkText: 'курсы',
+    contactsLinkText: 'контакты',
   },
   goToHome: 'Назад',
   socials: {
@@ -10,6 +11,7 @@ export default {
     support: 'группа помощи',
     youtube: 'ютуб канал',
   },
+  faqTitle: 'Вопрос-ответ',
   preloaderText: `
     <div class="preloader__text _ru _first">
       <span>Готовы</span>

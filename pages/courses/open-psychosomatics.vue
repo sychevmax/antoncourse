@@ -123,7 +123,7 @@
         )
   .course__faq
     .courseFaq.gridContainer.container
-      .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 Вопрос-ответ
+      .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 {{ $t('faqTitle') }}
       .courseFaq__list.gridContainer__cell._span-7._offset-4._span-md-10._offset-md-1._span-sm-6._span-xs-3
         accordion(id="accordion-example-2" :content="faq" :data='$t("pages.courses.openPsychosomatics.faq.data")' multiple)
 </template>
