@@ -43,12 +43,12 @@
         .indexCourse__meta._mobile(v-else="active")
           .indexCourse__info._inactive(v-html="date")
         .indexCourse__more._mobile(v-if='active')
-          Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
+          Link(mod="_more" :href="link" :outside="outside" :icon="false") {{ $t('courseBtnText') }}
         .indexCourse__text
           p(v-html='text')
       .gridContainer__cell._span-3._offset-6._span-md-3._offset-md-7._span-sm-2._span-xs-3
         .indexCourse__more._desktop(v-if='active')
-          Link(mod="_more" :href="link" :outside="false" :icon="false") {{ $t('courseBtnText') }}
+          Link(mod="_more" :href="link" :outside="outside" :icon="false") {{ $t('courseBtnText') }}
 
 
 </template>
@@ -95,6 +95,11 @@ export default {
       type: Boolean,
       required: true,
     },
+    outside: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
 }
 </script>
@@ -126,6 +131,7 @@ export default {
     transform translateY(-50%)
     left 0
     z-index 3
+    white-space nowrap
     @media $sm_minus
       bottom 40px
       top unset

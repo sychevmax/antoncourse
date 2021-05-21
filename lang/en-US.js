@@ -488,15 +488,17 @@ export default {
         },
       },
       practicalPsychosomatics: {
-        title: 'Practical <br> psychosomatics',
+        title: 'Open <br> psychosomatics 2. <br> Unboxing',
         titleFirstScreen: `
           <div>
-            <span>Practical</span>
+            <span>Open</span>
           </div>
           <div>
-            <span>psychosomatics</span>
+            <span>psychosomatics 2. Unboxing</span>
           </div>
         `,
+        format: 'Online',
+        level: 'Advanced',
         date: 'Starts at the end of January',
         text: `In-depth training of our methods. In the course we focus on
         practicing with people: we explain which methods and instruments

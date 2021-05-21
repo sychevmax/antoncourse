@@ -118,12 +118,15 @@
           )
       .indexCourses__item
         IndexCourse(
-          :active='false'
+          active
           :date='$t("pages.courses.practicalPsychosomatics.date")'
           :title='$t("pages.courses.practicalPsychosomatics.title")'
+          :format='$t("pages.courses.practicalPsychosomatics.format")'
+          :level='$t("pages.courses.practicalPsychosomatics.level")'
           img='/img/index/course_2.jpg'
-          link='#'
+          link='https://projects.antonantonov.com/2step'
           :text='$t("pages.courses.practicalPsychosomatics.text")'
+          outside
         )
       .indexCourses__item
         IndexCourse(

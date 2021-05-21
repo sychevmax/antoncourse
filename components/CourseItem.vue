@@ -1,5 +1,11 @@
 <template lang="pug">
-  nuxt-link.coursesItem(:to="link ? link : ''" @mousemove.native="itemMove" @mouseleave.native="itemLeave" :class="!active ? '_disabled' : ''")
+  a.coursesItem(v-if="outside" :href="link ? link : ''" target="_blank" @mousemove="itemMove" @mouseleave="itemLeave" :class="!active ? '_disabled' : ''")
+    .coursesItem__titleWrap
+      .coursesItem__title(v-html="title")
+    .coursesItem__imgWrap
+      .coursesItem__img(ref="img")
+        img(:src="imgSrc")
+  nuxt-link.coursesItem(v-else :to="link ? link : ''" @mousemove.native="itemMove" @mouseleave.native="itemLeave" :class="!active ? '_disabled' : ''")
     .coursesItem__titleWrap
       .coursesItem__title(v-html="title")
     .coursesItem__imgWrap
@@ -24,6 +30,10 @@ export default {
     },
     link: {
       type: String,
+      required: false,
+    },
+    outside: {
+      type: Boolean,
       required: false,
     },
   },
