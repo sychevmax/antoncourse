@@ -130,12 +130,15 @@
         )
       .indexCourses__item
         IndexCourse(
-          :active='false'
+          active
           :date='$t("pages.courses.neotericPsychosomatics.date")'
           :title='$t("pages.courses.neotericPsychosomatics.title")'
+          :format='$t("pages.courses.neotericPsychosomatics.format")'
+          :level='$t("pages.courses.neotericPsychosomatics.level")'
           img='/img/index/course_3.jpg'
-          link='#'
+          link='https://study.antonantonov.com/op3?utm_source=course_aa&utm_medium=referral'
           :text='$t("pages.courses.neotericPsychosomatics.text")'
+          outside
         )
 
 </template>
