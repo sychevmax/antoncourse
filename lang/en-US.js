@@ -506,19 +506,24 @@ export default {
         practice the psychosomatic approach with clients.`,
       },
       neotericPsychosomatics: {
-        title: 'Third',
+        title: 'Lightweight.<br>Adult<br>psychosomatics',
         titleFirstScreen: `
           <div>
-            <span>Third</span>
+            <span>Lightweight.</span>
           </div>
-        `,
-        format: 'Online', 
+          <div>
+            <span>Adult</span>
+          </div>
+          <div>
+            <span>Psychosomatics</span>
+          </div>`,
+        format: 'Online',
         level: 'Elementary',
         date: 'Starts in mid-2021',
         text: `I acquire new knowledge about psychosomatics on a daily basis
         and I am ready to share with you even more. This course combines
         the latest research, practical cases, and a new approach.
-        You’ll soon find out for yourself.`,
+        `,
       },
     },
   },
