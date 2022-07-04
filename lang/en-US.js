@@ -507,6 +507,8 @@ export default {
       },
       neotericPsychosomatics: {
         title: 'Third',
+      adultPsychosomatics: {
+        title: 'Lightweight.<br>Adult<br>psychosomatics',
         titleFirstScreen: `
           <div>
             <span>Third</span>

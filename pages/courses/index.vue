@@ -23,7 +23,7 @@
           .courses__item
             CourseItem(
               imgSrc="/img/courses/3.jpg"
-              :title="$t('pages.courses.neotericPsychosomatics.titleFirstScreen')"
+              :title="$t('pages.courses.adultPsychosomatics.titleFirstScreen')"
               link="https://study.antonantonov.com/op3?utm_source=course_aa&utm_medium=referral&utm_campaign=courses_screen"
               active
               outside
