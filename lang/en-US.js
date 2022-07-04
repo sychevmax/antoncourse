@@ -505,8 +505,6 @@ export default {
         are the most efficient in different situations. We learn to
         practice the psychosomatic approach with clients.`,
       },
-      neotericPsychosomatics: {
-        title: 'Third',
       adultPsychosomatics: {
         title: 'Lightweight.<br>Adult<br>psychosomatics',
         titleFirstScreen: `
@@ -514,7 +512,7 @@ export default {
             <span>Third</span>
           </div>
         `,
-        format: 'Online', 
+        format: 'Online',
         level: 'Elementary',
         date: 'Starts in mid-2021',
         text: `I acquire new knowledge about psychosomatics on a daily basis
