@@ -506,10 +506,10 @@ export default {
         practice the psychosomatic approach with clients.`,
       },
       neotericPsychosomatics: {
-        title: 'Lightweight.<br>Adult<br>psychosomatics',
+        title: 'Third.<br>Adult<br>psychosomatics',
         titleFirstScreen: `
           <div>
-            <span>Lightweight.</span>
+            <span>Third.</span>
           </div>
           <div>
             <span>Adult</span>
