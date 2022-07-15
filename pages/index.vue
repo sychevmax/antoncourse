@@ -136,9 +136,8 @@
           :format='$t("pages.courses.adultPsychosomatics.format")'
           :level='$t("pages.courses.adultPsychosomatics.level")'
           img='/img/index/course_3.jpg'
-          link='https://study.antonantonov.com/op3?utm_source=course_aa&utm_medium=referral'
+          :link="localePath('/courses/third')"
           :text='$t("pages.courses.adultPsychosomatics.text")'
-          outside
         )
 
 </template>

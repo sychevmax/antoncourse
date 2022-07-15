@@ -15,7 +15,7 @@
             samp {{ $t("pages.courses.adultPsychosomatics.level") }}
         .gridContainer__cell._span-6._offset-6._span-md-7._span-sm-4._order-sm-1._offset-sm-2._span-xs-3._order-xs-1
           .courseHeader__img
-            img(src='/img/course_light/course_header.jpg')
+            img(src='/img/course_third/course_header.jpg')
       .courseHeader__bottom.gridContainer
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-xs-3._order-xs-1
           .courseHeader__text
@@ -31,7 +31,7 @@
     .courseFromWhom
       .courseFromWhom__list.gridContainer.container
         .courseFromWhom__title.gridContainer__cell._span-6._offset-1._span-md-9._offset-md-1._span-sm-6._offset-sm-0._span-xs-3 {{ $t('pages.courses.adultPsychosomatics.fromWhom.title') }}
-        .courseFromWhom__col.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-1._span-sm-5._offset-sm-1._span-xs-2._offset-xs-1
+        .courseFromWhom__col.gridContainer__cell._span-4._offset-2._span-md-5._offset-md-1._span-sm-5._offset-sm-1._span-xs-2._offset-xs-1
           .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.adultPsychosomatics.fromWhom.contentCol1")' :key="item.id" v-html="item.body")
         .courseFromWhom__col._second.gridContainer__cell._span-4._offset-7._span-md-5._offset-md-7._span-sm-5._offset-sm-1._span-xs-2._offset-xs-1
           .courseFromWhom__text.aboutBorderText._course(v-for='item in $t("pages.courses.adultPsychosomatics.fromWhom.contentCol2")' :key="item.id" v-html="item.body")
@@ -46,8 +46,8 @@
             axis="y"
             type="translate")
             picture
-              source( media="(max-width: 1023px)" srcset="/img/course_light/from_whom_img_sm.jpg")
-              img(src="/img/course_light/from_whom_img.jpg")
+              source( media="(max-width: 1023px)" srcset="/img/course_third/from_whom_img_sm.jpg")
+              img(src="/img/course_third/from_whom_img.jpg")
       .gridContainer.container
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4
           .courseFromWhomImage__text
@@ -59,32 +59,34 @@
                 axis="y"
                 type="translate")
                 div(v-html='$t("pages.courses.adultPsychosomatics.fromWhomImage")')
-  .course__ofWhat
-    .courseOfWhat
-      .courseOfWhat__inner.gridContainer._courseOfWhat.container
-        .courseOfWhat__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6._span-xs-3 {{ $t("pages.courses.adultPsychosomatics.ofWhatTitle") }}
-        .courseOfWhat__item.gridContainer__cell._span-3._offset-1._span-md-2._offset-md-2._span-sm-2._offset-sm-0._span-xs-2._offset-xs-0._first
-          img(src='/img/course_psy/of_what_3.svg')
-          .courseOfWhat__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[0]")')
-        .courseOfWhat__item.gridContainer__cell._span-3._offset-4._span-md-3._offset-md-6._span-sm-2._offset-sm-3._span-xs-3._offset-xs-3._second
-          img(src='/img/course_psy/of_what_4.svg')
-          .courseOfWhat__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[1]")')
-        .courseOfWhat__item.gridContainer__cell._span-3._offset-7._span-md-2._offset-md-2._span-sm-2._offset-sm-0._span-xs-3._offset-xs-0._third
-          img(src='/img/course_psy/of_what_3.svg')
-          .courseOfWhat__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[2]")')
-        .courseOfWhat__item.gridContainer__cell._span-3._offset-1._span-md-3._offset-md-6._span-sm-2._offset-sm-3._span-xs-3._offset-xs-3._fourth
-          img(src='/img/course_psy/of_what_4.svg')
-          .courseOfWhat__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[3]")')
-        .courseOfWhat__item.gridContainer__cell._span-3._offset-4._span-md-2._offset-md-2._span-sm-2._offset-sm-0._span-xs-3._offset-xs-0._fifth
-          img(src='/img/course_psy/of_what_3.svg')
-          .courseOfWhat__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[4]")')
-        .courseOfWhat__item.gridContainer__cell._span-3._offset-7._span-md-3._offset-md-6._span-sm-2._offset-sm-3._span-xs-3._offset-xs-3._sixth
-          img(src='/img/course_psy/of_what_4.svg')
-          .courseOfWhat__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[5]")')
+  .course__ofWhat__third
+    .courseOfWhatThird
+      .courseOfWhatThird__inner.gridContainer._courseOfWhatThird.container
+        .courseOfWhatThird__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6._span-xs-3 {{ $t("pages.courses.adultPsychosomatics.ofWhatTitle") }}
+        .courseOfWhatThird__item.gridContainer__cell._span-3._offset-1._span-md-3._offset-md-1._span-sm-2._offset-sm-0._span-xs-1._offset-xs-0._first
+          img(src='/img/course_third/of_what_1.svg')
+          .courseOfWhatThird__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[0]")')
+        .courseOfWhatThird__item.gridContainer__cell._span-3._offset-4._span-md-3._offset-md-4._span-sm-2._offset-sm-3._span-xs-1._offset-xs-1._second
+          img(src='/img/course_third/of_what_2.svg')
+          .courseOfWhatThird__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[1]")')
+        .courseOfWhatThird__item.gridContainer__cell._span-3._offset-7._span-md-3._offset-md-7._span-sm-2._offset-sm-0._span-xs-1._offset-xs-0._third
+          img(src='/img/course_third/of_what_3.svg')
+          .courseOfWhatThird__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[2]")')
+        .courseOfWhatThird__item.gridContainer__cell._span-3._offset-1._span-md-3._offset-md-1._span-sm-2._offset-sm-3._span-xs-1._offset-xs-1._fourth
+          img(src='/img/course_third/of_what_4.svg')
+          .courseOfWhatThird__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[3]")')
+        .courseOfWhatThird__item.gridContainer__cell._span-3._offset-4._span-md-3._offset-md-4._span-sm-2._offset-sm-0._span-xs-1._offset-xs-0._fifth
+          img(src='/img/course_third/of_what_5.svg')
+          .courseOfWhatThird__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[4]")')
+        .courseOfWhatThird__item.gridContainer__cell._span-3._offset-7._span-md-3._offset-md-7._span-sm-2._offset-sm-3._span-xs-1._offset-xs-1._sixth
+          img(src='/img/course_third/of_what_6.svg')
+          .courseOfWhatThird__text(v-html='$t("pages.courses.adultPsychosomatics.ofWhat[5]")')
   .course__program
     .courseProgram.gridContainer.container
       .courseProgram__title.gridContainer__cell._span-11._offset-1._span-md-8._offset-md-1._span-sm-3 {{ $t("pages.courses.adultPsychosomatics.program.title") }}
-      .courseProgram__inner.gridContainer__cell.gridContainer._rows._span-10._offset-1._span-md-12._span-sm-6
+      .courseProgram__description.gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-10
+        p(v-html='$t("pages.courses.adultPsychosomatics.program.description")')
+      .courseProgram__inner.gridContainer__cell.gridContainer._rows._span-10._offset-1._span-md-10._span-sm-10
         .courseProgram__item(v-for='item in $t("pages.courses.adultPsychosomatics.program.list")' :key='item.num')
           .courseProgram__num {{ item.num }}
           .courseProgram__text(v-html='item.body')
@@ -120,13 +122,39 @@
             span {{ $t("coursePriceLabel") }}
             samp {{ $t("pages.courses.adultPsychosomatics.price") }}
   .course__reviews
-    .courseReviews.gridContainer.container
-      .courseReviews__title.gridContainer__cell._span-6._offset-1._span-md-8._offset-md-1._span-sm-6 {{ $t("pages.courses.adultPsychosomatics.reviews.title") }}
-      .courseReviews__slider.gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-6
-        Reviews(
-          :data="reviews",
-          :texts='$t("pages.courses.adultPsychosomatics.reviews.items")'
-        )
+    .courseReviews
+      .gridContainer.container
+        .courseReviews__title.gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-6 {{ $t("pages.courses.adultPsychosomatics.reviews.title") }}
+        .courseReviews__description.gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-6
+          p(v-html='$t("pages.courses.adultPsychosomatics.reviews.description")')
+        .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
+          AboutVideo(
+            :title='$t("pages.courses.adultPsychosomatics.reviews.video[0].title")'
+            videoSrc='https://youtu.be/pQCxhC8yvmM'
+            previewSrc='/img/course_third/reviews_video_anichka.png',
+            :hoverEffect="true"
+            mod="_symptoms"
+          )
+        .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
+          AboutVideo(
+            :title='$t("pages.courses.adultPsychosomatics.reviews.video[1].title")'
+            videoSrc='https://youtu.be/VvEb6r8OaCo'
+            previewSrc='/img/course_third/reviews_video_igor.png',
+            :hoverEffect="true"
+            mod="_symptoms"
+          )
+        .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
+          AboutVideo(
+            :title='$t("pages.courses.adultPsychosomatics.reviews.video[2].title")'
+            videoSrc='https://youtu.be/buUws4K9GFs'
+            previewSrc='/img/course_third/reviews_video_irina.png',
+            :hoverEffect="true"
+            mod="_symptoms"
+          )
+  .courseReviews_youtube
+    .gridContainer.container
+      .gridContainer__cell._span-10._offset-1._span-md-10._offset-md-1._span-sm-8
+        p(v-html='$t("pages.courses.adultPsychosomatics.reviews.youtubeText")')
   .course__faq
     .courseFaq.gridContainer.container
       .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 {{ $t('faqTitle') }}
@@ -230,6 +258,14 @@ export default {
           id: 7,
           active: false,
         },
+        {
+          id: 8,
+          active: false,
+        },
+        {
+          id: 9,
+          active: false,
+        },
       ],
     }
   },
@@ -295,7 +331,7 @@ export default {
       margin-top 19px
     @media $xs
       margin-top 24px
-  &__ofWhat
+  &__ofWhat__third
     margin-top 128px
     @media $xs
       margin-top 64px
@@ -512,7 +548,7 @@ export default {
       @media $xs
         transform none !important
 
-.courseOfWhat
+.courseOfWhatThird
   &__title
     margin-bottom 112px
     font-size 48px
@@ -544,52 +580,6 @@ export default {
     @media $xs
       margin-bottom 85px
       width 104px
-    &._first
-      @media $xs
-        width 200px
-        margin-right 73px
-      & img
-        @media $xs
-          width 70.92px
-          height 58.46px
-    &._second
-      @media $md_minus
-        margin-left 0
-      @media $xs
-        width 200px
-      & img
-        @media $xs
-          width 50px
-    &._third
-      @media $xs
-        width 200px
-        margin-right 73px
-      & img
-        @media $xs
-          width 70.92px
-          height 58.46px
-    &._fourth
-      @media $xs
-        width 200px
-      & img
-        @media $xs
-          width 70.92px
-    &._fifth
-      @media $xs
-        width 200px
-        margin-right 73px
-      & img
-        @media $xs
-          width 60px
-    &._sixth
-      margin-left 50px
-      @media $md_minus
-        margin-left 0
-      @media $xs
-        width 200px
-      & img
-        @media $xs
-          width 70.92px
   &__text
     font-size 16px
     line-height 24px
@@ -603,24 +593,32 @@ export default {
     @media $xs
       display block !important
   &__title
-    margin-bottom 48px
     font-size 48px
     line-height 150%
     letter-spacing 0.02em
     color $charkGrey
     opacity 0.8
-    @media $md_minus
-      margin-bottom 104px
     @media $sm_minus
       font-size 32px
       line-height 48px
       letter-spacing 0.02em
-      margin-bottom 43px
     @media $xs
       margin-bottom 0
       font-size 24px
       line-height 40px
       width 100%
+  &__description
+    letter-spacing 0
+    line-height 40px
+    @media $md_minus
+      letter-spacing 0.03em
+    @media $sm_minus
+      font-size 16px
+      line-height 24px
+      letter-spacing 0.03em
+    @media $xs
+      font-size 12px
+      line-height 20px
   &__item
     width 100%
     //border-top 1px solid $border
@@ -674,6 +672,8 @@ export default {
       @media $xs
         font-size 12px
         line-height 20px
+    & a
+      color $acsent
 .coursePractice
   padding 61px 0 63px
   background $darkGray
@@ -1003,7 +1003,7 @@ export default {
       margin-top 0
   &__type
     grid-area type
-    margin-top -16px
+    margin-top -5px
     @media $md_minus
       margin-top 0
     @media $sm_minus
@@ -1068,6 +1068,34 @@ export default {
        font-size 24px
        line-height 40px
        width 100%
+   & a
+    color $acsent
+    text-transform lowercase
+    position relative
+    &:after
+      content ''
+      width 16px
+      height 16px
+      background url('/img/link_icon.svg') no-repeat
+      background-size contain
+      margin-left 14px
+      position absolute
+      right -28px
+      top calc(50% + 2px)
+      transform translateY(-50%)
+      opacity 0
+      visibility hidden
+      transition $transition
+      @media $md_minus
+        top 50%
+    @media $hover
+      &:hover
+        &:after
+          opacity 1
+          visibility visible
+    @media $xs
+      font-size 16px
+      line-height 24px
 .courseReviews
   &__title
     margin-bottom 32px
@@ -1112,4 +1140,45 @@ export default {
         height 64px
         top 0
         left -43px
+.courseReviews_youtube
+  font-size 24px
+  line-height 40px
+  margin 80px 0 128px
+  letter-spacing 0.03em
+  @media $sm_minus
+    margin 128px 0
+  @media $xs
+    margin 80px 0 83px
+    font-size 16px
+    line-height 24px
+  & a
+    font-size 24px
+    line-height 32px
+    color $acsent
+    text-transform lowercase
+    position relative
+    &:after
+      content ''
+      width 16px
+      height 16px
+      background url('/img/link_icon.svg') no-repeat
+      background-size contain
+      margin-left 14px
+      position absolute
+      right -28px
+      top calc(50% + 2px)
+      transform translateY(-50%)
+      opacity 0
+      visibility hidden
+      transition $transition
+      @media $md_minus
+        top 50%
+    @media $hover
+      &:hover
+        &:after
+          opacity 1
+          visibility visible
+    @media $xs
+      font-size 16px
+      line-height 24px
 </style>
