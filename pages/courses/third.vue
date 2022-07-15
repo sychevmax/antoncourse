@@ -580,6 +580,12 @@ export default {
     @media $xs
       margin-bottom 85px
       width 104px
+      &._second
+        margin-left 70px
+      &._fourth
+        margin-left 70px
+      &._sixth
+        margin-left 70px
   &__text
     font-size 16px
     line-height 24px
