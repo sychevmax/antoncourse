@@ -42,5 +42,6 @@ function forwardUtmTags() {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  window.onNuxtReady(forwardUtmTags)
+  forwardUtmTags();
+  window.onNuxtReady(forwardUtmTags);
 });
