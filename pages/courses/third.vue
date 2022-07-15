@@ -22,7 +22,7 @@
             p(v-html='$t("pages.courses.adultPsychosomatics.text")')
         .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._span-xs-3._order-xs-3._offset-xs-0
           .courseHeader__btn
-            Link(mod='_more _icon' href="https://online.antonantonov.com/public/course/58085237-9e3e-4f70-9f74-536789e18399" outside icon) {{ $t('courseBtnBookingText') }}
+            Link(mod='_more _icon' href="https://study.antonantonov.com/op3" outside icon) {{ $t('courseBtnBookingText') }}
         .gridContainer__cell._span-2._offset-5._span-md-2._offset-md-6._span-sm-2._offset-sm-4._centered._span-xs-2._order-xs-2
           .courseHeader__info._price
             span {{ $t('coursePriceLabel') }}
