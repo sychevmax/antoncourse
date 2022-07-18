@@ -953,7 +953,6 @@ export default {
     letter-spacing 0.02em
     text-transform uppercase
     color $acsent
-    height 152px
     grid-area name
     @media $xs
       font-size 24px
