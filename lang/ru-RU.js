@@ -811,9 +811,9 @@ export default {
               id: 8,
               title: `Где можно узнать больше об авторе курса?`,
               details: `
-                <p><a href=”https://www.instagram.com/antonov/” target=”blank>Инстаграм</a><br><br>
-                <a href=”https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA” target=”blank>YouTube</a><br><br>
-                <a href=”https://t.me/aantonov_channel” target=”blank>Telegram</a><br>
+                <p><a href="https://www.instagram.com/antonov/" target="_blank">Инстаграм</a><br><br>
+                <a href="https://www.youtube.com/channel/UCsIsJO8scV9ULL2bc5IqroA" target="_blank">YouTube</a><br><br>
+                <a href="https://t.me/aantonov_channel" target="_blank">Telegram</a><br>
                 </p>
               `,
             },
@@ -821,7 +821,7 @@ export default {
               id: 9,
               title: `У меня остались вопросы по обучению или оплате.`,
               details: `
-                <p>Напишите нам в&nbsp;<a href=”https://t.me/aantonovsupportbot” target=”blank>чат поддержки</a> или на&nbsp;почту info@antonantonov.com, будем рады помочь.</p>
+                <p>Напишите нам в&nbsp;<a href="https://t.me/aantonovsupportbot" target="_blank">чат поддержки</a> или на&nbsp;почту info@antonantonov.com, будем рады помочь.</p>
               `,
             },
           ],
