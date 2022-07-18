@@ -51,7 +51,7 @@
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
-              img.aboutContentBird__img._first(src='/img/about/about_bird.png')
+              img.aboutContentBird__img._first(src='/img/about/about_bird.jpg')
         .gridContainer__cell._span-5._offset-6._span-md-6._offset-md-6._span-sm-4._offset-sm-2._order-sm-1._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.aboutBirdText1')")
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-3._span-xs-3
@@ -64,7 +64,7 @@
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
-              img.aboutContentBird__img._second(src='/img/about/about_bird_2.png')
+              img.aboutContentBird__img._second(src='/img/about/about_bird_2.jpg')
         .gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-4._offset-sm-2._order-sm-4._span-xs-3
           KinesisContainer(event="scroll" :duration="100")
             KinesisElement(
@@ -73,7 +73,7 @@
               transformOrigin="50% 300%"
               axis="y"
               type="translate")
-              img.aboutContentBird__img._third(src='/img/about/about_bird_3.png')
+              img.aboutContentBird__img._third(src='/img/about/about_bird_3.jpg')
         .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-sm-4._offset-sm-0._order-sm-6._span-xs-3
           .aboutBorderText(v-html="$t('pages.about.aboutBirdText3')")
         .gridContainer__cell._span-7._offset-1._span-md-8._offset-md-0._span-sm-6._order-sm-7._span-xs-3

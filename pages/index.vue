@@ -131,14 +131,13 @@
       .indexCourses__item
         IndexCourse(
           active
-          :date='$t("pages.courses.neotericPsychosomatics.date")'
-          :title='$t("pages.courses.neotericPsychosomatics.title")'
-          :format='$t("pages.courses.neotericPsychosomatics.format")'
-          :level='$t("pages.courses.neotericPsychosomatics.level")'
+          :date='$t("pages.courses.adultPsychosomatics.date")'
+          :title='$t("pages.courses.adultPsychosomatics.title")'
+          :format='$t("pages.courses.adultPsychosomatics.format")'
+          :level='$t("pages.courses.adultPsychosomatics.level")'
           img='/img/index/course_3.jpg'
-          link='https://study.antonantonov.com/op3?utm_source=course_aa&utm_medium=referral'
-          :text='$t("pages.courses.neotericPsychosomatics.text")'
-          outside
+          :link="localePath('/courses/third')"
+          :text='$t("pages.courses.adultPsychosomatics.text")'
         )
 
 </template>
