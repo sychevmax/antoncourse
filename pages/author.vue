@@ -167,6 +167,9 @@ export default {
     AboutVideo,
     BackToHome,
   },
+  mounted: () => {
+    window.forwardUtmTags()
+  },
   head() {
     return {
       title: this.$t('pages.about.seo.title'),

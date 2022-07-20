@@ -1,3 +1,12 @@
+function contains (str, arr) {
+  for(var index=0; index < arr.length; index++){
+    if(str.includes(arr[index])){
+      return true
+    }
+  }
+  return false;
+}
+
 function forwardUtmTags() {
   var domainsToDecorate = [
           'antonantonov.com',
@@ -11,10 +20,13 @@ function forwardUtmTags() {
           'utm_term'
       ]
   // не редактируйте ничего ниже этой строки
-  var links = document.querySelectorAll('a'); 
+  var links = document.querySelectorAll('a');
 
 // проверяем, содержат ли ссылки домен из массива domainsToDecorate, а затем оформляем ссылку (link decoration)
   for (var linkIndex = 0; linkIndex < links.length; linkIndex++) {
+    if(contains(links[linkIndex].href, queryParams)){
+      continue;
+    }
       for (var domainIndex = 0; domainIndex < domainsToDecorate.length; domainIndex++) { 
           if (links[linkIndex].href.indexOf(domainsToDecorate[domainIndex]) > -1 && links[linkIndex].href.indexOf("#") === -1) {
               links[linkIndex].href = decorateUrl(links[linkIndex].href);
@@ -38,10 +50,4 @@ function forwardUtmTags() {
       if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(window.location.search))
           return decodeURIComponent(name[1]);
   }
-
 }
-
-document.addEventListener('DOMContentLoaded', function(){
-  forwardUtmTags();
-  window.onNuxtReady(forwardUtmTags);
-});

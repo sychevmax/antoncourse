@@ -177,6 +177,7 @@ export default {
     const titleParentBox = titleParent.getBoundingClientRect()
     const leftPosTitle = titleBox.left - titleParentBox.left
     this.$root.$emit('titleReady', leftPosTitle)
+    window.forwardUtmTags()
   },
   methods: {
     scrollToSecondScreen() {

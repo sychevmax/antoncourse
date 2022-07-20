@@ -143,6 +143,9 @@ export default {
     Accordion,
     Reviews,
   },
+  mounted: () => {
+    window.forwardUtmTags()
+  },
   head() {
     return {
       title: this.$t('pages.courses.openPsychosomatics.seo.title'),

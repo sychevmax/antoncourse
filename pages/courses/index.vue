@@ -38,6 +38,9 @@ export default {
     CourseItem,
     BackToHome,
   },
+  mounted: () => {
+    window.forwardUtmTags()
+  },
   head() {
     return {
       title: this.$t('pages.home.seo.title'),
