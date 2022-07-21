@@ -59,6 +59,12 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
+    '@nuxtjs/google-analytics',
+    ['@nuxtjs/yandex-metrika', {
+        id: '86760117',
+        webvisor: true,
+      }
+    ],
     ['vue-scrollto/nuxt', { duration: 300 }],
     ['nuxt-i18n', {
       detectBrowserLanguage: {
@@ -86,6 +92,9 @@ export default {
       defaultLocale: 'ru',
     }]
   ],
+  googleAnalytics: {
+    id: 'G-4G1WC45KVF'
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   // build: {
