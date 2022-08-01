@@ -65,6 +65,9 @@ export default {
         webvisor: true,
       }
     ],
+    ['nuxt-facebook-pixel-module', {
+      pixelId: '430622055667255',
+    }],
     ['vue-scrollto/nuxt', { duration: 300 }],
     ['nuxt-i18n', {
       detectBrowserLanguage: {

@@ -23,6 +23,7 @@
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.6",
+    "nuxt-facebook-pixel-module": "^1.5.0",
     "nuxt-i18n": "^6.15.4",
     "postcss-preset-env": "^6.7.0",
     "reset-css": "^5.0.1",
