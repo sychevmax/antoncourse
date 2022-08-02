@@ -30,6 +30,7 @@ export default {
   courseBtnText: 'подробнее',
   courseBtnBookingText: 'записаться',
   courseBtnBookingText2: 'начать обучение',
+  courseBtnFreeLessonText: 'смотреть первый урок',
   courseSelectBtnText: 'выбрать курс',
   courseWord: 'курс',
   pages: {
