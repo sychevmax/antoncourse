@@ -1,6 +1,6 @@
 <template lang="pug">
   .wrapper(ref="wrapper" @scroll.passive='handleScroll' :class="openMenu ? '_overflow' : ''")
-    Preloader
+    Preloader(v-if="showPreloader")
     MobileMenu(:open="openMenu")
     Header
     Nuxt
@@ -26,6 +26,7 @@ export default {
       openMenu: false,
       opeMenuFromBurger: false,
       overflowBody: true,
+      showPreloader: false,
     }
   },
   mounted() {
