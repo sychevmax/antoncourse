@@ -42,7 +42,7 @@ export default {
         body.style.overflow = 'auto'
       }
     })
-    this.unlockBody()
+    // this.unlockBody()
   },
   methods: {
     unlockBody() {
@@ -58,13 +58,13 @@ export default {
       }, interval)
     },
   },
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.overflowBody ? '_overflow' : '',
-      },
-    }
-  },
+  // head() {
+  //   return {
+  //     bodyAttrs: {
+  //       class: this.overflowBody ? '_overflow' : '',
+  //     },
+  //   }
+  // },
 }
 </script>
 
