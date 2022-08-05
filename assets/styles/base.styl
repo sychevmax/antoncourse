@@ -572,3 +572,28 @@ img
     opacity 0
   100%
     opacity 1
+
+
+.popup-form
+  width 100%
+  background $white
+  padding 32px 40px 16px 40px
+  border-radius 10px
+  overflow hidden
+  & form
+    width 100%
+    & input
+      width 100%
+      padding 16px 24px
+      margin-bottom 12px
+    & button[type="submit"]
+      width 100%
+      //max-width 280px
+      margin 0 auto
+      display block
+      height 56px
+      margin-top 18px
+      transition $transition
+      &:hover
+        cursor pointer
+        filter brightness(1.1)
