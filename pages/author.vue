@@ -233,8 +233,8 @@ export default {
   //height 700px
   //display flex
   //overflow hidden
-  animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
-  opacity 0
+  //animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
+  //opacity 0
   margin-bottom 40px
   @media $md_minus
     margin-bottom 128px

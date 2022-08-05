@@ -25,7 +25,7 @@
               imgSrc="/img/courses/3.jpg"
               :title="$t('pages.courses.adultPsychosomatics.titleFirstScreen')"
               :link="localePath('/courses/third')"
-              active              
+              active
             )
 
 </template>
@@ -101,6 +101,6 @@ export default {
     @media $xs
       margin-bottom 0
   &__inner
-    animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
-    opacity 0
+    //animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
+    //opacity 0
 </style>

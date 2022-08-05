@@ -373,8 +373,8 @@ export default {
     @media $xs
       margin-top 136px
 .courseHeader
-  animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
-  opacity 0
+  //animation animPhoto 2s cubic-bezier(0.25, 0.46, 0.45, 0.84) 3.5s 1 normal forwards
+  //opacity 0
   &__top
     position relative
   &__title
