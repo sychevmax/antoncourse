@@ -22,7 +22,7 @@
             p(v-html='$t("pages.courses.adultPsychosomatics.text")')
         .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._span-xs-3._order-xs-3._offset-xs-0
           .courseHeader__btn
-            Link(mod='_more _icon' href="https://study.antonantonov.com/op3_freelesson" outside icon) {{ $t('courseBtnFreeLessonText') }}
+            Link(mod='_more _icon' href="https://study.antonantonov.com/op3_freelesson" outside icon @click.native.prevent="showFirstLessonPopUp = true") {{ $t('courseBtnFreeLessonText') }}
         .gridContainer__cell._span-2._offset-5._span-md-2._offset-md-6._span-sm-2._offset-sm-4._centered._span-xs-2._order-xs-2
           .courseHeader__info._price
             span {{ $t('coursePriceLabel') }}
@@ -117,7 +117,7 @@
           .courseBooking__name(v-html='$t("pages.courses.adultPsychosomatics.title")')
           .courseBooking__type {{ $t("pages.courses.adultPsychosomatics.format") }}-{{ $t("courseWord") }}
           .courseBooking__btn
-            Link(mod="_more _icon" href="https://study.antonantonov.com/op3" outside icon) {{ $t('courseBtnBookingText') }}
+            Link(mod="_more _icon" href="https://study.antonantonov.com/op3" outside icon @click.native.prevent="showThirdPaymentPopup = true") {{ $t('courseBtnBookingText') }}
           .courseBooking__price
             span {{ $t("coursePriceLabel") }}
             samp {{ $t("pages.courses.adultPsychosomatics.price") }}
@@ -160,6 +160,12 @@
       .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 {{ $t('faqTitle') }}
       .courseFaq__list.gridContainer__cell._span-7._offset-4._span-md-10._offset-md-1._span-sm-6._span-xs-3
         accordion(id="accordion-example-2" :content="faq" :data='$t("pages.courses.adultPsychosomatics.faq.data")' multiple)
+  popup(v-model="showFirstLessonPopUp" name="form")
+    .popup-form
+      <div style="font-size: 16px;line-height: 1.2">Для знакомства с курсом вам необходимо зарегистрироваться на нашей образовательной платформе. Первый урок откроется сразу после заполнения формы.</div><form id="ltForm6356726" action="https://study.antonantonov.com/pl/lite/block-public/process-html?id=1481629038" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br><input type="text" maxlength="60" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br><input type="text" maxlength="60" placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br><button type="submit"id="button5744231"style="color: #FFFFFF; background-color: #ff543e; border-radius: 9px !important; " onclick="if(window['btnprs62ede3c0dc259']){return false;}window['btnprs62ede3c0dc259']=true;setTimeout(function(){window['btnprs62ede3c0dc259']=false},6000);return true;">Смотреть первый урок</button><br><input type="hidden" id="71605462ede3c0cd17a" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value=""><input type="hidden" id="71605462ede3c0cd17aref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value=""><input type="hidden" name="requestTime" value="1659757504"><input type="hidden" name="requestSimpleSign" value="bad550ad86bf0146f77fcf369ca7dc6c"><input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>window.addEventListener('load', function(){let loc=document.getElementById("71605462ede3c0cd17a");loc.value=window.location.href;let ref=document.getElementById("71605462ede3c0cd17aref");ref.value=document.referrer;let statUrl="https://study.antonantonov.com/stat/counter?ref=" + encodeURIComponent(document.referrer)+ "&loc=" + encodeURIComponent(document.location.href);document.getElementById('gccounterImgContainer').innerHTML="<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";});</script>
+  popup(v-model="showThirdPaymentPopup" name="form")
+    .popup-form
+      <form id="ltForm8671106" action="https://study.antonantonov.com/pl/lite/block-public/process-html?id=1481628963" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br><input type="text" maxlength="60" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br><input type="text" maxlength="60" placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br><button type="submit"id="button7746089"style="color: #FFFFFF; background-color: #ff543e; border-radius: 9px !important; " onclick="if(window['btnprs62ede5f75377a']){return false;}window['btnprs62ede5f75377a']=true;setTimeout(function(){window['btnprs62ede5f75377a']=false},6000);return true;">Перейти к оплате</button><br><input type="hidden" id="71605362ede5f745200" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value=""><input type="hidden" id="71605362ede5f745200ref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value=""><input type="hidden" name="requestTime" value="1659758071"><input type="hidden" name="requestSimpleSign" value="87ae73e46423c1877322b1d7ae5bdcb1"><input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>window.addEventListener('load', function(){let loc=document.getElementById("71605362ede5f745200");loc.value=window.location.href;let ref=document.getElementById("71605362ede5f745200ref");ref.value=document.referrer;let statUrl="https://study.antonantonov.com/stat/counter?ref=" + encodeURIComponent(document.referrer)+ "&loc=" + encodeURIComponent(document.location.href);document.getElementById('gccounterImgContainer').innerHTML="<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";});</script>
 </template>
 
 <script>
@@ -168,6 +174,7 @@ import Link from '@/components/Link'
 import BackToHome from '@/components/BackToHome'
 import Accordion from '@/components/Accordion'
 import Reviews from '@/components/Reviews'
+import Popup from '@/components/Popup'
 export default {
   components: {
     KinesisContainer,
@@ -176,6 +183,7 @@ export default {
     BackToHome,
     Accordion,
     Reviews,
+    Popup,
   },
   mounted: () => {
     window.forwardUtmTags()
@@ -194,6 +202,8 @@ export default {
   },
   data() {
     return {
+      showFirstLessonPopUp: false,
+      showThirdPaymentPopup: false,
       reviews: [
         {
           id: 1,
