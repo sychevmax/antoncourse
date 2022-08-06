@@ -126,6 +126,9 @@
       .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 {{ $t('faqTitle') }}
       .courseFaq__list.gridContainer__cell._span-7._offset-4._span-md-10._offset-md-1._span-sm-6._span-xs-3
         accordion(id="accordion-example-2" :content="faq" :data='$t("pages.courses.openPsychosomatics.faq.data")' multiple)
+  popup(v-model="showFormPopup" name="form")
+    .popup-form
+      | <form id="ltForm9479193" action="https://study.antonantonov.com/pl/lite/block-public/process-html?id=1258906402" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br><input type="text" maxlength="60" placeholder="Введите ваше имя" name="formParams[full_name]" value=""><br><input type="text" maxlength="60" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br><input type="text" maxlength="60" placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br><button type="submit" id="button801816" style="color: #FFFFFF; background-color: #199c68; " onclick="if(window['btnprs62ed16d4f02bf']){return false;}window['btnprs62ed16d4f02bf']=true;setTimeout(function(){window['btnprs62ed16d4f02bf']=false},6000);return true;"> Оплатить курс</button><br><input type="hidden" id="56479462ed16d4d936c" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value=""><input type="hidden" id="56479462ed16d4d936cref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value=""><input type="hidden" name="requestTime" value="1659705044"><input type="hidden" name="requestSimpleSign" value="778dcf578e770456cac40aa0fbac3f37"><input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>window.addEventListener('load', function(){let loc=document.getElementById("56479462ed16d4d936c"); loc.value=window.location.href; let ref=document.getElementById("56479462ed16d4d936cref"); ref.value=document.referrer; let statUrl="https://study.antonantonov.com/stat/counter?ref=" + encodeURIComponent(document.referrer) + "&loc=" + encodeURIComponent(document.location.href); document.getElementById('gccounterImgContainer').innerHTML="<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";});</script>
 </template>
 
 <script>
@@ -134,6 +137,7 @@ import Link from '@/components/Link'
 import BackToHome from '@/components/BackToHome'
 import Accordion from '@/components/Accordion'
 import Reviews from '@/components/Reviews'
+import Popup from '@/components/Popup'
 export default {
   components: {
     KinesisContainer,
@@ -142,6 +146,7 @@ export default {
     BackToHome,
     Accordion,
     Reviews,
+    Popup,
   },
   mounted: () => {
     window.forwardUtmTags()
@@ -160,6 +165,7 @@ export default {
   },
   data() {
     return {
+      showFormPopup: false,
       reviews: [
         {
           id: 1,
