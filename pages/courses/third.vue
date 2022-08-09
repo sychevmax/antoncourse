@@ -185,8 +185,23 @@ export default {
     Reviews,
     Popup,
   },
-  mounted: () => {
+  mounted() {
     window.forwardUtmTags()
+    this.$nextTick(() => {
+      const linkPopup = window.document.querySelector('.courseProgram__inner a.link-popup')
+      if (!linkPopup) {
+        return
+      }
+
+      linkPopup.addEventListener(
+        'click',
+        (e) => {
+          e.preventDefault()
+          this.showFirstLessonPopUp = true
+        },
+        false
+      )
+    })
   },
   head() {
     return {

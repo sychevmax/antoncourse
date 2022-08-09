@@ -548,7 +548,7 @@ export default {
           list: [
             {
               num: 1,
-              body: `<p>Узнаете как построен курс, какие темы будем изучать. <a href="https://study.antonantonov.com/op3_freelesson" target="blank">Смотреть первый урок</a></p>`,
+              body: `<p>Узнаете как построен курс, какие темы будем изучать. <a id="programFirstLessonLink" class="link-popup" href="https://study.antonantonov.com/op3_freelesson" target="blank">Смотреть первый урок</a></p>`,
             },
             {
               num: 2,
