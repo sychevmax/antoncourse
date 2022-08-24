@@ -439,6 +439,10 @@ export default {
     @media $xs
       margin-top 0
       height 80px
+    & span
+      max-width: 165px
+      @media $md_minus
+        max-width: 300px
 .courseFromWhom
   &__col
     &._second
