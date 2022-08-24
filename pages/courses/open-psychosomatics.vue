@@ -17,16 +17,19 @@
           .courseHeader__img
             img(src='/img/course_psy/course_header.jpg')
       .courseHeader__bottom.gridContainer
-        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-xs-3._order-xs-1
+        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._order-sm-1._span-xs-3._order-xs-1
           .courseHeader__text
             p(v-html='$t("pages.courses.openPsychosomatics.text")')
-        .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._span-xs-3._order-xs-3._offset-xs-0
-          .courseHeader__btn
-            Link(mod='_more _icon' href="https://online.antonantonov.com/public/course/58085237-9e3e-4f70-9f74-536789e18399" outside icon) {{ $t('courseBtnBookingText') }}
-        .gridContainer__cell._span-2._offset-5._span-md-2._offset-md-6._span-sm-2._offset-sm-4._centered._span-xs-2._order-xs-2
+        .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._offset-sm-0._span-xs-2
           .courseHeader__info._price
             span {{ $t('coursePriceLabel') }}
             samp {{ $t("pages.courses.openPsychosomatics.price") }}
+        .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._order-sm-2._span-xs-3._order-xs-3._offset-xs-0
+          .courseHeader__btn
+            Link(mod='_more _icon' href="https://study.antonantonov.com/op1_promo" outside icon @click.native.prevent="showFirstLessonPopUp = true") {{ $t('courseBtnFreeLessonText') }}
+        .gridContainer__cell._span-3._offset-4._span-md-4._offset-md-5._span-sm-3._offset-sm-4._order-sm-3._span-xs-3._order-xs-3._offset-xs-4._order-xs-4
+          .courseHeader__btn
+            Link(mod='_more _icon' href="https://study.antonantonov.com/op1" outside icon @click.native.prevent="showFirstPaymentPopup = true") {{ $t('courseBtnBookingText3') }}
   .course__fromWhom
     .courseFromWhom
       .courseFromWhom__list.gridContainer.container
@@ -126,9 +129,12 @@
       .courseFaq__title.gridContainer__cell._span-3._offset-1._span-md-7._offset-md-1._span-sm-6._span-xs-3 {{ $t('faqTitle') }}
       .courseFaq__list.gridContainer__cell._span-7._offset-4._span-md-10._offset-md-1._span-sm-6._span-xs-3
         accordion(id="accordion-example-2" :content="faq" :data='$t("pages.courses.openPsychosomatics.faq.data")' multiple)
-  popup(v-model="showFormPopup" name="form")
+  popup(v-model="showFirstLessonPopUp" name="form")
     .popup-form
-      | <form id="ltForm9479193" action="https://study.antonantonov.com/pl/lite/block-public/process-html?id=1258906402" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br><input type="text" maxlength="60" placeholder="Введите ваше имя" name="formParams[full_name]" value=""><br><input type="text" maxlength="60" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br><input type="text" maxlength="60" placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br><button type="submit" id="button801816" style="color: #FFFFFF; background-color: #199c68; " onclick="if(window['btnprs62ed16d4f02bf']){return false;}window['btnprs62ed16d4f02bf']=true;setTimeout(function(){window['btnprs62ed16d4f02bf']=false},6000);return true;"> Оплатить курс</button><br><input type="hidden" id="56479462ed16d4d936c" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value=""><input type="hidden" id="56479462ed16d4d936cref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value=""><input type="hidden" name="requestTime" value="1659705044"><input type="hidden" name="requestSimpleSign" value="778dcf578e770456cac40aa0fbac3f37"><input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>window.addEventListener('load', function(){let loc=document.getElementById("56479462ed16d4d936c"); loc.value=window.location.href; let ref=document.getElementById("56479462ed16d4d936cref"); ref.value=document.referrer; let statUrl="https://study.antonantonov.com/stat/counter?ref=" + encodeURIComponent(document.referrer) + "&loc=" + encodeURIComponent(document.location.href); document.getElementById('gccounterImgContainer').innerHTML="<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";});</script>
+      <div style="font-size: 16px;line-height: 1.2">Для знакомства с курсом вам необходимо зарегистрироваться на нашей образовательной платформе. Первый урок откроется сразу после заполнения формы.</div><form id="ltForm3639673" action="https://study.antonantonov.com/pl/lite/block-public/process-html?id=1494324232" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br><input type="text" maxlength="60" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br><input type="text" maxlength="60" placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br><button type="submit"id="button2778597"style="color: #FFFFFF; background-color: #ff543e; border-radius: 9px !important; " onclick="if(window['btnprs630624a4be98e']){return false;}window['btnprs630624a4be98e']=true;setTimeout(function(){window['btnprs630624a4be98e']=false},6000);return true;">Смотреть первый урок</button><br><input type="hidden" id="726861630624a4a8e9f" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value=""><input type="hidden" id="726861630624a4a8e9fref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value=""><input type="hidden" name="requestTime" value="1661346980"><input type="hidden" name="requestSimpleSign" value="0c84fcc8df03309d7f1864d4aa3c83f0"><input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>window.addEventListener('load', function(){let loc=document.getElementById("726861630624a4a8e9f");loc.value=window.location.href;let ref=document.getElementById("726861630624a4a8e9fref");ref.value=document.referrer;let statUrl="https://study.antonantonov.com/stat/counter?ref=" + encodeURIComponent(document.referrer)+ "&loc=" + encodeURIComponent(document.location.href);document.getElementById('gccounterImgContainer').innerHTML="<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";});</script>
+  popup(v-model="showFirstPaymentPopup" name="form")
+    .popup-form
+      <div style="font-size: 16px;line-height: 1.2">Стоимость курса 30 000₽.<br/><br/>Заполните форму, чтобы перейти к оплате.</div><form id="ltForm4148050" action="https://study.antonantonov.com/pl/lite/block-public/process-html?id=1494324201" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br><input type="text" maxlength="60" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br><input type="text" maxlength="60" placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br><button type="submit"id="button752396"style="color: #FFFFFF; background-color: #ff543e; border-radius: 9px !important; " onclick="if(window['btnprs63062414aa6aa']){return false;}window['btnprs63062414aa6aa']=true;setTimeout(function(){window['btnprs63062414aa6aa']=false},6000);return true;">Перейти к оплате</button><br><input type="hidden" id="726860630624149a9c1" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value=""><input type="hidden" id="726860630624149a9c1ref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value=""><input type="hidden" name="requestTime" value="1661346836"><input type="hidden" name="requestSimpleSign" value="565377bcf99c640add61b34b06579d1a"><input type="hidden" name="isHtmlWidget" value="1"/></form><span id="gccounterImgContainer"></span><script>window.addEventListener('load', function(){let loc=document.getElementById("726860630624149a9c1");loc.value=window.location.href;let ref=document.getElementById("726860630624149a9c1ref");ref.value=document.referrer;let statUrl="https://study.antonantonov.com/stat/counter?ref=" + encodeURIComponent(document.referrer)+ "&loc=" + encodeURIComponent(document.location.href);document.getElementById('gccounterImgContainer').innerHTML="<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";});</script>
 </template>
 
 <script>
@@ -165,6 +171,8 @@ export default {
   },
   data() {
     return {
+      showFirstLessonPopUp: false,
+      showFirstPaymentPopup: false,
       showFormPopup: false,
       reviews: [
         {
