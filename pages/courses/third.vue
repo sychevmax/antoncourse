@@ -17,16 +17,19 @@
           .courseHeader__img
             img(src='/img/course_third/course_header.jpg')
       .courseHeader__bottom.gridContainer
-        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._span-xs-3._order-xs-1
+        .gridContainer__cell._span-5._offset-1._span-md-6._offset-md-1._order-sm-1._span-xs-3._order-xs-1
           .courseHeader__text
             p(v-html='$t("pages.courses.adultPsychosomatics.text")')
-        .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._span-xs-3._order-xs-3._offset-xs-0
-          .courseHeader__btn
-            Link(mod='_more _icon' href="https://study.antonantonov.com/op3_freelesson" outside icon @click.native.prevent="showFirstLessonPopUp = true") {{ $t('courseBtnFreeLessonText') }}
-        .gridContainer__cell._span-2._offset-5._span-md-2._offset-md-6._span-sm-2._offset-sm-4._centered._span-xs-2._order-xs-2
+        .gridContainer__cell._span-2._offset-1._span-md-2._offset-md-1._span-sm-2._offset-sm-0._span-xs-2
           .courseHeader__info._price
             span {{ $t('coursePriceLabel') }}
             samp {{ $t("pages.courses.adultPsychosomatics.price") }}
+        .gridContainer__cell._span-3._offset-1._span-md-4._offset-md-1._span-sm-3._order-sm-2._span-xs-3._order-xs-3._offset-xs-0
+          .courseHeader__btn
+            Link(mod='_more _icon' href="https://study.antonantonov.com/op3_freelesson" outside icon @click.native.prevent="showFirstLessonPopUp = true") {{ $t('courseBtnFreeLessonText') }}
+        .gridContainer__cell._span-3._offset-4._span-md-4._offset-md-5._span-sm-3._offset-sm-4._order-sm-3._span-xs-3._order-xs-3._offset-xs-4._order-xs-4
+          .courseHeader__btn
+            Link(mod='_more _icon' href="https://study.antonantonov.com/op3" outside icon @click.native.prevent="showThirdPaymentPopup = true") {{ $t('courseBtnBookingText3') }}
   .course__fromWhom
     .courseFromWhom
       .courseFromWhom__list.gridContainer.container
