@@ -14,7 +14,7 @@
           .courses__item
             CourseItem(
               imgSrc="/img/courses/2.jpg"
-              :title="$t('pages.courses.practicalPsychosomatics.titleFirstScreen')"
+              :title="$t('pages.courses.unpacking.titleFirstScreen')"
               link="https://projects.antonantonov.com/2step"
               active
               outside
