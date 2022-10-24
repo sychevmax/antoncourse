@@ -133,7 +133,7 @@
         .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
           AboutVideo(
             :title='$t("pages.courses.adultPsychosomatics.reviews.video[0].title")'
-            videoSrc='https://youtu.be/pQCxhC8yvmM'
+            videoSrc='https://youtu.be/_vvMwyQWq7w'
             previewSrc='/img/course_third/reviews_video_anichka.png',
             :hoverEffect="true"
             mod="_symptoms"
@@ -141,7 +141,7 @@
         .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
           AboutVideo(
             :title='$t("pages.courses.adultPsychosomatics.reviews.video[1].title")'
-            videoSrc='https://youtu.be/VvEb6r8OaCo'
+            videoSrc='https://youtu.be/5Zq0YhVM2Lw'
             previewSrc='/img/course_third/reviews_video_igor.png',
             :hoverEffect="true"
             mod="_symptoms"
@@ -149,7 +149,7 @@
         .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
           AboutVideo(
             :title='$t("pages.courses.adultPsychosomatics.reviews.video[2].title")'
-            videoSrc='https://youtu.be/buUws4K9GFs'
+            videoSrc='https://youtu.be/XAzQ2J86NDE'
             previewSrc='/img/course_third/reviews_video_irina.png',
             :hoverEffect="true"
             mod="_symptoms"
