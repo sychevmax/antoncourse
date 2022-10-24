@@ -641,7 +641,7 @@ export default {
           description: 'Студенты о&nbsp;том, что произошло в&nbsp;их&nbsp;жизни после знакомства с&nbsp;психосоматикой',
           youtubeText: `
           <p>Больше историй из жизни наших студентов на
-          <a class="_icon" href="https://www.youtube.com/watch?v=buUws4K9GFs&list=PLjwoyf6ZDuhQ6BD8bvI1Epz1nTul35ErE"
+          <a class="_icon" href="https://youtube.com/playlist?list=PLGawSVa8epe4lq8On4DS5Dxa2SGQ27maO"
           target="_blank">ютуб канале</a></p>
         `,
           video: [
