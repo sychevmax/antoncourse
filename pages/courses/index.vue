@@ -15,9 +15,8 @@
             CourseItem(
               imgSrc="/img/courses/2.jpg"
               :title="$t('pages.courses.unpacking.titleFirstScreen')"
-              link="https://projects.antonantonov.com/2step"
+              link="/courses/unpacking"
               active
-              outside
             )
         .gridContainer__cell._span-4._span-md-4._span-sm-6._span-xs-3
           .courses__item

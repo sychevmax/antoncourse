@@ -124,9 +124,8 @@
           :format='$t("pages.courses.unpacking.format")'
           :level='$t("pages.courses.unpacking.level")'
           img='/img/index/course_2.jpg'
-          link='https://projects.antonantonov.com/2step'
+          link='/courses/unpacking'
           :text='$t("pages.courses.unpacking.text")'
-          outside
         )
       .indexCourses__item
         IndexCourse(
