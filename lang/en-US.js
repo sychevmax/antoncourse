@@ -487,7 +487,7 @@ export default {
           ],
         },
       },
-      practicalPsychosomatics: {
+      unpacking: {
         title: 'Open <br> psychosomatics 2. <br> Unboxing',
         titleFirstScreen: `
           <div>
