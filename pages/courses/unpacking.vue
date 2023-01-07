@@ -291,10 +291,6 @@ export default {
           id: 8,
           active: false,
         },
-        {
-          id: 9,
-          active: false,
-        },
       ],
     }
   },

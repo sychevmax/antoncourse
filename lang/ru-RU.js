@@ -287,18 +287,19 @@ export default {
           info: [
             {
               value: `
-                <span>15 - 40<small>мин</small></span>
+                <span>15 - 40 <small>мин</small></span>
                 <samp>длительность урока</samp>
               `,
             },
             {
               value: `
-                <span>1<small>год</small></span>
-                <samp>доступа к&nbsp;платформе</samp>
+                <span><large>∞</large></span>
+                <samp>доступ к&nbsp;платформе не&nbsp;ограничен по&nbsp;времени</samp>
               `,
             },
             {
               value: `
+                <span><small>Онлайн</small></span>
                 <samp>Уроки размещены на&nbsp;онлайн-платформе.
                 Чтобы пройти курс вам нужен интернет, смартфон или
                 ноутбук.</samp>
@@ -599,6 +600,10 @@ export default {
               num: 17,
               body: `<p>Заключение. Принцип личной ответственности и&nbsp;его значение в&nbsp;терапии</p>`,
             },
+            {
+              num: 18,
+              body: `<p>Оплачиваемая стажировка в группе консультантов AntonovGroup с поддержкой и обратной связью от наставников. Поток заявок от реальных клиентов.</p>`,
+            },
           ],
         },
         practice: {
@@ -625,6 +630,7 @@ export default {
             },
             {
               value: `
+                <span><small>Онлайн</small></span>
                 <samp>Уроки размещены на&nbsp;онлайн-платформе.
                 Чтобы пройти курс вам нужен интернет, смартфон или
                 ноутбук.</samp>
@@ -824,13 +830,6 @@ export default {
                 <p>Напишите нам в&nbsp;<a href="https://t.me/aantonovsupportbot" target="_blank">чат поддержки</a> или на&nbsp;почту info@antonantonov.com, будем рады помочь.</p>
               `,
             },
-            {
-              id: 9,
-              title: `У меня остались вопросы по обучению или оплате.`,
-              details: `
-                <p>Напишите нам в&nbsp;<a href="https://t.me/aantonovsupportbot" target="_blank">чат поддержки</a> или на&nbsp;почту info@antonantonov.com, будем рады помочь.</p>
-              `,
-            },
           ],
         },
       },
@@ -959,7 +958,7 @@ export default {
           info: [
             {
               value: `
-                <span>15 - 90<small>мин</small></span>
+                <span>15 - 90 <small>мин</small></span>
                 <samp>длительность урока</samp>
               `,
             },
@@ -971,6 +970,7 @@ export default {
             },
             {
               value: `
+                <span><small>Онлайн</small></span>
                 <samp>Уроки размещены на&nbsp;онлайн-платформе.
                 Чтобы пройти курс вам нужен интернет, смартфон или
                 ноутбук.</samp>

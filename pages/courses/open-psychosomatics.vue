@@ -794,7 +794,6 @@ export default {
         font-size 24px
         line-height 24px
         font-family 'ObjectSans'
-        margin-left 16px
         letter-spacing normal
         &._year
           margin-left 8px
