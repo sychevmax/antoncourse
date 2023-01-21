@@ -658,15 +658,15 @@ export default {
           video: [
             {
               id: 1,
-              title: 'Аничка',
+              title: 'Марина',
             },
             {
               id: 2,
-              title: 'Игорь',
+              title: 'Татьяна',
             },
             {
               id: 3,
-              title: 'Ирина',
+              title: 'Дарья',
             },
           ],
           items: [

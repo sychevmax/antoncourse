@@ -131,24 +131,24 @@
         .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
           AboutVideo(
             :title='$t("pages.courses.unpacking.reviews.video[0].title")'
-            videoSrc='https://youtu.be/pQCxhC8yvmM'
-            previewSrc='/img/course_third/reviews_video_anichka.png',
+            videoSrc='https://youtu.be/dX411s9iaiY'
+            previewSrc='/img/course_unpacking/reviews_video_marina.png',
             :hoverEffect="true"
             mod="_symptoms"
           )
         .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
           AboutVideo(
             :title='$t("pages.courses.unpacking.reviews.video[1].title")'
-            videoSrc='https://youtu.be/VvEb6r8OaCo'
-            previewSrc='/img/course_third/reviews_video_igor.png',
+            videoSrc='https://youtu.be/ZvuV21sRwmg'
+            previewSrc='/img/course_unpacking/reviews_video_tatyana.png',
             :hoverEffect="true"
             mod="_symptoms"
           )
         .courseReviews__videoItem.gridContainer__cell._span-4._span-md-4._span-sm-4._span-xs-4
           AboutVideo(
             :title='$t("pages.courses.unpacking.reviews.video[2].title")'
-            videoSrc='https://youtu.be/buUws4K9GFs'
-            previewSrc='/img/course_third/reviews_video_irina.png',
+            videoSrc='https://youtu.be/GtBR7VV2oS0'
+            previewSrc='/img/course_unpacking/reviews_video_daria.png',
             :hoverEffect="true"
             mod="_symptoms"
           )
