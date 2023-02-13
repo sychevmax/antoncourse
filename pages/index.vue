@@ -55,7 +55,7 @@
         .indexVideos__text.gridContainer__cell._span-3._offset-2._span-md-4._offset-md-0._span-sm-3._order-sm-2._offset-sm-3._span-xs-2(v-html="$t('pages.home.indexVideoText2')")
         .indexVideos__video._rightMobile.gridContainer__cell._span-6._offset-6._span-md-7._offset-md-5._span-sm-6._order-sm-1._span-xs-3
           AboutVideo(
-            videoSrc='https://youtu.be/mWI9CGHO-Js'
+            videoSrc='https://youtu.be/uBeCZ0qg2TA'
             previewSrc='/img/index/video_preview_2.jpg',
             :parallax="-32"
             hoverEffect
