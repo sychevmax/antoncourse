@@ -16,9 +16,6 @@ export default {
       {
         src: '/script/utm_forwarder.js',
       },
-      {
-        src: '/script/birch_redirect.js',
-      },
     ],
   },
   pageTransition: {
