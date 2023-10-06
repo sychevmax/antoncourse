@@ -293,8 +293,8 @@ export default {
             },
             {
               value: `
-                <span><large>∞</large></span>
-                <samp>доступ к&nbsp;платформе не&nbsp;ограничен по&nbsp;времени</samp>
+                <span>45 <small>дней</small></span>
+                <samp>доступ к&nbsp;курсу с&nbsp;возможностью продлить</samp>
               `,
             },
             {
