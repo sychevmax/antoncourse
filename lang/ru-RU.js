@@ -624,7 +624,7 @@ export default {
             },
             {
               value: `
-                <span>45<small>дней</small></span>
+                <span>45 <small>дней</small></span>
                 <samp>доступ к&nbsp;курсу с&nbsp;возможностью продления</samp>
               `,
             },
@@ -964,7 +964,7 @@ export default {
             },
             {
               value: `
-                <span>45<small>дней</small></span>
+                <span>45 <small>дней</small></span>
                 <samp>доступ к&nbsp;курсу с&nbsp;возможностью продления</samp>
               `,
             },
