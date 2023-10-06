@@ -864,8 +864,6 @@ export default {
         margin-top 32px
       @media $xs
         margin-top 0
-      & span
-        margin-bottom 0px
     &._third
       grid-area info3
       @media $sm_minus
